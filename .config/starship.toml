@@ -4,9 +4,9 @@
 add_newline = false
 
 # Replace the '❯' symbol in the prompt with '➜'
-# [character]  # The name of the module we are configuring is 'character'
-# success_symbol = "[󱞩](bold green)"  # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-# error_symbol = "[󱞩](bold red)"
+[character]  # The name of the module we are configuring is 'character'
+success_symbol = "[󱞩](bold green)"  # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = "[󱞩](bold red)"
 
 [line_break]
 disabled = false
@@ -19,10 +19,10 @@ disabled = true
 disabled = true
 palette = "catppuccin_mocha"
 
-[character]
+# [character]
 # Note the use of Catppuccin color 'peach'
-success_symbol = "[[󰄛 ](green)❯](green)"
-error_symbol = "[[󰄛 ](red)❯](red)"
+# success_symbol = "[[󰄛 ](green)❯](green)"
+# error_symbol = "[[󰄛 ](red)❯](red)"
 
 [git_branch]
 style = "bold mauve"
