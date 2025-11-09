@@ -209,7 +209,6 @@ nautilus
 ncdu
 nemo
 neovim-git
-netbeans
 netcdf
 netctl
 networkmanager
@@ -328,7 +327,6 @@ v4l2loopback-dkms
 vesktop-bin
 vi
 vim
-visual-studio-code-bin
 vlc-plugins-all
 vpl-gpu-rt
 vscodium-bin-marketplace

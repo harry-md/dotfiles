@@ -56,16 +56,6 @@ return {
             ---@alias lazyvim.lsp.Config vim.lsp.Config|{mason?:boolean, enabled?:boolean, keys?:LazyKeysLspSpec[]}
             ---@type table<string, lazyvim.lsp.Config|boolean>
             servers = {
-
-                yamlls = { mason = true },
-                ruff = { mason = true },
-                ts_ls = { mason = true },
-                basedpyright = { mason = true },
-                emmet_ls = { mason = true },
-                lemminx = { mason = true },
-                hyprls = { mason = true },
-                clangd = { mason = true },
-                clang_format = { mason = true },
                 -- configuration for all lsp servers
                 ["*"] = {
                     capabilities = {
@@ -103,7 +93,29 @@ return {
             desc = "Prev Reference", enabled = function() return Snacks.words.is_enabled() end },
         },
                 },
-                stylua = { enabled = false },
+                basedpyright = { mason = true },
+                clang_format = { mason = true },
+                clangd = { mason = true },
+                cssls = { mason = true },
+                docker_compose_language_service = { mason = true },
+                docker_language_server = { mason = true },
+                dockerls = { mason = true },
+                emmet_ls = { mason = true },
+                gitui = { mason = true },
+                google_java_format = { mason = true },
+                hyprls = { mason = true },
+                lemminx = { mason = true },
+                prettier = { mason = true },
+                ruff = { mason = true },
+                shellcheck = { mason = true },
+                shfmt = { mason = true },
+                stylelint = { mason = true },
+                tailwindcss = { mason = true },
+                tombi = { mason = true },
+                tree_sitter_cli = { mason = true },
+                ts_ls = { mason = true },
+                vscode_spring_boot_tools = { mason = true },
+                yamlls = { mason = true },
                 lua_ls = {
                     -- mason = false, -- set to false if you don't want this server to be installed with mason
                     -- Use this to add any additional keymaps
