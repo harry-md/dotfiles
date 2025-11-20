@@ -1,24 +1,16 @@
-[tool.pyright]
-typeCheckingMode = "off"
-reportMissingTypeStubs = false
-pythonVersion = "3.13"
-venvPath = "."
-venv = ".venv"
-
-[tool.ruff]
 target-version = "py313"
 line-length = 88
+indent-width = 4
 
-[tool.ruff.lint]
+[lint]
 select = ["E", "F", "W", "I", "B", "ANN", "T20"]
 ignore = [
   "F401",
-  "ANN101",
   "B008",
 ]
 fixable = ["ALL"]
 unfixable = []
 
-[tool.ruff.lint.per-file-ignores]
+[lint.per-file-ignores]
 "__init__.py" = ["F401"]
 "tests/*" = ["S101", "T201", "ANN"]

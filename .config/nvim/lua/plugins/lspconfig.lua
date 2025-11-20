@@ -64,7 +64,14 @@ return {
                         },
                     },
                 },
-                basedpyright = { mason = true },
+                basedpyright = {
+                    mason = true,
+                    settings = {
+                        basedpyright = {
+                            typeCheckingMode = "off",
+                        },
+                    },
+                },
                 clang_format = { mason = true },
                 clangd = { mason = true },
                 cssls = { mason = true },
