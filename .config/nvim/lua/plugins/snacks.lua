@@ -482,6 +482,15 @@ return {
             },
         },
     },
+    keys = {
+        {
+            "<leader>ff",
+            function()
+                Snacks.picker.files()
+            end,
+            desc = "Find Files",
+        },
+    },
     init = function()
         vim.api.nvim_create_autocmd("User", {
             pattern = "VeryLazy",

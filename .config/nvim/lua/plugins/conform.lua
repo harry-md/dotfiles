@@ -4,9 +4,11 @@ return {
         formatters_by_ft = {
             java = { "google-java-format" },
             xml = { "lemminx" },
-            html = { "prettier" },
-            js = { "prettier" },
-            ts = { "prettier" },
+            html = { "htmlbeautifier" },
+            js = { "biome" },
+            javascript = { "biome" },
+            ts = { "biome" },
+            typescript = { "biome" },
             htmldjango = {},
         },
         formatters = {
