@@ -8,7 +8,6 @@ set recolor-keephue
 
 set selection-notification false
 set adjust-open width
-set sandbox none
 set selection-clipboard clipboard
 
 map = zoom in

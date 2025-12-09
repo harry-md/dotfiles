@@ -11,12 +11,6 @@ application/rss+xml=thorium-browser-avx2.desktop
 application/xml=thorium-browser-avx2.desktop
 text/xml=thorium-browser-avx2.desktop
 
-# Image Handlers
-image/gif=imv.desktop
-image/jpeg=imv.desktop
-image/png=imv.desktop
-image/webp=imv.desktop
-
 # Other Applications
 application/pdf=org.pwmt.zathura.desktop
 application/sql=io.dbeaver.DBeaver.desktop
@@ -27,3 +21,4 @@ x-scheme-handler/ipfs=
 x-scheme-handler/ipns=
 x-scheme-handler/discord=vesktop.desktop
 x-scheme-handler/bruno=bruno.desktop
+x-scheme-handler/readest=readest-handler.desktop
