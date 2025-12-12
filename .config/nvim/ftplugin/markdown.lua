@@ -6,6 +6,7 @@ vim.api.nvim_create_autocmd("BufWinEnter", {
         vim.opt.wrap = true
         vim.opt.expandtab = true
         vim.keymap.set("n", "<leader>mv", ":RenderMarkdown toggle<CR>", { desc = "Toggle RenderMarkdown plugin" })
+        vim.b.autoformat = false
         require("snacks.indent").disable()
     end,
 })

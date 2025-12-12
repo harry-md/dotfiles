@@ -3,6 +3,39 @@ return {
     priority = 1000,
     lazy = false,
     opts = {
+        zen = {
+            toggles = {
+                dim = false,
+                git_signs = true,
+                mini_diff_signs = true,
+                -- diagnostics = false,
+                -- inlay_hints = false,
+            },
+            center = true, -- center the window
+            show = {
+                statusline = true, -- can only be shown when using the global statusline
+                tabline = true,
+            },
+            ---@type snacks.win.Config
+            win = { style = "zen" },
+            --- Callback when the window is opened.
+            ---@param win snacks.win
+            on_open = function(win) end,
+            --- Callback when the window is closed.
+            ---@param win snacks.win
+            on_close = function(win) end,
+            --- Options for the `Snacks.zen.zoom()`
+            ---@type snacks.zen.Config
+            zoom = {
+                toggles = {},
+                center = true,
+                show = { statusline = true, tabline = true },
+                win = {
+                    backdrop = false,
+                    width = 0, -- full width
+                },
+            },
+        },
         explorer = {
             enabled = true,
             tree = true,
