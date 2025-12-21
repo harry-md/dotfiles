@@ -4,7 +4,7 @@ cursor-style-blink = false
 background-opacity = 1.0
 background-blur = false
 cursor-text = #060606
-font-size = 16
+font-size = 17
 # font-style-italic = true
 keybind = alt+one=unbind
 keybind = alt+two=unbind
@@ -17,8 +17,8 @@ keybind = alt+eight=unbind
 keybind = alt+nine=unbind
 window-decoration = none
 app-notifications = no-clipboard-copy
-adjust-cell-width = -5%
-adjust-cell-height = -5%
+adjust-cell-width = -10%
+adjust-cell-height = 0%
 font-family = JetBrainsMono Nerd Font
 
 # palette = 0=#252530

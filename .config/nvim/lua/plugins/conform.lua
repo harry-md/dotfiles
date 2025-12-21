@@ -10,7 +10,7 @@ return {
             javascript = { "biome" },
             ts = { "biome" },
             typescript = { "biome" },
-            htmldjango = {},
+            -- htmldjango = {},
         },
         formatters = {
             -- ["google-java-format"] = {

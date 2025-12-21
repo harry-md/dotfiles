@@ -65,7 +65,7 @@ return {
                     },
                 },
                 basedpyright = {
-                    mason = true,
+                    mason = false,
                     settings = {
                         basedpyright = {
                             typeCheckingMode = "off",
@@ -82,6 +82,7 @@ return {
                         },
                     },
                 },
+                ty = { mason = true },
                 htmlbeautifier = { mason = true },
                 ast_grep = { mason = true },
                 biome = { mason = true },
