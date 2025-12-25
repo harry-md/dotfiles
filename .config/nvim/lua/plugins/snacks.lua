@@ -1,559 +1,557 @@
 return {
-    "folke/snacks.nvim",
-    priority = 1000,
-    lazy = false,
-    opts = {
-        zen = {
-            toggles = {
-                dim = false,
-                git_signs = true,
-                mini_diff_signs = true,
-                -- diagnostics = false,
-                -- inlay_hints = false,
-            },
-            center = true, -- center the window
-            show = {
-                statusline = true, -- can only be shown when using the global statusline
-                tabline = true,
-            },
-            ---@type snacks.win.Config
-            win = { style = "zen" },
-            --- Callback when the window is opened.
-            ---@param win snacks.win
-            on_open = function(win) end,
-            --- Callback when the window is closed.
-            ---@param win snacks.win
-            on_close = function(win) end,
-            --- Options for the `Snacks.zen.zoom()`
-            ---@type snacks.zen.Config
-            zoom = {
-                toggles = {},
-                center = true,
-                show = { statusline = true, tabline = true },
-                win = {
-                    backdrop = false,
-                    width = 0, -- full width
-                },
-            },
+  "folke/snacks.nvim",
+  priority = 1000,
+  lazy = false,
+  opts = {
+    zen = {
+      toggles = {
+        dim = false,
+        git_signs = true,
+        mini_diff_signs = true,
+        -- diagnostics = false,
+        -- inlay_hints = false,
+      },
+      center = true, -- center the window
+      show = {
+        statusline = true, -- can only be shown when using the global statusline
+        tabline = true,
+      },
+      ---@type snacks.win.Config
+      win = { style = "zen" },
+      --- Callback when the window is opened.
+      ---@param win snacks.win
+      on_open = function(win) end,
+      --- Callback when the window is closed.
+      ---@param win snacks.win
+      on_close = function(win) end,
+      --- Options for the `Snacks.zen.zoom()`
+      ---@type snacks.zen.Config
+      zoom = {
+        toggles = {},
+        center = true,
+        show = { statusline = true, tabline = true },
+        win = {
+          backdrop = false,
+          width = 0, -- full width
         },
+      },
+    },
+    explorer = {
+      enabled = true,
+      tree = true,
+      focus = "list",
+    },
+    indent = {
+      enabled = true,
+      char = "│",
+      animate = {
+        enabled = false,
+      },
+    },
+    scroll = {
+      enabled = true,
+      animate = {
+        duration = { step = 30, total = 300 },
+        easing = "linear",
+      },
+      -- faster animation when repeating scroll after delay
+      animate_repeat = {
+        delay = 50, -- delay in ms before using the repeat animation
+        duration = { step = 3, total = 30 },
+        easing = "linear",
+      },
+    },
+    input = { enabled = true },
+    bigfile = { enabled = true },
+    image = {
+      enabled = true,
+    },
+    terminal = {
+      enabled = true,
+      bo = {
+        filetype = "snacks_terminal",
+      },
+      wo = {},
+      keys = {
+        q = "hide",
+        gf = function(self)
+          local f = vim.fn.findfile(vim.fn.expand("<cfile>"), "**")
+          if f == "" then
+            Snacks.notify.warn("No file under cursor")
+          else
+            self:hide()
+            vim.schedule(function()
+              vim.cmd("e " .. f)
+            end)
+          end
+        end,
+        term_normal = {
+          "<esc>",
+          function(self)
+            self.esc_timer = self.esc_timer or (vim.uv or vim.loop).new_timer()
+            if self.esc_timer:is_active() then
+              self.esc_timer:stop()
+              vim.cmd("stopinsert")
+            else
+              self.esc_timer:start(200, 0, function() end)
+              return "<esc>"
+            end
+          end,
+          mode = "t",
+          expr = true,
+          desc = "Double escape to normal mode",
+        },
+      },
+    },
+    dashboard = { enabled = false },
+    notifier = {
+      enabled = true,
+      timeout = 2000, -- default timeout in ms
+      width = { min = 30, max = 0.4 },
+      height = { min = 1, max = 0.6 },
+      -- editor margin to keep free. tabline and statusline are taken into account automatically
+      margin = { top = 0, right = 0, bottom = 0 },
+      padding = false, -- add 1 cell of left/right padding to the notification window
+      sort = { "level", "added" }, -- sort by level and time
+      -- minimum log level to display. TRACE is the lowest
+      -- all notifications are stored in history
+      level = vim.log.levels.TRACE,
+      icons = {
+        error = " ",
+        warn = " ",
+        info = " ",
+        debug = " ",
+        trace = " ",
+      },
+      keep = function(notif)
+        return vim.fn.getcmdpos() > 0
+      end,
+      ---@type snacks.notifier.style
+      style = "minimal",
+      top_down = false, -- place notifications from top to bottom
+      date_format = "%R", -- time format for notifications
+      -- format for footer when more lines are available
+      -- `%d` is replaced with the number of lines.
+      -- only works for styles with a border
+      ---@type string|boolean
+      more_format = " ↓ %d lines ",
+      refresh = 50, -- refresh at most every 50ms
+    },
+    quickfile = { enabled = true },
+    statuscolumn = { enabled = true },
+    words = { enabled = true },
+    lazygit = { enabled = true },
+    git = {
+      enabled = true,
+    },
+    picker = {
+      exclude = { "*.class", "*.jar", "target/*", "*.out" }, -- exclude files
+      enabled = true,
+      prompt = "❯ ",
+      sources = {
         explorer = {
-            enabled = true,
-            tree = true,
-            focus = "list",
+          layout = {
+            backdrop = false,
+            width = 40,
+            min_width = 40,
+            height = 0,
+            position = "left",
+            border = "none",
+            box = "vertical",
+          },
         },
-        indent = {
-            enabled = true,
-            char = "│",
-            animate = {
-                enabled = false,
-            },
+      },
+      focus = "input",
+      -- layout = "custom",
+      -- layouts = {
+      --     custom = {
+      --         layout = {
+      --             box = "vertical",
+      --             backdrop = false,
+      --             row = -1,
+      --             width = 0,
+      --             height = 0.5,
+      --             border = "none",
+      --             title = " {title} {live} {flags}",
+      --             title_pos = "left",
+      --             {
+      --                 box = "horizontal",
+      --                 { win = "list", border = "rounded" },
+      --                 { win = "preview", title = "{preview}", width = 0.6, border = "rounded" },
+      --             },
+      --             {
+      --                 win = "input",
+      --                 height = 1,
+      --                 border = "none",
+      --             },
+      --         },
+      --     },
+      -- },
+      layout = {
+        cycle = true,
+
+        layout = {
+          box = "horizontal",
+          width = 0.8,
+          min_width = 120,
+          height = 0.85,
+          {
+            box = "vertical",
+            border = "rounded",
+            title = "{title} {live} {flags}",
+            { win = "input", height = 1, border = "bottom" },
+            { win = "list", border = "none" },
+          },
+          { win = "preview", title = "{preview}", border = "rounded", width = 0.6 },
         },
-        scroll = {
-            enabled = true,
-            animate = {
-                duration = { step = 30, total = 300 },
-                easing = "linear",
-            },
-            -- faster animation when repeating scroll after delay
-            animate_repeat = {
-                delay = 50, -- delay in ms before using the repeat animation
-                duration = { step = 3, total = 30 },
-                easing = "linear",
-            },
+      },
+      ---@class snacks.picker.matcher.Config
+      matcher = {
+        fuzzy = true, -- use fuzzy matching
+        smartcase = true, -- use smartcase
+        ignorecase = true, -- use ignorecase
+        sort_empty = false, -- sort results when the search string is empty
+        filename_bonus = true, -- give bonus for matching file names (last part of the path)
+        file_pos = true, -- support patterns like `file:line:col` and `file:line`
+        -- the bonusses below, possibly require string concatenation and path normalization,
+        -- so this can have a performance impact for large lists and increase memory usage
+        cwd_bonus = true, -- give bonus for matching files in the cwd
+        frecency = true, -- frecency bonus
+        history_bonus = true, -- give more weight to chronological order
+      },
+      sort = {
+        -- default sort is by score, text length and index
+        fields = { "score:desc", "#text", "idx" },
+      },
+      ui_select = true, -- replace `vim.ui.select` with the snacks picker
+      ---@class snacks.picker.formatters.Config
+      formatters = {
+        text = {
+          ft = nil, ---@type string? filetype for highlighting
         },
-        input = { enabled = true },
-        bigfile = { enabled = true },
-        image = {
-            enabled = true,
+        file = {
+          filename_first = false, -- display filename before the file path
+          truncate = 40, -- truncate the file path to (roughly) this length
+          filename_only = false, -- only show the filename
+          icon_width = 2, -- width of the icon (in characters)
+          git_status_hl = true, -- use the git status highlight group for the filename
         },
-        terminal = {
-            enabled = true,
-            bo = {
-                filetype = "snacks_terminal",
-            },
-            wo = {},
-            keys = {
-                q = "hide",
-                gf = function(self)
-                    local f = vim.fn.findfile(vim.fn.expand("<cfile>"), "**")
-                    if f == "" then
-                        Snacks.notify.warn("No file under cursor")
-                    else
-                        self:hide()
-                        vim.schedule(function()
-                            vim.cmd("e " .. f)
-                        end)
-                    end
-                end,
-                term_normal = {
-                    "<esc>",
-                    function(self)
-                        self.esc_timer = self.esc_timer or (vim.uv or vim.loop).new_timer()
-                        if self.esc_timer:is_active() then
-                            self.esc_timer:stop()
-                            vim.cmd("stopinsert")
-                        else
-                            self.esc_timer:start(200, 0, function() end)
-                            return "<esc>"
-                        end
-                    end,
-                    mode = "t",
-                    expr = true,
-                    desc = "Double escape to normal mode",
-                },
-            },
+        selected = {
+          show_always = false, -- only show the selected column when there are multiple selections
+          unselected = true, -- use the unselected icon for unselected items
         },
-        dashboard = { enabled = false },
-        notifier = {
-            enabled = true,
-            timeout = 2000, -- default timeout in ms
-            width = { min = 30, max = 0.4 },
-            height = { min = 1, max = 0.6 },
-            -- editor margin to keep free. tabline and statusline are taken into account automatically
-            margin = { top = 0, right = 0, bottom = 0 },
-            padding = false, -- add 1 cell of left/right padding to the notification window
-            sort = { "level", "added" }, -- sort by level and time
-            -- minimum log level to display. TRACE is the lowest
-            -- all notifications are stored in history
-            level = vim.log.levels.TRACE,
-            icons = {
-                error = " ",
-                warn = " ",
-                info = " ",
-                debug = " ",
-                trace = " ",
-            },
-            keep = function(notif)
-                return vim.fn.getcmdpos() > 0
-            end,
-            ---@type snacks.notifier.style
-            style = "minimal",
-            top_down = false, -- place notifications from top to bottom
-            date_format = "%R", -- time format for notifications
-            -- format for footer when more lines are available
-            -- `%d` is replaced with the number of lines.
-            -- only works for styles with a border
-            ---@type string|boolean
-            more_format = " ↓ %d lines ",
-            refresh = 50, -- refresh at most every 50ms
+        severity = {
+          icons = true, -- show severity icons
+          level = false, -- show severity level
+          ---@type "left"|"right"
+          pos = "left", -- position of the diagnostics
         },
-        quickfile = { enabled = true },
-        statuscolumn = { enabled = true },
-        words = { enabled = true },
-        lazygit = { enabled = true },
+      },
+      ---@class snacks.picker.previewers.Config
+      previewers = {
+        diff = {
+          builtin = true, -- use Neovim for previewing diffs (true) or use an external tool (false)
+          cmd = { "delta" }, -- example to show a diff with delta
+        },
         git = {
-            enabled = true,
+          builtin = true, -- use Neovim for previewing git output (true) or use git (false)
+          args = {}, -- additional arguments passed to the git command. Useful to set pager options usin `-c ...`
         },
-        picker = {
-            exclude = { "*.class", "*.jar", "target/*", "*.out" }, -- exclude files
-            enabled = true,
-            prompt = "❯ ",
-            sources = {
-                explorer = {
-                    layout = {
-                        backdrop = false,
-                        width = 40,
-                        min_width = 40,
-                        height = 0,
-                        position = "left",
-                        border = "none",
-                        box = "vertical",
-                    },
-                },
-            },
-            focus = "input",
-            -- layout = "custom",
-            -- layouts = {
-            --     custom = {
-            --         layout = {
-            --             box = "vertical",
-            --             backdrop = false,
-            --             row = -1,
-            --             width = 0,
-            --             height = 0.5,
-            --             border = "none",
-            --             title = " {title} {live} {flags}",
-            --             title_pos = "left",
-            --             {
-            --                 box = "horizontal",
-            --                 { win = "list", border = "rounded" },
-            --                 { win = "preview", title = "{preview}", width = 0.6, border = "rounded" },
-            --             },
-            --             {
-            --                 win = "input",
-            --                 height = 1,
-            --                 border = "none",
-            --             },
-            --         },
-            --     },
-            -- },
-            layout = {
-                cycle = true,
-
-                layout = {
-                    box = "horizontal",
-                    width = 0.8,
-                    min_width = 120,
-                    height = 0.85,
-                    {
-                        box = "vertical",
-                        border = "rounded",
-                        title = "{title} {live} {flags}",
-                        { win = "input", height = 1, border = "bottom" },
-                        { win = "list", border = "none" },
-                    },
-                    { win = "preview", title = "{preview}", border = "rounded", width = 0.6 },
-                },
-            },
-            ---@class snacks.picker.matcher.Config
-            matcher = {
-                fuzzy = true, -- use fuzzy matching
-                smartcase = true, -- use smartcase
-                ignorecase = true, -- use ignorecase
-                sort_empty = false, -- sort results when the search string is empty
-                filename_bonus = true, -- give bonus for matching file names (last part of the path)
-                file_pos = true, -- support patterns like `file:line:col` and `file:line`
-                -- the bonusses below, possibly require string concatenation and path normalization,
-                -- so this can have a performance impact for large lists and increase memory usage
-                cwd_bonus = true, -- give bonus for matching files in the cwd
-                frecency = true, -- frecency bonus
-                history_bonus = true, -- give more weight to chronological order
-            },
-            sort = {
-                -- default sort is by score, text length and index
-                fields = { "score:desc", "#text", "idx" },
-            },
-            ui_select = true, -- replace `vim.ui.select` with the snacks picker
-            ---@class snacks.picker.formatters.Config
-            formatters = {
-                text = {
-                    ft = nil, ---@type string? filetype for highlighting
-                },
-                file = {
-                    filename_first = false, -- display filename before the file path
-                    truncate = 40, -- truncate the file path to (roughly) this length
-                    filename_only = false, -- only show the filename
-                    icon_width = 2, -- width of the icon (in characters)
-                    git_status_hl = true, -- use the git status highlight group for the filename
-                },
-                selected = {
-                    show_always = false, -- only show the selected column when there are multiple selections
-                    unselected = true, -- use the unselected icon for unselected items
-                },
-                severity = {
-                    icons = true, -- show severity icons
-                    level = false, -- show severity level
-                    ---@type "left"|"right"
-                    pos = "left", -- position of the diagnostics
-                },
-            },
-            ---@class snacks.picker.previewers.Config
-            previewers = {
-                diff = {
-                    builtin = true, -- use Neovim for previewing diffs (true) or use an external tool (false)
-                    cmd = { "delta" }, -- example to show a diff with delta
-                },
-                git = {
-                    builtin = true, -- use Neovim for previewing git output (true) or use git (false)
-                    args = {}, -- additional arguments passed to the git command. Useful to set pager options usin `-c ...`
-                },
-                file = {
-                    max_size = 1024 * 1024, -- 1MB
-                    max_line_length = 500, -- max line length
-                    ft = nil, ---@type string? filetype for highlighting. Use `nil` for auto detect
-                },
-                man_pager = nil, ---@type string? MANPAGER env to use for `man` preview
-            },
-            ---@class snacks.picker.jump.Config
-            jump = {
-                jumplist = true, -- save the current position in the jumplist
-                tagstack = false, -- save the current position in the tagstack
-                reuse_win = false, -- reuse an existing window if the buffer is already open
-                close = true, -- close the picker when jumping/editing to a location (defaults to true)
-                match = false, -- jump to the first match position. (useful for `lines`)
-            },
-            toggles = {
-                follow = "f",
-                hidden = "h",
-                ignored = "i",
-                modified = "m",
-                regex = { icon = "R", value = false },
-            },
-            win = {
-                -- input window
-                input = {
-                    keys = {
-                        -- to close the picker on ESC instead of going to normal mode,
-                        -- add the following keymap to your config
-                        -- ["<Esc>"] = { "close", mode = { "n", "i" } },
-                        ["/"] = "toggle_focus",
-                        ["<C-Down>"] = { "history_forward", mode = { "i", "n" } },
-                        ["<C-Up>"] = { "history_back", mode = { "i", "n" } },
-                        ["<C-c>"] = { "cancel", mode = "i" },
-                        ["<C-w>"] = { "<c-s-w>", mode = { "i" }, expr = true, desc = "delete word" },
-                        ["<CR>"] = { "confirm", mode = { "n", "i" } },
-                        ["<A-y>"] = { "confirm", mode = { "n", "i" } },
-                        ["<C-y>"] = { "confirm", mode = { "n", "i" } },
-                        ["<Down>"] = { "list_down", mode = { "i", "n" } },
-                        ["<Esc>"] = "cancel",
-                        ["<S-CR>"] = { { "pick_win", "jump" }, mode = { "n", "i" } },
-                        ["<S-Tab>"] = { "select_and_prev", mode = { "i", "n" } },
-                        ["<Tab>"] = { "select_and_next", mode = { "i", "n" } },
-                        ["<Up>"] = { "list_up", mode = { "i", "n" } },
-                        ["<a-d>"] = { "inspect", mode = { "n", "i" } },
-                        ["<a-f>"] = { "toggle_follow", mode = { "i", "n" } },
-                        ["<a-h>"] = { "toggle_hidden", mode = { "i", "n" } },
-                        ["<a-i>"] = { "toggle_ignored", mode = { "i", "n" } },
-                        ["<a-m>"] = { "toggle_maximize", mode = { "i", "n" } },
-                        ["<c-p>"] = { "list_up", mode = { "i", "n" } },
-                        ["<a-w>"] = { "cycle_win", mode = { "i", "n" } },
-                        ["<c-a>"] = { "select_all", mode = { "n", "i" } },
-                        ["<c-k>"] = { "preview_scroll_up", mode = { "i", "n" } },
-                        ["<c-j>"] = { "preview_scroll_down", mode = { "i", "n" } },
-                        ["<A-k>"] = { "preview_scroll_up", mode = { "i", "n" } },
-                        ["<A-j>"] = { "preview_scroll_down", mode = { "i", "n" } },
-                        ["<c-g>"] = { "toggle_live", mode = { "i", "n" } },
-                        ["<A-n>"] = { "list_down", mode = { "i", "n" } },
-                        ["<A-p>"] = { "list_up", mode = { "i", "n" } },
-                        ["<c-q>"] = { "qflist", mode = { "i", "n" } },
-                        ["<c-s>"] = { "edit_split", mode = { "i", "n" } },
-                        ["<c-t>"] = { "tab", mode = { "n", "i" } },
-                        ["<c-v>"] = { "edit_vsplit", mode = { "i", "n" } },
-                        ["<c-r>#"] = { "insert_alt", mode = "i" },
-                        ["<c-r>%"] = { "insert_filename", mode = "i" },
-                        ["<c-r><c-a>"] = { "insert_cWORD", mode = "i" },
-                        ["<c-r><c-f>"] = { "insert_file", mode = "i" },
-                        ["<c-r><c-l>"] = { "insert_line", mode = "i" },
-                        ["<c-r><c-p>"] = { "insert_file_full", mode = "i" },
-                        ["<c-r><c-w>"] = { "insert_cword", mode = "i" },
-                        ["<c-w>H"] = "layout_left",
-                        ["<c-w>J"] = "layout_bottom",
-                        ["<c-w>K"] = "layout_top",
-                        ["<c-w>L"] = "layout_right",
-                        ["?"] = "toggle_help_input",
-                        ["G"] = "list_bottom",
-                        ["gg"] = "list_top",
-                        ["j"] = "list_down",
-                        ["k"] = "list_up",
-                        ["q"] = "close",
-                    },
-                    b = {
-                        minipairs_disable = true,
-                    },
-                },
-                -- result list window
-                list = {
-                    keys = {
-                        ["/"] = "toggle_focus",
-                        ["<2-LeftMouse>"] = "confirm",
-                        ["<CR>"] = "confirm",
-                        ["<Down>"] = "list_down",
-                        ["<Esc>"] = "cancel",
-                        ["<S-CR>"] = { { "pick_win", "jump" } },
-                        ["<S-Tab>"] = { "select_and_prev", mode = { "n", "x" } },
-                        ["<Tab>"] = { "select_and_next", mode = { "n", "x" } },
-                        ["<Up>"] = "list_up",
-                        ["<a-d>"] = "inspect",
-                        ["<a-f>"] = "toggle_follow",
-                        ["<a-h>"] = "toggle_hidden",
-                        ["<a-i>"] = "toggle_ignored",
-                        ["<a-m>"] = "toggle_maximize",
-                        -- ["<a-p>"] = "toggle_preview",
-                        ["<a-w>"] = "cycle_win",
-                        ["<c-a>"] = "select_all",
-                        ["<c-b>"] = "preview_scroll_up",
-                        ["<c-d>"] = "list_scroll_down",
-                        ["<c-f>"] = "preview_scroll_down",
-                        ["<c-j>"] = "list_down",
-                        ["<c-k>"] = "list_up",
-                        ["<c-n>"] = "list_down",
-                        ["<c-p>"] = "list_up",
-                        ["<c-q>"] = "qflist",
-                        ["<c-s>"] = "edit_split",
-                        ["<c-t>"] = "tab",
-                        ["<c-u>"] = "list_scroll_up",
-                        ["<c-v>"] = "edit_vsplit",
-                        ["<c-w>H"] = "layout_left",
-                        ["<c-w>J"] = "layout_bottom",
-                        ["<c-w>K"] = "layout_top",
-                        ["<c-w>L"] = "layout_right",
-                        ["?"] = "toggle_help_list",
-                        ["G"] = "list_bottom",
-                        ["gg"] = "list_top",
-                        ["i"] = "focus_input",
-                        ["j"] = "list_down",
-                        ["k"] = "list_up",
-                        ["q"] = "close",
-                        ["zb"] = "list_scroll_bottom",
-                        ["zt"] = "list_scroll_top",
-                        ["zz"] = "list_scroll_center",
-                    },
-                    wo = {
-                        conceallevel = 2,
-                        concealcursor = "nvc",
-                    },
-                },
-                -- preview window
-                preview = {
-                    keys = {
-                        ["<Esc>"] = "cancel",
-                        ["q"] = "close",
-                        ["i"] = "focus_input",
-                        ["<a-w>"] = "cycle_win",
-                    },
-                },
-            },
-            ---@class snacks.picker.icons
-            icons = {
-                files = {
-                    enabled = true, -- show file icons
-                    dir = "󰉋 ",
-                    dir_open = "󰝰 ",
-                    file = "󰈔 ",
-                },
-                keymaps = {
-                    nowait = "󰓅 ",
-                },
-                tree = {
-                    vertical = "│ ",
-                    middle = "├╴",
-                    last = "└╴",
-                },
-                undo = {
-                    saved = " ",
-                },
-                ui = {
-                    live = "󰐰 ",
-                    hidden = "h",
-                    ignored = "i",
-                    follow = "f",
-                    selected = "● ",
-                    unselected = "○ ",
-                    -- selected = " ",
-                },
-                git = {
-                    enabled = true, -- show git icons
-                    commit = "󰜘 ", -- used by git log
-                    staged = "●", -- staged changes. always overrides the type icons
-                    added = "",
-                    deleted = "",
-                    ignored = " ",
-                    modified = "○",
-                    renamed = "",
-                    unmerged = " ",
-                    untracked = "?",
-                },
-                diagnostics = {
-                    Error = " ",
-                    Warn = " ",
-                    Hint = " ",
-                    Info = " ",
-                },
-                lsp = {
-                    unavailable = "",
-                    enabled = " ",
-                    disabled = " ",
-                    attached = "󰖩 ",
-                },
-                kinds = {
-                    Array = " ",
-                    Boolean = "󰨙 ",
-                    Class = " ",
-                    Color = " ",
-                    Control = " ",
-                    Collapsed = " ",
-                    Constant = "󰏿 ",
-                    Constructor = " ",
-                    Copilot = " ",
-                    Enum = " ",
-                    EnumMember = " ",
-                    Event = " ",
-                    Field = " ",
-                    File = " ",
-                    Folder = " ",
-                    Function = "󰊕 ",
-                    Interface = " ",
-                    Key = " ",
-                    Keyword = " ",
-                    Method = "󰊕 ",
-                    Module = " ",
-                    Namespace = "󰦮 ",
-                    Null = " ",
-                    Number = "󰎠 ",
-                    Object = " ",
-                    Operator = " ",
-                    Package = " ",
-                    Property = " ",
-                    Reference = " ",
-                    Snippet = "󱄽 ",
-                    String = " ",
-                    Struct = "󰆼 ",
-                    Text = " ",
-                    TypeParameter = " ",
-                    Unit = " ",
-                    Unknown = " ",
-                    Value = " ",
-                    Variable = "󰀫 ",
-                },
-            },
-            ---@class snacks.picker.db.Config
-            db = {
-                -- path to the sqlite3 library
-                -- If not set, it will try to load the library by name.
-                -- On Windows it will download the library from the internet.
-                sqlite3_path = nil, ---@type string?
-            },
-            ---@class snacks.picker.debug
-            debug = {
-                scores = false, -- show scores in the list
-                leaks = false, -- show when pickers don't get garbage collected
-                explorer = false, -- show explorer debug info
-                files = false, -- show file debug info
-                grep = false, -- show file debug info
-                proc = false, -- show proc debug info
-                extmarks = false, -- show extmarks errors
-            },
+        file = {
+          max_size = 1024 * 1024, -- 1MB
+          max_line_length = 500, -- max line length
+          ft = nil, ---@type string? filetype for highlighting. Use `nil` for auto detect
         },
+        man_pager = nil, ---@type string? MANPAGER env to use for `man` preview
+      },
+      ---@class snacks.picker.jump.Config
+      jump = {
+        jumplist = true, -- save the current position in the jumplist
+        tagstack = false, -- save the current position in the tagstack
+        reuse_win = false, -- reuse an existing window if the buffer is already open
+        close = true, -- close the picker when jumping/editing to a location (defaults to true)
+        match = false, -- jump to the first match position. (useful for `lines`)
+      },
+      toggles = {
+        follow = "f",
+        hidden = "h",
+        ignored = "i",
+        modified = "m",
+        regex = { icon = "R", value = false },
+      },
+      win = {
+        -- input window
+        input = {
+          keys = {
+            -- to close the picker on ESC instead of going to normal mode,
+            -- add the following keymap to your config
+            -- ["<Esc>"] = { "close", mode = { "n", "i" } },
+            ["/"] = "toggle_focus",
+            ["<C-Down>"] = { "history_forward", mode = { "i", "n" } },
+            ["<C-Up>"] = { "history_back", mode = { "i", "n" } },
+            ["<C-c>"] = { "cancel", mode = "i" },
+            ["<C-w>"] = { "<c-s-w>", mode = { "i" }, expr = true, desc = "delete word" },
+            ["<CR>"] = { "confirm", mode = { "n", "i" } },
+            ["<A-y>"] = { "confirm", mode = { "n", "i" } },
+            ["<C-y>"] = { "confirm", mode = { "n", "i" } },
+            ["<Down>"] = { "list_down", mode = { "i", "n" } },
+            ["<Esc>"] = "cancel",
+            ["<S-CR>"] = { { "pick_win", "jump" }, mode = { "n", "i" } },
+            ["<S-Tab>"] = { "select_and_prev", mode = { "i", "n" } },
+            ["<Tab>"] = { "select_and_next", mode = { "i", "n" } },
+            ["<Up>"] = { "list_up", mode = { "i", "n" } },
+            ["<a-d>"] = { "inspect", mode = { "n", "i" } },
+            ["<a-f>"] = { "toggle_follow", mode = { "i", "n" } },
+            ["<a-h>"] = { "toggle_hidden", mode = { "i", "n" } },
+            ["<a-i>"] = { "toggle_ignored", mode = { "i", "n" } },
+            ["<a-m>"] = { "toggle_maximize", mode = { "i", "n" } },
+            ["<c-p>"] = { "list_up", mode = { "i", "n" } },
+            ["<a-w>"] = { "cycle_win", mode = { "i", "n" } },
+            ["<c-a>"] = { "select_all", mode = { "n", "i" } },
+            ["<c-k>"] = { "preview_scroll_up", mode = { "i", "n" } },
+            ["<c-j>"] = { "preview_scroll_down", mode = { "i", "n" } },
+            ["<A-k>"] = { "preview_scroll_up", mode = { "i", "n" } },
+            ["<A-j>"] = { "preview_scroll_down", mode = { "i", "n" } },
+            ["<c-g>"] = { "toggle_live", mode = { "i", "n" } },
+            ["<A-n>"] = { "list_down", mode = { "i", "n" } },
+            ["<A-p>"] = { "list_up", mode = { "i", "n" } },
+            ["<c-q>"] = { "qflist", mode = { "i", "n" } },
+            ["<c-s>"] = { "edit_split", mode = { "i", "n" } },
+            ["<c-t>"] = { "tab", mode = { "n", "i" } },
+            ["<c-v>"] = { "edit_vsplit", mode = { "i", "n" } },
+            ["<c-r>#"] = { "insert_alt", mode = "i" },
+            ["<c-r>%"] = { "insert_filename", mode = "i" },
+            ["<c-r><c-a>"] = { "insert_cWORD", mode = "i" },
+            ["<c-r><c-f>"] = { "insert_file", mode = "i" },
+            ["<c-r><c-l>"] = { "insert_line", mode = "i" },
+            ["<c-r><c-p>"] = { "insert_file_full", mode = "i" },
+            ["<c-r><c-w>"] = { "insert_cword", mode = "i" },
+            ["<c-w>H"] = "layout_left",
+            ["<c-w>J"] = "layout_bottom",
+            ["<c-w>K"] = "layout_top",
+            ["<c-w>L"] = "layout_right",
+            ["?"] = "toggle_help_input",
+            ["G"] = "list_bottom",
+            ["gg"] = "list_top",
+            ["j"] = "list_down",
+            ["k"] = "list_up",
+            ["q"] = "close",
+          },
+          b = {
+            minipairs_disable = true,
+          },
+        },
+        -- result list window
+        list = {
+          keys = {
+            ["/"] = "toggle_focus",
+            ["<2-LeftMouse>"] = "confirm",
+            ["<CR>"] = "confirm",
+            ["<Down>"] = "list_down",
+            ["<Esc>"] = "cancel",
+            ["<S-CR>"] = { { "pick_win", "jump" } },
+            ["<S-Tab>"] = { "select_and_prev", mode = { "n", "x" } },
+            ["<Tab>"] = { "select_and_next", mode = { "n", "x" } },
+            ["<Up>"] = "list_up",
+            ["<a-d>"] = "inspect",
+            ["<a-f>"] = "toggle_follow",
+            ["<a-h>"] = "toggle_hidden",
+            ["<a-i>"] = "toggle_ignored",
+            ["<a-m>"] = "toggle_maximize",
+            -- ["<a-p>"] = "toggle_preview",
+            ["<a-w>"] = "cycle_win",
+            ["<c-a>"] = "select_all",
+            ["<c-b>"] = "preview_scroll_up",
+            ["<c-d>"] = "list_scroll_down",
+            ["<c-f>"] = "preview_scroll_down",
+            ["<c-j>"] = "list_down",
+            ["<c-k>"] = "list_up",
+            ["<c-n>"] = "list_down",
+            ["<c-p>"] = "list_up",
+            ["<c-q>"] = "qflist",
+            ["<c-s>"] = "edit_split",
+            ["<c-t>"] = "tab",
+            ["<c-u>"] = "list_scroll_up",
+            ["<c-v>"] = "edit_vsplit",
+            ["<c-w>H"] = "layout_left",
+            ["<c-w>J"] = "layout_bottom",
+            ["<c-w>K"] = "layout_top",
+            ["<c-w>L"] = "layout_right",
+            ["?"] = "toggle_help_list",
+            ["G"] = "list_bottom",
+            ["gg"] = "list_top",
+            ["i"] = "focus_input",
+            ["j"] = "list_down",
+            ["k"] = "list_up",
+            ["q"] = "close",
+            ["zb"] = "list_scroll_bottom",
+            ["zt"] = "list_scroll_top",
+            ["zz"] = "list_scroll_center",
+          },
+          wo = {
+            conceallevel = 2,
+            concealcursor = "nvc",
+          },
+        },
+        -- preview window
+        preview = {
+          keys = {
+            ["<Esc>"] = "cancel",
+            ["q"] = "close",
+            ["i"] = "focus_input",
+            ["<a-w>"] = "cycle_win",
+          },
+        },
+      },
+      ---@class snacks.picker.icons
+      icons = {
+        files = {
+          enabled = true, -- show file icons
+          dir = "󰉋 ",
+          dir_open = "󰝰 ",
+          file = "󰈔 ",
+        },
+        keymaps = {
+          nowait = "󰓅 ",
+        },
+        tree = {
+          vertical = "│ ",
+          middle = "├╴",
+          last = "└╴",
+        },
+        undo = {
+          saved = " ",
+        },
+        ui = {
+          live = "󰐰 ",
+          hidden = "h",
+          ignored = "i",
+          follow = "f",
+          selected = "● ",
+          unselected = "○ ",
+          -- selected = " ",
+        },
+        git = {
+          enabled = true, -- show git icons
+          commit = "󰜘 ", -- used by git log
+          staged = "●", -- staged changes. always overrides the type icons
+          added = "",
+          deleted = "",
+          ignored = " ",
+          modified = "○",
+          renamed = "",
+          unmerged = " ",
+          untracked = "?",
+        },
+        diagnostics = {
+          Error = " ",
+          Warn = " ",
+          Hint = " ",
+          Info = " ",
+        },
+        lsp = {
+          unavailable = "",
+          enabled = " ",
+          disabled = " ",
+          attached = "󰖩 ",
+        },
+        kinds = {
+          Array = " ",
+          Boolean = "󰨙 ",
+          Class = " ",
+          Color = " ",
+          Control = " ",
+          Collapsed = " ",
+          Constant = "󰏿 ",
+          Constructor = " ",
+          Copilot = " ",
+          Enum = " ",
+          EnumMember = " ",
+          Event = " ",
+          Field = " ",
+          File = " ",
+          Folder = " ",
+          Function = "󰊕 ",
+          Interface = " ",
+          Key = " ",
+          Keyword = " ",
+          Method = "󰊕 ",
+          Module = " ",
+          Namespace = "󰦮 ",
+          Null = " ",
+          Number = "󰎠 ",
+          Object = " ",
+          Operator = " ",
+          Package = " ",
+          Property = " ",
+          Reference = " ",
+          Snippet = "󱄽 ",
+          String = " ",
+          Struct = "󰆼 ",
+          Text = " ",
+          TypeParameter = " ",
+          Unit = " ",
+          Unknown = " ",
+          Value = " ",
+          Variable = "󰀫 ",
+        },
+      },
+      ---@class snacks.picker.db.Config
+      db = {
+        -- path to the sqlite3 library
+        -- If not set, it will try to load the library by name.
+        -- On Windows it will download the library from the internet.
+        sqlite3_path = nil, ---@type string?
+      },
+      ---@class snacks.picker.debug
+      debug = {
+        scores = false, -- show scores in the list
+        leaks = false, -- show when pickers don't get garbage collected
+        explorer = false, -- show explorer debug info
+        files = false, -- show file debug info
+        grep = false, -- show file debug info
+        proc = false, -- show proc debug info
+        extmarks = false, -- show extmarks errors
+      },
     },
-    keys = {
-        {
-            "<leader>ff",
-            function()
-                Snacks.picker.files()
-            end,
-            desc = "Find Files",
-        },
+  },
+  keys = {
+    {
+      "<leader>ff",
+      function()
+        Snacks.picker.files()
+      end,
+      desc = "Find Files",
     },
-    init = function()
-        vim.api.nvim_create_autocmd("User", {
-            pattern = "VeryLazy",
-            callback = function()
-                -- Setup some globals for debugging (lazy-loaded)
-                _G.dd = function(...)
-                    Snacks.debug.inspect(...)
-                end
-                _G.bt = function()
-                    Snacks.debug.backtrace()
-                end
-                vim.print = _G.dd -- Override print to use snacks for `:=` command
+  },
+  init = function()
+    vim.api.nvim_create_autocmd("User", {
+      pattern = "VeryLazy",
+      callback = function()
+        -- Setup some globals for debugging (lazy-loaded)
+        _G.dd = function(...)
+          Snacks.debug.inspect(...)
+        end
+        _G.bt = function()
+          Snacks.debug.backtrace()
+        end
+        vim.print = _G.dd -- Override print to use snacks for `:=` command
 
-                -- Create some toggle mappings
-                Snacks.toggle.option("spell", { name = "Spelling" }):map("<leader>us")
-                Snacks.toggle.option("wrap", { name = "Wrap" }):map("<leader>uw")
-                Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>uL")
-                Snacks.toggle.diagnostics():map("<leader>ud")
-                Snacks.toggle.line_number():map("<leader>ul")
-                Snacks.toggle
-                    .option("conceallevel", { off = 0, on = vim.o.conceallevel > 0 and vim.o.conceallevel or 2 })
-                    :map("<leader>uc")
-                Snacks.toggle.treesitter():map("<leader>uT")
-                Snacks.toggle
-                    .option("background", { off = "light", on = "dark", name = "Dark Background" })
-                    :map("<leader>ub")
-                Snacks.toggle.inlay_hints():map("<leader>uh")
-                Snacks.toggle.indent():map("<leader>ug")
-                Snacks.toggle.dim():map("<leader>uD")
-            end,
-        })
-    end,
+        -- Create some toggle mappings
+        Snacks.toggle.option("spell", { name = "Spelling" }):map("<leader>us")
+        Snacks.toggle.option("wrap", { name = "Wrap" }):map("<leader>uw")
+        Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>uL")
+        Snacks.toggle.diagnostics():map("<leader>ud")
+        Snacks.toggle.line_number():map("<leader>ul")
+        Snacks.toggle
+          .option("conceallevel", { off = 0, on = vim.o.conceallevel > 0 and vim.o.conceallevel or 2 })
+          :map("<leader>uc")
+        Snacks.toggle.treesitter():map("<leader>uT")
+        Snacks.toggle.option("background", { off = "light", on = "dark", name = "Dark Background" }):map("<leader>ub")
+        Snacks.toggle.inlay_hints():map("<leader>uh")
+        Snacks.toggle.indent():map("<leader>ug")
+        Snacks.toggle.dim():map("<leader>uD")
+      end,
+    })
+  end,
 }

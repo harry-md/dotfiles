@@ -93,7 +93,6 @@ return {
             desc = "Prev Reference", enabled = function() return Snacks.words.is_enabled() end },
         },
                 },
-                basedpyright = { mason = true },
                 clang_format = { mason = true },
                 clangd = { mason = true },
                 cssls = { mason = true },

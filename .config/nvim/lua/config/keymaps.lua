@@ -40,8 +40,11 @@ set("n", "<S-h>", ":bprevious<CR>", { desc = "Switch to previous buffer" })
 set("n", "<S-l>", ":bnext<CR>", { desc = "Switch to next buffer" })
 
 set({ "i", "c", "t" }, "<A-w>", "<C-w>")
-set("n", "<A-u>", "<C-u>")
-set("n", "<A-d>", "<C-d>")
+set({ "n", "v" }, "<A-u>", "<C-u>")
+set({ "n", "v" }, "<A-d>", "<C-d>")
 set("n", "<A-o>", "<C-o>", { silent = true })
 set("c", "<A-y>", "<CR>", { silent = true })
 set("n", "<leader>z", ":lua Snacks.zen()<CR>", { silent = true })
+
+-- go to definition
+set("n", "gd", ":lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
