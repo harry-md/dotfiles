@@ -22,7 +22,7 @@ vim.opt.listchars:append({
 opt.scrolloff = 6
 opt.showtabline = 0
 opt.statuscolumn = ""
-opt.shortmess = "ltToOCF"
+opt.shortmess = "ltToOCFnc"
 opt.cursorline = false
 opt.inccommand = "split"
 opt.smartcase = true

@@ -1,12 +1,11 @@
 {
-  "icon_theme": "Material Icon Theme",
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "disable_ai": true,
   "minimap": {
-    "show": "auto"
+    "show": "auto",
   },
   "inlay_hints": {
     "enabled": false,
@@ -22,50 +21,38 @@
       "alt": false,
       "shift": false,
       "platform": false,
-      "function": false
-    }
+      "function": false,
+    },
   },
   "vim_mode": true,
   "ui_font_size": 16.0,
   "buffer_font_size": 19.0,
-  "buffer_font_family": "JetBrainsMono Nerd Font",
-  "ui_font_fallbacks": ["JetBrainsMono Nerd Font"],
+  "buffer_font_family": "CaskaydiaCove Nerd Font",
+  "ui_font_fallbacks": ["CaskaydiaCove Nerd Font"],
   "theme": {
     "mode": "system",
     "light": "Ayu Light",
-    "dark": "One Dark"
+    "dark": "Ayu Dark",
   },
   "cursor_blink": false,
   "format_on_save": "on",
   "vim": {
-    "use_system_clipboard": "always"
+    "use_system_clipboard": "always",
   },
   "languages": {
     "HTML": {
-      "format_on_save": "off"
-    }
+      "format_on_save": "off",
+    },
   },
   "tab_size": 4,
-  "lsp": {
-    "basedpyright": {
-      "settings": {
-        "typeCheckingMode": "basic",
-        "basedpyright.analysis": {
-          "diagnosticMode": "workspace",
-          "inlayHints.callArgumentNames": false,
-          "typeCheckingMode": "basic",
-          "logLevel": "error"
-        }
-      }
-    }
-  },
+  "lsp": {},
   "tab_bar": {
-    "show": true
+    "show": true,
   },
   "current_line_highlight": "none",
   "terminal": {
-    "font_size": 15
+    "font_size": 15,
   },
-  "relative_line_numbers": true,
-  "buffer_line_height": "standard"
+  "relative_line_numbers": "enabled",
+  "buffer_line_height": "standard",
 }

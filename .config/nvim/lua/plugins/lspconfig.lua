@@ -64,25 +64,7 @@ return {
             },
           },
         },
-        basedpyright = {
-          mason = false,
-          settings = {
-            basedpyright = {
-              typeCheckingMode = "off",
-              analysis = {
-                autoFormatStrings = false,
-                inlayHints = {
-                  variableTypes = false,
-                  callArgumentNames = false,
-                  functionReturnTypes = false,
-                  genericTypes = false,
-                  useTypingExtensions = false,
-                },
-              },
-            },
-          },
-        },
-        ty = { mason = false },
+        ty = { mason = true },
         htmlbeautifier = { mason = true },
         ast_grep = { mason = true },
         biome = { mason = true },

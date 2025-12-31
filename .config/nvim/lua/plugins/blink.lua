@@ -1,15 +1,25 @@
 return {
   "saghen/blink.cmp",
   lazy = false,
-  -- optional: provides snippets for the snippet source
-  dependencies = {},
-
-  -- use a release tag to download pre-built binaries
-  version = "*",
-  -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
-  -- build = 'cargo build --release',
-  -- If you use nix, you can build from source using latest nightly rust with:
-  -- build = 'nix run .#build-plugin',
+  version = not vim.g.lazyvim_blink_main and "*",
+  build = vim.g.lazyvim_blink_main and "cargo build --release",
+  opts_extend = {
+    "sources.completion.enabled_providers",
+    "sources.compat",
+    "sources.default",
+  },
+  dependencies = {
+    {
+      "nvim-mini/mini.icons",
+      version = false,
+    },
+    {
+      "saghen/blink.compat",
+      optional = true,
+      opts = {},
+      version = not vim.g.lazyvim_blink_main and "*",
+    },
+  },
 
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
@@ -67,8 +77,12 @@ return {
     },
 
     completion = {
+      accept = {
+        auto_brackets = { enabled = true },
+      },
       menu = {
         draw = {
+          treesitter = { "lsp" },
           components = {
             kind_icon = {
               text = function(ctx)
@@ -94,7 +108,7 @@ return {
       ghost_text = { enabled = false },
       documentation = {
         auto_show = true,
-        auto_show_delay_ms = 300,
+        auto_show_delay_ms = 200,
         window = {
           border = "none",
         },
@@ -107,12 +121,12 @@ return {
     sources = {
       -- `lsp`, `buffer`, `snippets`, `path` and `omni` are built-in
       -- so you don't need to define them in `sources.providers`
-      default = { "lsp", "snippets", "buffer", "path", "omni", "cmdline" },
+      default = { "lsp", "snippets", "buffer", "path" },
       providers = {},
     },
 
     cmdline = {
-      enabled = true,
+      enabled = false,
       keymap = {
         preset = "none",
         ["<Tab>"] = { "fallback" },
@@ -135,13 +149,6 @@ return {
         ["<C-k>"] = { "scroll_documentation_up", "fallback" },
       },
     },
-
-    -- Blink.cmp uses a Rust fuzzy matcher by default for typo resistance and significantly better performance
-    -- You may use a lua implementation instead by using `implementation = "lua"` or fallback to the lua implementation,
-    -- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
-    --
-    -- See the fuzzy documentation for more information
     fuzzy = { implementation = "prefer_rust_with_warning" },
   },
-  opts_extend = { "sources.default" },
 }

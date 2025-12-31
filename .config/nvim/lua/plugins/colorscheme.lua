@@ -1,5 +1,4 @@
 return {
-  -- VAGUE
   {
     "vague2k/vague.nvim",
     config = function()
