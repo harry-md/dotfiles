@@ -9,87 +9,87 @@ local workspace_dir = workspace_path .. project_name
 
 local status, jdtls = pcall(require, "jdtls")
 if not status then
-    return
+  return
 end
 local extendedClientCapabilities = jdtls.extendedClientCapabilities
 local config = {
-    -- !IMPORTANT make javadoc visible when typing completion
-    capabilities = require("blink-cmp").get_lsp_capabilities(),
+  -- !IMPORTANT make javadoc visible when typing completion
+  capabilities = require("blink-cmp").get_lsp_capabilities(),
 
-    cmd = {
-        "java",
-        "-XX:+UseG1GC",
-        "-Xms256m",
-        "-Xmx1g",
-        "-XX:+UseStringDeduplication",
-        "-XX:+TieredCompilation",
-        "-XX:MaxGCPauseMillis=150",
-        "-Dsun.zip.disableMemoryMapping=true",
-        "-Declipse.application=org.eclipse.jdt.ls.core.id1",
-        "-Dosgi.bundles.defaultStartLevel=4",
-        "-Declipse.product=org.eclipse.jdt.ls.core.product",
-        "-Dlog.protocol=true",
-        "-Dlog.level=WARN",
-        "--add-modules=ALL-SYSTEM",
-        "--add-opens",
-        "java.base/java.util=ALL-UNNAMED",
-        "--add-opens",
-        "java.base/java.lang=ALL-UNNAMED",
-        "-javaagent:" .. home .. "/jdtls/lombok.jar",
-        "-jar",
-        vim.fn.glob(home .. "/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"),
-        "-configuration",
-        home .. "/jdtls/config_linux",
-        "-data",
-        workspace_dir,
-    },
-    root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }),
+  cmd = {
+    "java",
+    "-XX:+UseG1GC",
+    "-Xms512m",
+    "-Xmx1g",
+    "-XX:+UseStringDeduplication",
+    "-XX:+TieredCompilation",
+    "-XX:MaxGCPauseMillis=150",
+    "-Dsun.zip.disableMemoryMapping=true",
+    "-Declipse.application=org.eclipse.jdt.ls.core.id1",
+    "-Dosgi.bundles.defaultStartLevel=4",
+    "-Declipse.product=org.eclipse.jdt.ls.core.product",
+    "-Dlog.protocol=true",
+    "-Dlog.level=WARN",
+    "--add-modules=ALL-SYSTEM",
+    "--add-opens",
+    "java.base/java.util=ALL-UNNAMED",
+    "--add-opens",
+    "java.base/java.lang=ALL-UNNAMED",
+    "-javaagent:" .. home .. "/jdtls/lombok.jar",
+    "-jar",
+    vim.fn.glob(home .. "/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"),
+    "-configuration",
+    home .. "/jdtls/config_linux",
+    "-data",
+    workspace_dir,
+  },
+  root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }),
 
-    settings = {
-        java = {
-            signatureHelp = { enabled = true },
-            extendedClientCapabilities = extendedClientCapabilities,
-            eclipse = {
-                downloadSources = true,
-            },
-            maven = {
-                downloadSources = true,
-            },
-            referencesCodeLens = {
-                enabled = false,
-            },
-            references = {
-                includeDecompiledSources = false,
-            },
-            completion = {
-                favoriteStaticMembers = {
-                    "org.hamcrest.MatcherAssert.assertThat",
-                    "org.hamcrest.Matchers.*",
-                    "org.junit.jupiter.api.Assertions.*",
-                    "java.util.stream.Collectors.*",
-                    "org.mockito.Mockito.*",
-                },
-                guessMethodArguments = false,
-            },
-            inlayHints = {
-                parameterNames = {
-                    enabled = "none", -- literals, all, none
-                },
-            },
-            format = {
-                enabled = false,
-                settings = {
-                    url = vim.fn.expand("~/eclipse-java-google-style.xml"),
-                    profile = "GoogleStyle",
-                },
-            },
+  settings = {
+    java = {
+      signatureHelp = { enabled = true },
+      extendedClientCapabilities = extendedClientCapabilities,
+      eclipse = {
+        downloadSources = true,
+      },
+      maven = {
+        downloadSources = true,
+      },
+      referencesCodeLens = {
+        enabled = false,
+      },
+      references = {
+        includeDecompiledSources = false,
+      },
+      completion = {
+        favoriteStaticMembers = {
+          "org.hamcrest.MatcherAssert.assertThat",
+          "org.hamcrest.Matchers.*",
+          "org.junit.jupiter.api.Assertions.*",
+          "java.util.stream.Collectors.*",
+          "org.mockito.Mockito.*",
         },
+        guessMethodArguments = false,
+      },
+      inlayHints = {
+        parameterNames = {
+          enabled = "none", -- literals, all, none
+        },
+      },
+      format = {
+        enabled = false,
+        settings = {
+          url = vim.fn.expand("~/eclipse-java-google-style.xml"),
+          profile = "GoogleStyle",
+        },
+      },
     },
+  },
 
-    init_options = {
-        bundles = {},
-        usePlaceholders = true,
-    },
+  init_options = {
+    bundles = {},
+    usePlaceholders = true,
+  },
 }
 
 require("jdtls").start_or_attach(config)

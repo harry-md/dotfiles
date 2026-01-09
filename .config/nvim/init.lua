@@ -1,6 +1,6 @@
 require("config.lazy")
 
-vim.cmd.colorscheme("vague")
+vim.cmd.colorscheme("tokyonight-night")
 require("oil").setup()
 require("harpoon")
 require("treesitter-context").setup()

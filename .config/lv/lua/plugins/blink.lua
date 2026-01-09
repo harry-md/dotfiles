@@ -35,6 +35,7 @@ return {
             ["<A-k>"] = { "scroll_documentation_up", "fallback" },
             ["<Tab>"] = { "fallback" },
             ["<S-Tab>"] = { "fallback" },
+            ["<CR>"] = { "fallback" },
         },
 
         appearance = {
@@ -88,6 +89,10 @@ return {
             -- `lsp`, `buffer`, `snippets`, `path` and `omni` are built-in
             -- so you don't need to define them in `sources.providers`
             default = { "lsp", "buffer", "snippets", "path" },
+        },
+
+        cmdline = {
+            enabled = false,
         },
 
         -- Blink.cmp uses a Rust fuzzy matcher by default for typo resistance and significantly better performance

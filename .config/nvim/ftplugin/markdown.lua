@@ -1,7 +1,7 @@
 vim.api.nvim_create_autocmd("BufWinEnter", {
   pattern = { "*.md" },
   callback = function()
-    vim.opt.textwidth = 100
+    vim.opt.textwidth = 0
     vim.opt.colorcolumn = ""
     vim.opt.wrap = false
     vim.opt.expandtab = true

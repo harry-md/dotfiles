@@ -31,7 +31,7 @@ return {
         -- Override colors
         colors = {
           bg = "#060606",
-          fg = "#dddddd",
+          -- fg = "#dddddd",
           -- floatBorder = "#878787",
           -- line = "#282830",
           -- comment = "#646477",
@@ -128,5 +128,15 @@ return {
         },
       })
     end,
+  },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      on_colors = function(colors)
+        colors.bg = "#121416"
+      end,
+    },
   },
 }
