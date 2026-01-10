@@ -138,14 +138,14 @@ alias ta='tmux attach -t'
 alias tk='tmux kill-session -t'
 alias tl='tmux ls'
 alias df='df -h'
-alias la='ls -la'
+alias la='ls -lah'
 
 # Convert DOCX to PDF
 alias convert-to-pdf=soffice --headless --convert-to pdf
 
 # Boot to windows/fedora
 alias winboot='sudo efibootmgr --bootnext 0003; sudo reboot'
-alias cachyboot='sudo efibootmgr --bootnext 0006; sudo reboot'
+alias mintboot='sudo efibootmgr --bootnext 0004; sudo reboot'
 source <(fzf --zsh)
 
 # Enable vim mode in terminal

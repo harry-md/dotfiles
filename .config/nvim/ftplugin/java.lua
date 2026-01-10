@@ -20,7 +20,7 @@ local config = {
     "java",
     "-XX:+UseG1GC",
     "-Xms512m",
-    "-Xmx1g",
+    "-Xmx2g",
     "-XX:+UseStringDeduplication",
     "-XX:+TieredCompilation",
     "-XX:MaxGCPauseMillis=150",
@@ -46,6 +46,9 @@ local config = {
   root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }),
 
   settings = {
+    diagnostic = {
+      refreshAfterSave = true,
+    },
     java = {
       signatureHelp = { enabled = true },
       extendedClientCapabilities = extendedClientCapabilities,
@@ -62,6 +65,7 @@ local config = {
         includeDecompiledSources = false,
       },
       completion = {
+        maxResults = 50,
         favoriteStaticMembers = {
           "org.hamcrest.MatcherAssert.assertThat",
           "org.hamcrest.Matchers.*",
@@ -73,7 +77,7 @@ local config = {
       },
       inlayHints = {
         parameterNames = {
-          enabled = "none", -- literals, all, none
+          enabled = "literals", -- literals, all, none
         },
       },
       format = {

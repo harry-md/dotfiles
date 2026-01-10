@@ -1,15 +1,15 @@
-vim.api.nvim_create_autocmd("BufWinEnter", {
-  pattern = { "*.md" },
-  callback = function()
-    vim.opt.textwidth = 0
-    vim.opt.colorcolumn = ""
-    vim.opt.wrap = false
-    vim.opt.expandtab = true
-    vim.keymap.set("n", "<leader>mv", ":RenderMarkdown toggle<CR>", { desc = "Toggle RenderMarkdown plugin" })
-    vim.b.autoformat = false
-    require("snacks.indent").disable()
-  end,
-})
+-- vim.api.nvim_create_autocmd("BufWinEnter", {
+--   pattern = { "*.md" },
+--   callback = function()
+--   end,
+-- })
+vim.opt.textwidth = 0
+vim.opt.colorcolumn = ""
+vim.opt.wrap = false
+vim.opt.expandtab = true
+vim.keymap.set("n", "<leader>mv", ":RenderMarkdown toggle<CR>", { desc = "Toggle RenderMarkdown plugin" })
+vim.b.autoformat = false
+require("snacks.indent").disable()
 require("vague").setup({
   style = {},
 })
@@ -33,7 +33,7 @@ require("render-markdown").setup({
   -- | obsidian | mimic Obsidian UI                                          |
   -- | lazy     | will attempt to stay up to date with LazyVim configuration |
   -- | none     | does nothing                                               |
-  preset = "none",
+  preset = "obsidian",
   -- The level of logs to write to file: vim.fn.stdpath('state') .. '/render-markdown.log'.
   -- Only intended to be used for plugin development / debugging.
   log_level = "error",
