@@ -46,9 +46,9 @@ local config = {
   root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }),
 
   settings = {
-    diagnostic = {
-      refreshAfterSave = true,
-    },
+    -- diagnostic = {
+    --   refreshAfterSave = true,
+    -- },
     java = {
       signatureHelp = { enabled = true },
       extendedClientCapabilities = extendedClientCapabilities,
@@ -65,7 +65,7 @@ local config = {
         includeDecompiledSources = false,
       },
       completion = {
-        maxResults = 50,
+        maxResults = 40,
         favoriteStaticMembers = {
           "org.hamcrest.MatcherAssert.assertThat",
           "org.hamcrest.Matchers.*",
@@ -77,7 +77,7 @@ local config = {
       },
       inlayHints = {
         parameterNames = {
-          enabled = "literals", -- literals, all, none
+          enabled = "none", -- literals, all, none
         },
       },
       format = {

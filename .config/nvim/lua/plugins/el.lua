@@ -1,3 +1,3 @@
 return {
-    "tjdevries/express_line.nvim",
+  "tjdevries/express_line.nvim",
 }

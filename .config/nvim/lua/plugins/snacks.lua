@@ -138,16 +138,16 @@ return {
       refresh = 50, -- refresh at most every 50ms
     },
     quickfile = { enabled = true },
-    statuscolumn = { enabled = true },
+    statuscolumn = { enabled = false },
     words = { enabled = true },
     lazygit = { enabled = true },
     git = {
       enabled = true,
     },
     picker = {
-      exclude = { "*.class", "*.jar", "target/*", "*.out" }, -- exclude files
+      exclude = { "*.class", "*.jar", "*.out" }, -- exclude files
       enabled = true,
-      prompt = "❯ ",
+      prompt = " ",
       sources = {
         explorer = {
           layout = {
@@ -164,28 +164,28 @@ return {
       focus = "input",
       -- layout = "custom",
       -- layouts = {
-      --     custom = {
-      --         layout = {
-      --             box = "vertical",
-      --             backdrop = false,
-      --             row = -1,
-      --             width = 0,
-      --             height = 0.5,
-      --             border = "none",
-      --             title = " {title} {live} {flags}",
-      --             title_pos = "left",
-      --             {
-      --                 box = "horizontal",
-      --                 { win = "list", border = "rounded" },
-      --                 { win = "preview", title = "{preview}", width = 0.6, border = "rounded" },
-      --             },
-      --             {
-      --                 win = "input",
-      --                 height = 1,
-      --                 border = "none",
-      --             },
-      --         },
+      --   custom = {
+      --     layout = {
+      --       box = "vertical",
+      --       backdrop = false,
+      --       row = -1,
+      --       width = 0,
+      --       height = 0.5,
+      --       border = "none",
+      --       title = " {title} {live} {flags}",
+      --       title_pos = "left",
+      --       {
+      --         box = "horizontal",
+      --         { win = "list", border = "rounded" },
+      --         { win = "preview", title = "{preview}", width = 0.6, border = "rounded" },
+      --       },
+      --       {
+      --         win = "input",
+      --         height = 1,
+      --         border = "none",
+      --       },
       --     },
+      --   },
       -- },
       layout = {
         cycle = true,
@@ -202,7 +202,7 @@ return {
             { win = "input", height = 1, border = "bottom" },
             { win = "list", border = "none" },
           },
-          { win = "preview", title = "{preview}", border = "rounded", width = 0.4 },
+          { win = "preview", title = "{preview}", border = "rounded", width = 0.6 },
         },
       },
       ---@class snacks.picker.matcher.Config

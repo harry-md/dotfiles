@@ -139,7 +139,7 @@ return {
         },
       },
       on_colors = function(colors)
-        colors.bg = "#121416"
+        colors.bg = "#050505"
       end,
     },
   },

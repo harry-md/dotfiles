@@ -1,10 +1,2 @@
-BasedOnStyle: LLVM
-# ---
-Language: Java
-IndentWidth: 4
-AllowShortFunctionsOnASingleLine: None
-ColumnLimit: 100
-BreakAfterJavaFieldAnnotations: true
----
-Language: Cpp
+BasedOnStyle: Microsoft
 ColumnLimit: 80
