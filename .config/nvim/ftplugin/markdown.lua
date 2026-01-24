@@ -3,7 +3,6 @@
 --   callback = function()
 --   end,
 -- })
-vim.opt_local.spell = false
 vim.opt.textwidth = 0
 vim.opt.colorcolumn = ""
 vim.opt.wrap = false
