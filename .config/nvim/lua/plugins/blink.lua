@@ -149,6 +149,8 @@ return {
         ["<C-k>"] = { "scroll_documentation_up", "fallback" },
       },
     },
-    fuzzy = { implementation = "prefer_rust_with_warning" },
+    fuzzy = {
+      implementation = "prefer_rust_with_warning",
+    },
   },
 }

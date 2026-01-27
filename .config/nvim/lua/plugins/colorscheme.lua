@@ -143,4 +143,11 @@ return {
       end,
     },
   },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    opts = {
+      no_italic = true,
+    },
+  },
 }

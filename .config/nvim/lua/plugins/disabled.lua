@@ -12,6 +12,4 @@ return {
   { "nvim-telescope/telescope.nvim", enabled = false },
   { "hrsh7th/nvim-cmp", enabled = false },
   { "rcarriga/nvim-notify", enabled = false },
-  -- { "https://github.com/nvim-mini/mini.pairs", enabled = false },
-  -- { "nvim-mini/mini.files", enabled = false },
 }

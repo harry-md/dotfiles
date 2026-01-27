@@ -42,11 +42,13 @@ return {
       focus = "list",
     },
     indent = {
+      priority = 1,
       enabled = true,
       char = "│",
       animate = {
         enabled = false,
       },
+      only_scope = true,
     },
     scroll = {
       enabled = true,
@@ -162,6 +164,24 @@ return {
         },
       },
       focus = "input",
+      layout = {
+        cycle = true,
+
+        layout = {
+          box = "horizontal",
+          width = 0.8, -- 0.8
+          min_width = 110, -- 120
+          height = 0.85,
+          {
+            box = "vertical",
+            border = "rounded",
+            title = "{title} {live} {flags}",
+            { win = "input", height = 1, border = "bottom" },
+            { win = "list", border = "none" },
+          },
+          { win = "preview", title = "{preview}", border = "rounded", width = 0.6 },
+        },
+      },
       -- layout = "custom",
       -- layouts = {
       --   custom = {
@@ -187,24 +207,6 @@ return {
       --     },
       --   },
       -- },
-      layout = {
-        cycle = true,
-
-        layout = {
-          box = "horizontal",
-          width = 0.8,
-          min_width = 120,
-          height = 0.85,
-          {
-            box = "vertical",
-            border = "rounded",
-            title = "{title} {live} {flags}",
-            { win = "input", height = 1, border = "bottom" },
-            { win = "list", border = "none" },
-          },
-          { win = "preview", title = "{preview}", border = "rounded", width = 0.6 },
-        },
-      },
       ---@class snacks.picker.matcher.Config
       matcher = {
         fuzzy = true, -- use fuzzy matching

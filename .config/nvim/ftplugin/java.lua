@@ -35,6 +35,12 @@ local config = {
     "java.base/java.util=ALL-UNNAMED",
     "--add-opens",
     "java.base/java.lang=ALL-UNNAMED",
+    "--add-opens",
+    "java.base/sun.nio.ch=ALL-UNNAMED",
+    "--add-opens",
+    "java.management/sun.management=ALL-UNNAMED",
+    "--add-opens",
+    "jdk.management/com.sun.management.internal=ALL-UNNAMED",
     "-javaagent:" .. home .. "/jdtls/lombok.jar",
     "-jar",
     vim.fn.glob(home .. "/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"),
@@ -46,9 +52,9 @@ local config = {
   root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }),
 
   settings = {
-    -- diagnostic = {
-    --   refreshAfterSave = true,
-    -- },
+    diagnostic = {
+      refreshAfterSave = true,
+    },
     java = {
       signatureHelp = { enabled = true },
       extendedClientCapabilities = extendedClientCapabilities,
@@ -65,7 +71,25 @@ local config = {
         includeDecompiledSources = false,
       },
       completion = {
-        maxResults = 40,
+        importOrder = {
+          "java",
+          "javax",
+          "lombok",
+          "org",
+          "com",
+          "", -- Everything else
+          "#", -- Static imports last
+        },
+        maxResults = 50,
+        -- remove these in completion
+        filteredTypes = {
+          "java.awt.*",
+          "com.sun.*",
+          "sun.*",
+          "jdk.*",
+          -- "org.graalvm.*",
+          "io.micrometer.shaded.*",
+        },
         favoriteStaticMembers = {
           "org.hamcrest.MatcherAssert.assertThat",
           "org.hamcrest.Matchers.*",
@@ -89,11 +113,13 @@ local config = {
       },
     },
   },
-
+  on_attach = function(client, bufnr)
+    require("jdtls").setup_dap({ hotcodereplace = "auto" })
+  end,
   init_options = {
     bundles = {},
     usePlaceholders = true,
+    -- extendedClientCapabilities = extendedClientCapabilities,
   },
 }
-
 require("jdtls").start_or_attach(config)
