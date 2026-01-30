@@ -48,12 +48,11 @@ return {
       animate = {
         enabled = false,
       },
-      only_scope = true,
     },
     scroll = {
       enabled = true,
       animate = {
-        duration = { step = 30, total = 300 },
+        duration = { step = 40, total = 300 },
         easing = "linear",
       },
       -- faster animation when repeating scroll after delay
@@ -553,6 +552,20 @@ return {
         Snacks.toggle.inlay_hints():map("<leader>uh")
         Snacks.toggle.indent():map("<leader>ug")
         Snacks.toggle.dim():map("<leader>uD")
+
+        -- Fix indentation disappearing after Javadoc lookup (Shift+K)
+        vim.api.nvim_create_autocmd({ "WinClosed", "BufEnter" }, {
+          pattern = "*",
+          callback = function()
+            -- Check if the current buffer is Java
+            if vim.bo.filetype == "java" then
+              -- Use schedule to run this after the window close event completes
+              vim.schedule(function()
+                Snacks.indent.enable()
+              end)
+            end
+          end,
+        })
       end,
     })
   end,

@@ -5,7 +5,6 @@
 -- })
 vim.opt.textwidth = 0
 vim.opt.colorcolumn = ""
-vim.opt.wrap = false
 vim.opt.expandtab = true
 vim.keymap.set("n", "<leader>mv", ":RenderMarkdown toggle<CR>", { desc = "Toggle RenderMarkdown plugin" })
 vim.b.autoformat = false

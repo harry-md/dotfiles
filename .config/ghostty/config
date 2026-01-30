@@ -39,6 +39,7 @@ font-family = CaskaydiaCove Nerd Font
 # palette = 15=#d7d7d7
 
 background = #060606
+# background = #111111
 # foreground = #dddddd
 # cursor-color = #ffffff
 # selection-background = #252530
