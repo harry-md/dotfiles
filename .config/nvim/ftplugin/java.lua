@@ -11,10 +11,52 @@ local status, jdtls = pcall(require, "jdtls")
 if not status then
   return
 end
+
+-- 1. Define the cleaner function
+local function filter_jdt_links(result)
+  if not result or not result.contents then
+    return
+  end
+
+  local function strip_links(text)
+    -- %b() matches balanced parentheses.
+    -- We capture [Label] and then the (Link) part separately.
+    return text:gsub("%[([^%]]*)%](%b())", function(label, link)
+      -- Check if the captured link starts with (jdt://
+      if link:match("^%(jdt://") then
+        -- Return just the label (wrapped in backticks for clarity)
+        return "`" .. label .. "`"
+      end
+      -- If it's a normal web link, return nil (no change)
+      return nil
+    end)
+  end
+
+  if type(result.contents) == "table" and result.contents.value then
+    result.contents.value = strip_links(result.contents.value)
+  elseif type(result.contents) == "string" then
+    result.contents = strip_links(result.contents)
+  end
+end
+
+-- 2. Define the custom handler for JDTLS specifically
+local function jdtls_hover(err, result, ctx, config)
+  if result then
+    filter_jdt_links(result)
+  end
+  -- Fallback to the default Neovim handler (or Noice/Lspsaga if installed)
+  vim.lsp.handlers["textDocument/hover"](err, result, ctx, config)
+end
+
 local extendedClientCapabilities = jdtls.extendedClientCapabilities
 local config = {
   -- !IMPORTANT make javadoc visible when typing completion
   capabilities = require("blink-cmp").get_lsp_capabilities(),
+
+  -- 3. Register the handler HERE in the config
+  handlers = {
+    ["textDocument/hover"] = jdtls_hover,
+  },
 
   cmd = {
     "java",
@@ -41,15 +83,16 @@ local config = {
     "java.management/sun.management=ALL-UNNAMED",
     "--add-opens",
     "jdk.management/com.sun.management.internal=ALL-UNNAMED",
-    "-javaagent:" .. home .. "/jdtls/lombok.jar",
+    "-javaagent:" .. home .. "/.local/share/nvim/mason/packages/jdtls/lombok.jar",
     "-jar",
-    vim.fn.glob(home .. "/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"),
+    vim.fn.glob(home .. "/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"),
     "-configuration",
-    home .. "/jdtls/config_linux",
+    home .. "/.local/share/nvim/mason/packages/jdtls/config_linux",
     "-data",
     workspace_dir,
   },
-  root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }),
+  -- root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }),
+  root_dir = vim.fs.root(0, { "gradlew", ".git", "mvnw", "pom.xml", "build.gradle" }),
 
   settings = {
     diagnostic = {
@@ -68,28 +111,10 @@ local config = {
         enabled = false,
       },
       references = {
-        includeDecompiledSources = false,
+        includeDecompiledSources = true,
       },
       completion = {
-        importOrder = {
-          "java",
-          "javax",
-          "lombok",
-          "org",
-          "com",
-          "", -- Everything else
-          "#", -- Static imports last
-        },
         maxResults = 50,
-        -- remove these in completion
-        filteredTypes = {
-          "java.awt.*",
-          "com.sun.*",
-          "sun.*",
-          "jdk.*",
-          -- "org.graalvm.*",
-          "io.micrometer.shaded.*",
-        },
         favoriteStaticMembers = {
           "org.hamcrest.MatcherAssert.assertThat",
           "org.hamcrest.Matchers.*",
@@ -113,13 +138,12 @@ local config = {
       },
     },
   },
-  on_attach = function(client, bufnr)
-    require("jdtls").setup_dap({ hotcodereplace = "auto" })
-  end,
+
   init_options = {
     bundles = {},
     usePlaceholders = true,
-    -- extendedClientCapabilities = extendedClientCapabilities,
+    extendedClientCapabilities = extendedClientCapabilities,
   },
 }
+
 require("jdtls").start_or_attach(config)

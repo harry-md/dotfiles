@@ -1,11 +1,22 @@
 return {
   "mason-org/mason.nvim",
+  dependencies = {
+    {
+      "mason-org/mason-lspconfig.nvim",
+      opts = {
+        automatic_enable = {
+          exclude = {
+            "jdtls",
+          },
+        },
+      },
+    },
+  },
   opts = {
     ensure_installed = {
       "stylua",
       "shfmt",
       "google-java-format",
-      "ast-grep",
       "biome",
       "clang-format",
       "clangd",
@@ -14,19 +25,19 @@ return {
       "docker-language-server",
       "dockerfile-language-server",
       "emmet-ls",
+      "prettier",
       "gitui",
       "hyprls",
       "lemminx",
-      "prettier",
       "ruff",
       "ty",
       "shellcheck",
       "stylelint",
       "tailwindcss-language-server",
       "tombi",
-      "tree-sitter-cli",
       "typescript-language-server",
       "yaml-language-server",
+      "jdtls",
     },
   },
 }

@@ -42,8 +42,8 @@ return {
       focus = "list",
     },
     indent = {
-      priority = 1,
       enabled = true,
+      priority = 1,
       char = "│",
       animate = {
         enabled = false,
@@ -146,7 +146,7 @@ return {
       enabled = true,
     },
     picker = {
-      exclude = { "*.class", "*.jar", "*.out" }, -- exclude files
+      exclude = { "*.class", "*.jar", "*.out", "target/*/*/*.html" }, -- exclude files
       enabled = true,
       prompt = " ",
       sources = {

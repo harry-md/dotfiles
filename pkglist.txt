@@ -27,6 +27,7 @@ bluez-hid2hci
 bluez-libs
 bluez-utils
 bottom
+brave-bin
 breeze-gtk
 brillo
 bruno-bin
@@ -56,6 +57,7 @@ cava
 chafa
 char-white
 chwd
+clickup
 cliphist
 clipse
 cmake
@@ -63,10 +65,8 @@ cosmic-greeter
 cpio
 cpupower
 croc
-cromite-bin
 cryptsetup
 dbeaver
-dbvis
 device-mapper
 dhclient
 dialog
@@ -78,6 +78,7 @@ docker
 docker-compose
 dolphin
 dosfstools
+downgrade
 duf
 dunst
 e2fsprogs
@@ -86,6 +87,7 @@ efitools
 egl-wayland
 eslint
 ethtool
+ex-vi-compat
 exfatprogs
 f2fs-tools
 fastfetch
@@ -110,6 +112,7 @@ git
 github-cli
 glances
 gnome-keyring
+gnome-system-monitor
 go
 gophertube-bin
 gpart
@@ -143,6 +146,7 @@ inetutils
 intel-gpu-tools
 intel-media-driver
 intel-ucode
+inter-font
 iptables-nft
 iwd
 jetbrains-toolbox
@@ -211,6 +215,7 @@ ncdu
 nemo
 neovide
 neovim-nightly-bin
+netbeans
 netcdf
 netctl
 networkmanager
@@ -219,6 +224,7 @@ nfs-utils
 nilfs-utils
 niri
 nodejs
+notion
 noto-color-emoji-fontconfig
 noto-fonts
 noto-fonts-cjk
@@ -238,10 +244,12 @@ openbsd-netcat
 opencl-mesa
 opendesktop-fonts
 openssh
+otf-monaspace-nerd
 pacman-contrib
 paru
 pavucontrol
 perl
+pgadmin4-desktop-bin
 phonon-qt6-vlc
 pipewire-alsa
 pipewire-pulse
@@ -269,6 +277,8 @@ python
 python-adblock
 python-defusedxml
 python-packaging
+qbittorrent
+qemu-base
 qt5ct
 qt6-3d
 qt6-charts
@@ -297,6 +307,7 @@ reflector
 resvg
 ripgrep
 rofi
+rpm-tools
 rsync
 rtkit
 ruby
@@ -306,6 +317,7 @@ s-nail
 satty
 sddm
 sg3_utils
+slack-desktop-wayland
 smartmontools
 sof-firmware
 spectacle
@@ -317,6 +329,7 @@ swtpm
 syncthing
 sysfsutils
 systemd-boot-manager
+telegram-desktop
 texinfo
 thorium-browser-avx2-bin
 thunar
@@ -335,6 +348,7 @@ ttf-bitstream-vera
 ttf-dejavu
 ttf-liberation
 ttf-meslo-nerd
+ttf-ms-fonts
 ttf-opensans
 tumbler
 udftools
@@ -348,7 +362,6 @@ uv
 uwsm
 v4l2loopback-dkms
 vesktop-bin
-vi
 vim
 vlc-plugins-all
 vpl-gpu-rt
@@ -361,6 +374,7 @@ wireless-regdb
 wireplumber
 wl-clip-persist
 wlsunset
+wofi
 wpa_supplicant
 xclip
 xdg-desktop-portal
@@ -378,6 +392,7 @@ xorg-xinit
 xorg-xinput
 xorg-xkill
 xorg-xrandr
+xournalpp
 xsettings-client
 xsettingsd
 yaak-bin
