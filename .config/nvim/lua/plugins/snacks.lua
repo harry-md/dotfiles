@@ -4,6 +4,7 @@ return {
   lazy = false,
   opts = {
     zen = {
+      enabled = true,
       toggles = {
         dim = false,
         git_signs = true,
@@ -68,7 +69,7 @@ return {
       enabled = true,
     },
     terminal = {
-      enabled = true,
+      enabled = false,
       bo = {
         filetype = "snacks_terminal",
       },
@@ -146,7 +147,7 @@ return {
       enabled = true,
     },
     picker = {
-      exclude = { "*.class", "*.jar", "*.out", "target/*/*/*.html" }, -- exclude files
+      exclude = { "*.class", "*.jar", "*.out", "target/*" }, -- exclude files
       enabled = true,
       prompt = " ",
       sources = {
@@ -168,8 +169,8 @@ return {
 
         layout = {
           box = "horizontal",
-          width = 0.8, -- 0.8
-          min_width = 110, -- 120
+          width = 0.8,
+          min_width = 120, -- 120
           height = 0.85,
           {
             box = "vertical",
@@ -555,7 +556,7 @@ return {
 
         -- Fix indentation disappearing after Javadoc lookup (Shift+K)
         vim.api.nvim_create_autocmd({ "WinClosed", "BufEnter" }, {
-          pattern = "*",
+          pattern = "*.java",
           callback = function()
             -- Check if the current buffer is Java
             if vim.bo.filetype == "java" then

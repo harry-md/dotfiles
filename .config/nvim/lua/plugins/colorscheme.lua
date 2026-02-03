@@ -228,4 +228,9 @@ return {
   {
     "rebelot/kanagawa.nvim",
   },
+  {
+    "cdmill/neomodern.nvim",
+    lazy = false,
+    priority = 1000,
+  },
 }

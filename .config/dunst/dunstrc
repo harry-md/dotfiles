@@ -23,10 +23,10 @@
     sort = yes
     idle_threshold = 120
 
-    font = Noto Sans Medium 12
+    font = "SF Pro Display 14"
     line_height = 0
     markup = full
-    format = "<span weight='bold' font='12'>%s</span>\n%b"
+    format = "<span weight='bold' font='14'>%s</span>\n%b"
     alignment = left
     vertical_alignment = center
     show_age_threshold = 60
@@ -82,5 +82,3 @@
 [backlight]
     appname = "Backlight"
     highlight = "#eba0ac"
-
-# vim: ft=cfg

@@ -1,7 +1,7 @@
 return {
   "saghen/blink.cmp",
   lazy = false,
-  version = not vim.g.lazyvim_blink_main and "*",
+  version = "*",
   build = vim.g.lazyvim_blink_main and "cargo build --release",
   opts_extend = {
     "sources.completion.enabled_providers",
@@ -127,27 +127,6 @@ return {
 
     cmdline = {
       enabled = false,
-      keymap = {
-        preset = "none",
-        ["<Tab>"] = { "fallback" },
-        ["<CR>"] = { "fallback" },
-        ["<A-e>"] = { "show", "show_documentation", "hide_documentation" },
-        ["<A-y>"] = { "select_and_accept" },
-        ["<A-p>"] = { "select_prev", "fallback_to_mappings" },
-        ["<A-n>"] = { "select_next", "fallback_to_mappings" },
-        ["<A-b>"] = { "snippet_backward", "fallback" },
-        ["<A-f>"] = { "snippet_forward", "fallback" },
-        ["<A-j>"] = { "scroll_documentation_down", "fallback" },
-        ["<A-k>"] = { "scroll_documentation_up", "fallback" },
-        ["<C-e>"] = { "show", "show_documentation", "hide_documentation" },
-        ["<C-y>"] = { "select_and_accept" },
-        ["<C-p>"] = { "select_prev", "fallback_to_mappings" },
-        ["<C-n>"] = { "select_next", "fallback_to_mappings" },
-        ["<C-b>"] = { "snippet_backward", "fallback" },
-        ["<C-f>"] = { "snippet_forward", "fallback" },
-        ["<C-j>"] = { "scroll_documentation_down", "fallback" },
-        ["<C-k>"] = { "scroll_documentation_up", "fallback" },
-      },
     },
     fuzzy = {
       implementation = "prefer_rust_with_warning",

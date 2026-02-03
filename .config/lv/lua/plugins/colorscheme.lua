@@ -1,12 +1,8 @@
 return {
-    -- iceclimber, gyokuro, hojicha, roseprime
-    {
-        "cdmill/neomodern.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require("neomodern").setup({})
-            require("neomodern").load()
-        end,
-    },
+  -- iceclimber, gyokuro, hojicha, roseprime, moon
+  {
+    "cdmill/neomodern.nvim",
+    lazy = false,
+    priority = 1000,
+  },
 }
