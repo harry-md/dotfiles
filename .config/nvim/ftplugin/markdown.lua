@@ -8,6 +8,8 @@ vim.opt.colorcolumn = ""
 vim.opt.expandtab = true
 vim.keymap.set("n", "<leader>mv", ":RenderMarkdown toggle<CR>", { desc = "Toggle RenderMarkdown plugin" })
 vim.b.autoformat = false
+vim.b.minipairs_disable = true
+
 require("snacks.indent").disable()
 require("vague").setup({
   style = {},

@@ -3,6 +3,10 @@ return {
   priority = 1000,
   lazy = false,
   opts = {
+    scratch = {
+      enabled = true,
+      ft = "markdown",
+    },
     zen = {
       enabled = true,
       toggles = {
@@ -43,7 +47,7 @@ return {
       focus = "list",
     },
     indent = {
-      enabled = true,
+      enabled = false,
       priority = 1,
       char = "│",
       animate = {
@@ -518,13 +522,13 @@ return {
     },
   },
   keys = {
-    {
-      "<leader>ff",
-      function()
-        Snacks.picker.files()
-      end,
-      desc = "Find Files",
-    },
+    -- {
+    --   "<leader><space>",
+    --   function()
+    --     Snacks.picker.files()
+    --   end,
+    --   desc = "Find Files",
+    -- },
   },
   init = function()
     vim.api.nvim_create_autocmd("User", {
@@ -553,20 +557,6 @@ return {
         Snacks.toggle.inlay_hints():map("<leader>uh")
         Snacks.toggle.indent():map("<leader>ug")
         Snacks.toggle.dim():map("<leader>uD")
-
-        -- Fix indentation disappearing after Javadoc lookup (Shift+K)
-        vim.api.nvim_create_autocmd({ "WinClosed", "BufEnter" }, {
-          pattern = "*.java",
-          callback = function()
-            -- Check if the current buffer is Java
-            if vim.bo.filetype == "java" then
-              -- Use schedule to run this after the window close event completes
-              vim.schedule(function()
-                Snacks.indent.enable()
-              end)
-            end
-          end,
-        })
       end,
     })
   end,

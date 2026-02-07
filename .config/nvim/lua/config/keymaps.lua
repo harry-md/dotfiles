@@ -51,3 +51,7 @@ set("n", "<leader>z", ":lua Snacks.zen()<CR>", { silent = true })
 
 -- -- go to definition
 set("n", "gd", ":lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+
+-- delete buffer
+set("n", "<S-x>", ":bd<CR>", {})
+set("n", "<leader><space>", ":lua Snacks.picker.files()<CR>", { silent = true })

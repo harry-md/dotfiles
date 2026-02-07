@@ -1,4 +1,7 @@
 @import 'colors.css';
+* {
+  font-weight: 500;
+}
 .window-frame {
   box-shadow: 0 0 0 0;
   margin: 0;
@@ -8,3 +11,4 @@ window decoration {
   padding: 0;
   border: none;
 }
+

@@ -1,8 +1,7 @@
 return {
   "saghen/blink.cmp",
   lazy = false,
-  version = "*",
-  build = vim.g.lazyvim_blink_main and "cargo build --release",
+  -- version = "*",
   opts_extend = {
     "sources.completion.enabled_providers",
     "sources.compat",

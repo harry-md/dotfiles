@@ -26,7 +26,7 @@ require("lazy").setup({
     -- version = false, -- always use the latest git commit
     version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  install = {},
   checker = {
     enabled = false,
     concurrency = nil, ---@type number? set to 1 to check for updates very slowly
