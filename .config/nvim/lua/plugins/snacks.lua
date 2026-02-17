@@ -6,6 +6,10 @@ return {
     scratch = {
       enabled = true,
       ft = "markdown",
+      win = {
+        width = 120,
+        height = 0.9,
+      },
     },
     zen = {
       enabled = true,
@@ -146,7 +150,7 @@ return {
       enabled = true,
     },
     picker = {
-      exclude = { "*.class", "*.jar", "*.out", "target/*" }, -- exclude files
+      exclude = { "*.class", "*.jar", "*.out", "target/*", "*.pyc" }, -- exclude files
       enabled = true,
       prompt = " ",
       sources = {

@@ -1,4 +1,4 @@
 require("config.lazy")
-vim.cmd.colorscheme("roseprime")
+vim.cmd.colorscheme("iceclimber")
 require("lspconfig").jdtls.setup({})
 -- require("el").setup({})

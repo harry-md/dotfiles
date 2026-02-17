@@ -14,7 +14,7 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- Can thiệp vào 'textDocument/hover' của LSP để clean text
+-- CÁCH AN TOÀN, GIỮ LẠI ĐỀ PHÒNG. DÙNG ĐỂ LOẠI BỎ jdt:// KHI HOVER TRONG FILE JAVA
 -- local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
 -- function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
 --   if syntax == "markdown" then
@@ -33,13 +33,13 @@ vim.api.nvim_create_autocmd("FileType", {
 --   return orig_util_open_floating_preview(contents, syntax, opts, ...)
 -- end
 
--- lua/config/options.lua
+-- CÁCH TỐI ƯU. DÙNG ĐỂ LOẠI BỎ jdt:// KHI HOVER TRONG FILE JAVA
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
 function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
   -- Hàm làm sạch text (định nghĩa 1 lần dùng cho gọn)
   local function clean(text)
     -- Cách 1: Biến [Text](jdt://...) thành Text (giống nvim-java - Sạch trơn)
-    text = text:gsub("%[([^%]]*)%]%((jdt://[^)]*)%)", "%1")
+    -- text = text:gsub("%[([^%]]*)%]%((jdt://[^)]*)%)", "%1")
 
     -- Cách 2: Xử lý các link jdt:// đứng một mình (không có [] bao quanh)
     text = text:gsub("%((jdt://[^)]*)%)", "")

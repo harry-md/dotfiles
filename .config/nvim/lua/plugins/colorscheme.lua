@@ -130,7 +130,7 @@ return {
   },
   {
     "folke/tokyonight.nvim",
-    lazy = false,
+    lazy = true,
     priority = 1000,
     opts = {
       styles = {
@@ -139,7 +139,7 @@ return {
         },
       },
       on_colors = function(colors)
-        colors.bg = "#050505"
+        -- colors.bg = "#050505"
       end,
     },
   },

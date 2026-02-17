@@ -1,8 +1,3 @@
--- vim.api.nvim_create_autocmd("BufWinEnter", {
---   pattern = { "*.md" },
---   callback = function()
---   end,
--- })
 vim.opt.textwidth = 0
 vim.opt.colorcolumn = ""
 vim.opt.expandtab = true
@@ -10,24 +5,15 @@ vim.keymap.set("n", "<leader>mv", ":RenderMarkdown toggle<CR>", { desc = "Toggle
 vim.b.autoformat = false
 vim.b.minipairs_disable = true
 
--- require("snacks.indent").disable()
 require("vague").setup({
   style = {},
 })
 
 --
 require("render-markdown").setup({
-  -- Whether markdown should be rendered by default.
   enabled = true,
-  -- Vim modes that will show a rendered view of the markdown file, :h mode(), for all enabled
-  -- components. Individual components can be enabled for other modes. Remaining modes will be
-  -- unaffected by this plugin.
   render_modes = { "n", "c", "t" },
-  -- Maximum file size (in MB) that this plugin will attempt to render.
-  -- Any file larger than this will effectively be ignored.
   max_file_size = 10.0,
-  -- Milliseconds that must pass before updating marks, updates occur.
-  -- within the context of the visible window, not the entire buffer.
   debounce = 100,
   -- Pre configured settings that will attempt to mimic various target user experiences.
   -- Any user provided settings will take precedence.

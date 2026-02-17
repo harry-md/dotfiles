@@ -4,37 +4,25 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
-    "nvim-tree/nvim-web-devicons", -- optional, but recommended
+    "nvim-tree/nvim-web-devicons",
   },
-  lazy = false, -- neo-tree will lazily load itself
+  lazy = false,
   opts = {
-    -- 1. CONFIG: Window Width
     window = {
-      position = "left", -- left, right, top, bottom
-      width = 30, -- width of the window
+      position = "left",
+      width = 23,
       mapping_options = {
         noremap = true,
         nowait = true,
       },
     },
-
-    -- 2. CONFIG: Group Empty Folders (Java style)
     filesystem = {
       filtered_items = {
-        visible = true, -- when true, they will just be displayed differently than normal items
+        visible = true,
         hide_dotfiles = false,
         hide_gitignored = false,
       },
-      -- This is the feature you want:
       group_empty_dirs = true,
-
-      -- Optional: separate them with a specific character if you want, default is /
-      -- renderers = {
-      --   directory = {
-      --     { "current_filter" },
-      --     { "name", group_empty_dirs = true },
-      --   }
-      -- }
     },
   },
 }

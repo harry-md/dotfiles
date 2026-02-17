@@ -7,4 +7,5 @@ return {
   { "nvim-telescope/telescope.nvim", enabled = false },
   { "hrsh7th/nvim-cmp", enabled = false },
   { "rcarriga/nvim-notify", enabled = false },
+  -- { "folke/which-key.nvim", enabled = false },
 }
