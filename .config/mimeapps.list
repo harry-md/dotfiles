@@ -14,7 +14,7 @@ text/xml=thorium-browser-avx2.desktop
 # Other Applications
 application/pdf=org.pwmt.zathura.desktop
 application/sql=io.dbeaver.DBeaver.desktop
-x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+x-scheme-handler/jetbrains=jetbrainsd.desktop
 
 # Handlers you explicitly left blank
 x-scheme-handler/ipfs=

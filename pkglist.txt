@@ -1,3 +1,4 @@
+7zip
 accountsservice
 adobe-source-han-sans-cn-fonts
 adobe-source-han-sans-jp-fonts
@@ -61,6 +62,7 @@ clickup
 cliphist
 clipse
 cmake
+consolas-font
 cosmic-greeter
 cpio
 cpupower
@@ -96,7 +98,6 @@ fcitx5-bamboo
 fcitx5-configtool
 fcitx5-gtk
 fcitx5-unikey
-ferdium-bin
 ffmpegthumbnailer
 ffmpegthumbs
 filelight
@@ -129,6 +130,7 @@ haruna
 haveged
 hdf5
 hdparm
+helium-browser-bin
 htop
 httpie
 httpie-desktop-bin
@@ -162,6 +164,7 @@ keepassxc
 keyd
 kinfocenter
 kio-admin
+kitty
 konsole
 kscreen
 kvantum
@@ -180,7 +183,7 @@ libplasma
 libreoffice-fresh
 librewolf-bin
 librsync
-libva-intel-driver
+libva-utils
 libvirt
 libwnck3
 linux-cachyos
@@ -191,10 +194,12 @@ linux-firmware
 lldb
 localsend
 logrotate
+lorien-bin
 lsb-release
 lsscsi
 luarocks
 lvm2
+macos-tahoe-cursor
 man-db
 man-pages
 mariadb-libs
@@ -214,7 +219,7 @@ nautilus
 ncdu
 nemo
 neovide
-neovim-nightly-bin
+neovim-git
 netbeans
 netcdf
 netctl
@@ -224,7 +229,6 @@ nfs-utils
 nilfs-utils
 niri
 nodejs
-notion
 noto-color-emoji-fontconfig
 noto-fonts
 noto-fonts-cjk
@@ -244,7 +248,6 @@ openbsd-netcat
 opencl-mesa
 opendesktop-fonts
 openssh
-otf-monaspace-nerd
 pacman-contrib
 paru
 pavucontrol
@@ -258,6 +261,7 @@ plasma-browser-integration
 plasma-desktop
 plasma-firewall
 plasma-integration
+plasma-login-manager
 plasma-nm
 plasma-pa
 plasma-systemmonitor
@@ -321,6 +325,7 @@ slack-desktop-wayland
 smartmontools
 sof-firmware
 spectacle
+speech-dispatcher
 spoofdpi
 starship
 stow
@@ -331,11 +336,11 @@ sysfsutils
 systemd-boot-manager
 telegram-desktop
 texinfo
-thorium-browser-avx2-bin
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
+tlp
 tmux
 tofi
 tree
@@ -386,6 +391,7 @@ xf86-input-libinput
 xfsprogs
 xl2tpd
 xorg-server
+xorg-xcursorgen
 xorg-xdpyinfo
 xorg-xhost
 xorg-xinit
@@ -395,7 +401,6 @@ xorg-xrandr
 xournalpp
 xsettings-client
 xsettingsd
-yaak-bin
 yazi
 yt-dlp
 zathura

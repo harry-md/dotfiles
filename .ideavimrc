@@ -35,6 +35,8 @@ Plug 'tpope/vim-commentary'
 nnoremap Y y$
 inoremap <A-n> <C-n>
 inoremap <A-p> <C-p>
+nnoremap <A-u> <C-u>
+nnoremap <A-d> <C-d>
 nnoremap <C-j> 10jzz
 nnoremap <C-k> 10kzz
 vnoremap <C-j> 10j

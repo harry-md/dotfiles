@@ -20,12 +20,19 @@ local config = {
 
   cmd = {
     "java",
-    "-XX:+UseG1GC",
-    "-Xms512m",
+    -- "-XX:+UseG1GC",
+    -- "-XX:MaxGCPauseMillis=150",
+    "-XX:+UseZGC", -- for oracle graalvm
+    "-XX:+ZGenerational", -- for oracle graalvm
+    "-Djdk.graal.CompilerConfiguration=enterprise", -- for oracle graalvm
+    "-XX:+UnlockExperimentalVMOptions", -- for oracle graalvm
+    "-XX:+UseGraalJIT", -- for oracle graalvm
+    "-Dgraal.TuneInlinerExploration=1", -- for oracle graalvm
+    "-Dgraal.Vectorization=true", -- for oracle graalvm
+    "-Xms1g",
     "-Xmx2g",
     "-XX:+UseStringDeduplication",
     "-XX:+TieredCompilation",
-    "-XX:MaxGCPauseMillis=150",
     "-Dsun.zip.disableMemoryMapping=true",
     "-Declipse.application=org.eclipse.jdt.ls.core.id1",
     "-Dosgi.bundles.defaultStartLevel=4",
@@ -89,6 +96,14 @@ local config = {
           "org.mockito.Mockito.*",
         },
         guessMethodArguments = false,
+        filteredTypes = {
+          "java.awt.*",
+          "com.sun.*",
+          "sun.*",
+          "jdk.*",
+          "org.graalvm.*",
+          "io.micrometer.shaded.*",
+        },
       },
       inlayHints = {
         parameterNames = {

@@ -12,8 +12,10 @@ return {
       ts = { "biome" },
       typescript = { "biome" },
     },
-    formatters = {
-      ["google-java-format"] = {},
-    },
+    -- formatters = {
+    --   ["google-java-format"] = {
+    --     prepend_args = { "--aosp" }, -- Ensure 4-space indentation
+    --   },
+    -- },
   },
 }

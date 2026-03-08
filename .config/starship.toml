@@ -8,8 +8,8 @@ add_newline = false
 # success_symbol = "[󱞩](bold green)"  # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
 # error_symbol = "[󱞩](bold red)"
 [character]  # The name of the module we are configuring is 'character'
-success_symbol = "[;](bold green)"  # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-error_symbol = "[;](bold red)"
+success_symbol = "[\\$](bold green)"  # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = "[\\$](bold red)"
 
 [line_break]
 disabled = false
@@ -20,7 +20,7 @@ disabled = true
 
 [cmd_duration]
 disabled = true
-palette = "catppuccin_mocha"
+# palette = "catppuccin_mocha"
 
 # [character]
 # Note the use of Catppuccin color 'peach'
@@ -31,7 +31,9 @@ palette = "catppuccin_mocha"
 style = "bold mauve"
 
 [directory]
-truncation_length = 4
+truncation_length = 10
+truncate_to_repo = false
+# truncation_symbol = "…/"
 style = "bold blue"
 
 [palettes.catppuccin_mocha]

@@ -48,6 +48,13 @@ return {
       nerd_font_variant = "normal",
     },
 
+    signature = {
+      enabled = true,
+      window = {
+        show_documentation = true,
+      },
+    },
+
     completion = {
       menu = {
         draw = {
@@ -76,7 +83,7 @@ return {
       ghost_text = { enabled = false },
       documentation = {
         auto_show = true,
-        auto_show_delay_ms = 300,
+        auto_show_delay_ms = 500,
         window = {
           border = "none",
         },
