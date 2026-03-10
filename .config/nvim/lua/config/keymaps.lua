@@ -48,6 +48,7 @@ set({ "n", "i", "v", "c" }, "<A-n>", "<C-n>", { silent = true })
 set({ "n", "i", "v", "c" }, "<A-p>", "<C-p>", { silent = true })
 set({ "n", "i", "v", "c" }, "<A-y>", "<C-y>", { silent = true })
 set("n", "<leader>z", ":lua Snacks.zen()<CR>", { silent = true })
+set("n", "K", ':lua vim.lsp.buf.hover({ border = "rounded" })<CR>', { silent = true })
 
 -- -- go to definition
 set("n", "gd", ":lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })

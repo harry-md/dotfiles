@@ -63,6 +63,7 @@ return {
         auto_brackets = { enabled = true },
       },
       menu = {
+        border = "rounded",
         auto_show = true,
         auto_show_delay_ms = 300,
         draw = {
@@ -95,7 +96,7 @@ return {
         auto_show_delay_ms = 500,
         treesitter_highlighting = true,
         window = {
-          border = "none",
+          border = "rounded",
         },
       },
     },

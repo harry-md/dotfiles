@@ -150,7 +150,21 @@ return {
       enabled = true,
     },
     picker = {
-      exclude = { "*.class", "*.jar", "*.out", "target/*", "*.pyc" }, -- exclude files
+      exclude = {
+        "*.class",
+        "*.jar",
+        "*.out",
+        "target/*",
+        "*.pyc",
+        "*.exe",
+        "*.dll",
+        "*.sys",
+        "*.xll",
+        "*.EXE",
+        "*.DLL",
+        "*.SYS",
+        "*.XLL",
+      },
       enabled = true,
       prompt = " ",
       sources = {

@@ -13,7 +13,7 @@ vim.g.loaded_ruby_provider = 0
 --
 require("config.lazy")
 
-vim.cmd.colorscheme("rose-pine")
+vim.cmd.colorscheme("vague")
 require("oil").setup()
 require("treesitter-context").setup()
 require("plugins.vim-fugitive")
