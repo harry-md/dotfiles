@@ -2,11 +2,11 @@ vim.opt.textwidth = 0
 vim.opt.colorcolumn = ""
 vim.opt.expandtab = true
 vim.keymap.set("n", "<leader>mv", ":RenderMarkdown toggle<CR>", { desc = "Toggle RenderMarkdown plugin" })
--- vim.b.autoformat = true
+vim.b.autoformat = false
 vim.b.minipairs_disable = true
 
 require("render-markdown").setup({
-  enabled = true,
+  enabled = false,
   render_modes = { "n", "c", "t" },
   max_file_size = 10.0,
   debounce = 100,

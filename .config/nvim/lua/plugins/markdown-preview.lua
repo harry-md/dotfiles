@@ -1,5 +1,6 @@
 return {
   "iamcco/markdown-preview.nvim",
+  lazy = true,
   cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
   ft = { "markdown" },
   -- Sửa lại dòng build: dùng lệnh shell thay vì gọi hàm vim
