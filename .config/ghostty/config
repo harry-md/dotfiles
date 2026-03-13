@@ -19,8 +19,9 @@ window-decoration = none
 app-notifications = no-clipboard-copy
 adjust-cell-width = 0% 
 adjust-cell-height = 0%
-font-family = JetBrainsMono Nerd Font
-
+# font-family = JetBrainsMono Nerd Font
+# font-family = Lilex Nerd Font
+font-family = Maple Mono Normal
 adjust-cursor-thickness = 2
 
 # palette = 0=#252530

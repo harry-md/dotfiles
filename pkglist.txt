@@ -12,6 +12,7 @@ alsa-utils
 amazon-fonts
 android-tools
 appmenu-gtk-module
+arch-audit
 aria2
 ark
 arrow
@@ -102,6 +103,7 @@ ffmpegthumbnailer
 ffmpegthumbs
 filelight
 firefox
+foot
 freerdp
 fsarchiver
 fuzzel
@@ -118,6 +120,7 @@ go
 gophertube-bin
 gpart
 gparted
+grimblast-git
 gst-libav
 gst-plugin-pipewire
 gst-plugin-va
@@ -199,9 +202,11 @@ lsb-release
 lsscsi
 luarocks
 lvm2
+lynis
 macos-tahoe-cursor
 man-db
 man-pages
+mangowc
 mariadb-libs
 mdadm
 meld
@@ -219,7 +224,7 @@ nautilus
 ncdu
 nemo
 neovide
-neovim-git
+neovim-nightly-bin
 netbeans
 netcdf
 netctl
@@ -378,6 +383,7 @@ which
 wireless-regdb
 wireplumber
 wl-clip-persist
+wlr-randr
 wlsunset
 wofi
 wpa_supplicant
