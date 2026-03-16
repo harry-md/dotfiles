@@ -6,7 +6,7 @@ vim.b.autoformat = false
 vim.b.minipairs_disable = true
 
 require("render-markdown").setup({
-  enabled = false,
+  enabled = true,
   render_modes = { "n", "c", "t" },
   max_file_size = 10.0,
   debounce = 100,

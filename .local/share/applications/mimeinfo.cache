@@ -1,8 +1,16 @@
 [MIME Cache]
+application/json=librewolf.desktop;
+application/pdf=librewolf.desktop;
 application/sql=io.dbeaver.DBeaver.desktop;
+application/x-xpinstall=librewolf.desktop;
 application/x-zerosize=dev.zed.Zed.desktop;
+application/xhtml+xml=librewolf.desktop;
+text/html=librewolf.desktop;
 text/plain=dev.zed.Zed.desktop;
+text/xml=librewolf.desktop;
 x-scheme-handler/discord=vesktop.desktop;
+x-scheme-handler/http=librewolf.desktop;
+x-scheme-handler/https=librewolf.desktop;
 x-scheme-handler/jetbrains=jetbrainsd.desktop;
 x-scheme-handler/readest=readest-handler.desktop;
 x-scheme-handler/zed=dev.zed.Zed.desktop;

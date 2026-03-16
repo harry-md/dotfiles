@@ -164,6 +164,7 @@ return {
         "*.DLL",
         "*.SYS",
         "*.XLL",
+        "*.parquet",
       },
       enabled = true,
       prompt = " ",

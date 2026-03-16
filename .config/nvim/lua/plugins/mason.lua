@@ -21,7 +21,7 @@ return {
       "clang-format",
       "clangd",
       "emmet-ls",
-      "prettier",
+      "prettierd",
       "gitui",
       "hyprls",
       "lemminx",

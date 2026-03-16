@@ -14,7 +14,7 @@ padding-bottom = 0
 padding-left = 0
 padding-right = 0
 
-text-color = #ffffff
+text-color = #faf9f5
 prompt-color = #585b70
-selection-color = #4287f5
-background-color = #060606
+selection-color = #d97757
+background-color = #000000

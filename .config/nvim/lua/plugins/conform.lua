@@ -2,20 +2,23 @@ return {
   "stevearc/conform.nvim",
   opts = {
     formatters_by_ft = {
-      css = { "prettier" },
-      scss = { "prettier" },
+      css = { "biome" },
+      scss = { "prettierd" },
       markdown = { "prettier" },
-      java = { "google-java-format" },
+      java = { "palantir-java-format" },
       xml = { "lemminx" },
       js = { "biome" },
       javascript = { "biome" },
       ts = { "biome" },
       typescript = { "biome" },
+      json = { "biome" },
     },
-    -- formatters = {
-    --   ["google-java-format"] = {
-    --     prepend_args = { "--aosp" }, -- Ensure 4-space indentation
-    --   },
-    -- },
+    formatters = {
+      ["palantir-java-format"] = {
+        command = vim.fn.expand("~/.local/bin/palantir-java-format-native.bin"),
+        args = { "--aosp", "-" },
+        stdin = true,
+      },
+    },
   },
 }
