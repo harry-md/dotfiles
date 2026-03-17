@@ -16,7 +16,6 @@ return {
     ensure_installed = {
       "stylua",
       "shfmt",
-      "google-java-format",
       "biome",
       "clang-format",
       "clangd",
@@ -31,9 +30,11 @@ return {
       "stylelint",
       "tailwindcss-language-server",
       "tombi",
-      "typescript-language-server",
+      -- "typescript-language-server",
+      "vtsls",
       "yaml-language-server",
       "jdtls",
+      "json-lsp",
     },
   },
 }
