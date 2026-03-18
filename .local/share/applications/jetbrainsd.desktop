@@ -4,4 +4,4 @@ Name=JetBrains
 Type=Application
 NoDisplay=true
 MimeType=x-scheme-handler/jetbrains;
-Exec="/home/harry/.local/share/JetBrains/Daemon/bundles/current/jetbrainsd/bin/jetbrainsd" handleUri %u
+Exec=/home/harry/.local/share/JetBrains/Daemon/bundles/current/jetbrainsd/bin/jetbrainsd handleUri %u

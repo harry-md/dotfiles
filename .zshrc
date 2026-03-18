@@ -137,7 +137,8 @@ alias ta='tmux attach -t'
 alias tk='tmux kill-session -t'
 alias tl='tmux ls'
 alias df='df -h'
-alias la='ls -lah'
+alias la='ls -lah --group-directories-first'
+alias l='ls -lah --group-directories-first'
 
 # Convert DOCX to PDF
 alias convert-to-pdf=soffice --headless --convert-to pdf

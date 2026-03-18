@@ -18,7 +18,6 @@ return {
       "shfmt",
       "biome",
       "clang-format",
-      "clangd",
       "emmet-ls",
       "prettierd",
       "gitui",
@@ -34,7 +33,6 @@ return {
       "vtsls",
       "yaml-language-server",
       "jdtls",
-      "json-lsp",
     },
   },
 }
