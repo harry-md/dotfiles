@@ -1,0 +1,27 @@
+[Default Applications]
+# Browser / Web Handlers
+text/html=thorium-browser-avx2.desktop
+x-scheme-handler/http=thorium-browser-avx2.desktop
+x-scheme-handler/https=thorium-browser-avx2.desktop
+x-scheme-handler/ftp=thorium-browser-avx2.desktop
+application/xhtml+xml=thorium-browser-avx2.desktop
+application/xhtml_xml=thorium-browser-avx2.desktop
+application/rdf+xml=thorium-browser-avx2.desktop
+application/rss+xml=thorium-browser-avx2.desktop
+application/xml=thorium-browser-avx2.desktop
+text/xml=thorium-browser-avx2.desktop
+
+# Image Handlers
+image/gif=imv.desktop
+image/jpeg=imv.desktop
+image/png=imv.desktop
+image/webp=imv.desktop
+
+# Other Applications
+application/pdf=org.pwmt.zathura.desktop
+application/sql=io.dbeaver.DBeaver.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+
+# Handlers you explicitly left blank
+x-scheme-handler/ipfs=
+x-scheme-handler/ipns=

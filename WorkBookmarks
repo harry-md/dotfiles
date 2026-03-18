@@ -1,0 +1,80 @@
+{
+   "checksum": "060e1c4cba25c2186f8ccf70fb3b7dbe",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13412796641465475",
+            "date_last_used": "13414505480954425",
+            "guid": "77e2e1a5-851c-404e-aab4-9c62d80d1965",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Tài liệu OU-renew - Google Drive",
+            "type": "url",
+            "url": "https://drive.google.com/drive/folders/1z869SInkzxwySxjvz2SF26hTRu5_ZSst"
+         }, {
+            "date_added": "13413552026120311",
+            "date_last_used": "13414505499068437",
+            "guid": "53587361-7688-4af3-86ab-5c0088fb927a",
+            "id": "7",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Spring ",
+            "type": "url",
+            "url": "https://docs.spring.io/spring-framework/reference/"
+         }, {
+            "date_added": "13413573352097560",
+            "date_last_used": "13414505507155227",
+            "guid": "68122d31-dd52-4790-918c-2f3e0fa24421",
+            "id": "8",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Spring Boot",
+            "type": "url",
+            "url": "https://docs.spring.io/spring-boot/index.html"
+         }, {
+            "date_added": "13413573376260011",
+            "date_last_used": "13414505510463878",
+            "guid": "654baeb7-a547-4358-8a05-0e8d70ee5787",
+            "id": "9",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Spring Docs",
+            "type": "url",
+            "url": "https://docs.spring.io/spring-security/reference/index.html"
+         } ],
+         "date_added": "13412784044824905",
+         "date_last_used": "0",
+         "date_modified": "13413573376260011",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13412784044824910",
+         "date_last_used": "0",
+         "date_modified": "13412796641465475",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13412784044824914",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

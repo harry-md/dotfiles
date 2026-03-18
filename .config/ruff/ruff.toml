@@ -1,0 +1,16 @@
+target-version = "py313"
+line-length = 88
+indent-width = 4
+
+[lint]
+select = ["E", "F", "W", "I", "B", "ANN", "T20"]
+ignore = [
+  "F401",
+  "B008",
+]
+fixable = ["ALL"]
+unfixable = []
+
+[lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/*" = ["S101", "T201", "ANN"]

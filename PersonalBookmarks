@@ -1,0 +1,91 @@
+{
+   "checksum": "0c9a9d105547192d8d0f4338a8f4317e",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13406008918917255",
+            "date_last_used": "13414505515349535",
+            "guid": "dadfd97c-b97d-4796-93d2-34686784905b",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Awesome Wallpapers",
+            "type": "url",
+            "url": "https://alexandrosliaskos.github.io/Awesome_Wallpapers/"
+         }, {
+            "date_added": "13409748043100911",
+            "date_last_used": "13414505054673093",
+            "guid": "8bea4352-7def-4fb0-a039-d3119ed6ef42",
+            "id": "7",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "freemediaheckyeah",
+            "type": "url",
+            "url": "https://fmhy.net/"
+         }, {
+            "date_added": "13410352342761320",
+            "date_last_used": "13414505536045985",
+            "guid": "c15b350e-2e74-437e-a3c6-89d2698052a7",
+            "id": "9",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Comix",
+            "type": "url",
+            "url": "https://comix.to/home"
+         }, {
+            "date_added": "13413222684802534",
+            "date_last_used": "13414505544544267",
+            "guid": "b40444f3-a60c-401a-9e27-8a0ffe4a03ef",
+            "id": "11",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Y2Mate - Free YouTube Downloader & Converter | MP3 & MP4 Video Downloads",
+            "type": "url",
+            "url": "https://classikappliancerepair.ca/"
+         }, {
+            "date_added": "13414164799505705",
+            "date_last_used": "0",
+            "guid": "e1265eac-bbd1-47a6-b337-669016f1572e",
+            "id": "13",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Z-Lib",
+            "type": "url",
+            "url": "https://1lib.sk/"
+         } ],
+         "date_added": "13406008878536275",
+         "date_last_used": "0",
+         "date_modified": "13414164799505705",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13406008878536277",
+         "date_last_used": "0",
+         "date_modified": "13406008918917255",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13406008878536278",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

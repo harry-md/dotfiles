@@ -1,0 +1,28 @@
+[Default Applications]
+# Browser / Web Handlers
+text/html=brave-browser.desktop
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+x-scheme-handler/ftp=thorium-browser-avx2.desktop
+application/xhtml+xml=thorium-browser-avx2.desktop
+application/xhtml_xml=thorium-browser-avx2.desktop
+application/rdf+xml=thorium-browser-avx2.desktop
+application/rss+xml=thorium-browser-avx2.desktop
+application/xml=thorium-browser-avx2.desktop
+text/xml=thorium-browser-avx2.desktop
+
+# Other Applications
+application/pdf=org.pwmt.zathura.desktop
+application/sql=io.dbeaver.DBeaver.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+
+# Handlers you explicitly left blank
+x-scheme-handler/ipfs=
+x-scheme-handler/ipns=
+x-scheme-handler/discord=vesktop.desktop
+x-scheme-handler/bruno=bruno.desktop
+x-scheme-handler/readest=readest-handler.desktop
+x-scheme-handler/clickup=ClickUp.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
+x-scheme-handler/mailto=brave-browser.desktop

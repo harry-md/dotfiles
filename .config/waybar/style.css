@@ -1,0 +1,46 @@
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 14px;
+    font-weight: bold;
+    color: #cdcdcd;
+    background-color: #0e0e0e;
+}
+
+#workspaces button {
+    all: initial;
+    padding: 0 6px;
+    margin: 0 1.5px;
+    min-width: 9px;
+}
+
+#workspaces button.empty {
+    opacity: 0.5;
+}
+#custom-dropbox,
+#cpu,
+#power-profiles-daemon,
+#battery,
+#network,
+#bluetooth,
+#pulseaudio,
+#clock {
+    min-width: 12px;
+    margin-right: 13px;
+}
+
+tooltip {
+    padding: 2px;
+}
+
+tooltip label {
+    padding: 2px;
+}
+
+#tray {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    border-radius: 5px;
+}

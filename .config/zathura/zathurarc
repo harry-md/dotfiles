@@ -1,0 +1,16 @@
+set recolor   
+# set recolor-lightcolor \#222222
+# set default-bg \#222230
+set recolor-lightcolor \#16191c
+set default-bg \#16191c
+set default-fg \#BBBCBE
+set recolor-keephue
+
+set selection-notification false
+set adjust-open width
+set selection-clipboard clipboard
+
+map = zoom in
+map - zoom out
+map + zoom default
+set scroll-step 100
