@@ -16,12 +16,14 @@ arch-audit
 aria2
 ark
 arrow
+ast-grep
 auto-cpufreq
 awesome-terminal-fonts
 base
 base-devel
 bash-completion
 bind
+biome
 bluedevil
 blueman
 bluez
@@ -59,7 +61,6 @@ cava
 chafa
 char-white
 chwd
-clickup
 cliphist
 clipse
 cmake
@@ -98,12 +99,14 @@ fcitx5
 fcitx5-bamboo
 fcitx5-configtool
 fcitx5-gtk
+fcitx5-lotus-bin
 fcitx5-unikey
 ffmpegthumbnailer
 ffmpegthumbs
 filelight
 firefox
 foot
+foot-terminfo
 freerdp
 fsarchiver
 fuzzel
@@ -112,6 +115,7 @@ gdb
 ghostty
 gimp
 git
+git-filter-repo
 github-cli
 glances
 gnome-keyring
@@ -224,7 +228,7 @@ nautilus
 ncdu
 nemo
 neovide
-neovim-nightly-bin
+neovim-git
 netbeans
 netcdf
 netctl
@@ -234,6 +238,7 @@ nfs-utils
 nilfs-utils
 niri
 nodejs
+notcurses
 noto-color-emoji-fontconfig
 noto-fonts
 noto-fonts-cjk
@@ -275,6 +280,7 @@ plasma-workspace
 plocate
 plymouth
 plymouth-kcm
+pnpm
 podofo
 poppler-glib
 postgresql-libs
@@ -326,7 +332,6 @@ s-nail
 satty
 sddm
 sg3_utils
-slack-desktop-wayland
 smartmontools
 sof-firmware
 spectacle
@@ -407,6 +412,7 @@ xorg-xrandr
 xournalpp
 xsettings-client
 xsettingsd
+yay
 yazi
 yt-dlp
 zathura
