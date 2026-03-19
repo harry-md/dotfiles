@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+find . -name "*.java" | xargs -P 4 -I {} palantir-java-format -i --aosp {}
