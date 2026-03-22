@@ -1,42 +1,38 @@
-# Get editor completions based on the config schema
 "$schema" = "https://starship.rs/config-schema.json"
-# Inserts a blank line between shell prompts
 add_newline = false
+format = """$directory$all\\[$username$hostname\\]$character"""
 
-# Replace the '❯' symbol in the prompt with '➜'
-# [character]  # The name of the module we are configuring is 'character'
-# success_symbol = "[󱞩](bold green)"  # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-# error_symbol = "[󱞩](bold red)"
-[character]  # The name of the module we are configuring is 'character'
-success_symbol = "[\\$](bold green)"  # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-error_symbol = "[\\$](bold red)"
+[username]
+show_always = true
+format = "[$user()](#6e94b2)"
+
+[hostname]
+ssh_only = false
+format = "[@$hostname](#6e94b2)"
+
+[character]
+success_symbol = "[\\$](#6e94b2)"  # #6e94b2
+error_symbol = "[\\$](red)"
 
 [line_break]
 disabled = false
 
-# # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
 
 [cmd_duration]
 disabled = true
-# palette = "catppuccin_mocha"
-
-# [character]
-# Note the use of Catppuccin color 'peach'
-# success_symbol = "[[󰄛 ](green)❯](green)"
-# error_symbol = "[[󰄛 ](red)❯](red)"
 
 [git_branch]
 style = "bold mauve"
 
 [directory]
-truncation_length = 4
-truncate_to_repo = false
-# truncation_symbol = "…/"
+truncation_length = 3
+truncate_to_repo = true
 style = "bold blue"
 
 [palettes.catppuccin_mocha]
+claude = "#d97757"
 rosewater = "#f5e0dc"
 flamingo = "#f2cdcd"
 pink = "#f5c2e7"

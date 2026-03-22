@@ -93,22 +93,6 @@ return {
             desc = "Prev Reference", enabled = function() return Snacks.words.is_enabled() end },
         },
         },
-        ty = { mason = true },
-        clang_format = { mason = true },
-        clangd = { mason = true },
-        emmet_ls = { mason = true },
-        gitui = { mason = true },
-        google_java_format = { mason = true },
-        hyprls = { mason = true },
-        lemminx = { mason = true },
-        prettier = { mason = true },
-        ruff = { mason = true },
-        shellcheck = { mason = true },
-        shfmt = { mason = true },
-        stylelint = { mason = true },
-        tombi = { mason = true },
-        tree_sitter_cli = { mason = true },
-        ts_ls = { mason = true },
         lua_ls = {
           -- mason = false, -- set to false if you don't want this server to be installed with mason
           -- Use this to add any additional keymaps

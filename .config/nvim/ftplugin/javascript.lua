@@ -21,12 +21,12 @@ vim.lsp.start({
     javascript = {
       updateImportsOnFileMove = { enabled = "always" },
       inlayHints = {
-        parameterNames = { enabled = "all" },
-        parameterTypes = { enabled = true },
-        variableTypes = { enabled = true },
-        propertyDeclarationTypes = { enabled = true },
-        functionLikeReturnTypes = { enabled = true },
-        enumMemberValues = { enabled = true },
+        parameterNames = { enabled = "none" },
+        parameterTypes = { enabled = false },
+        variableTypes = { enabled = false },
+        propertyDeclarationTypes = { enabled = false },
+        functionLikeReturnTypes = { enabled = false },
+        enumMemberValues = { enabled = false },
       },
     },
     typescript = {
