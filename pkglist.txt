@@ -37,6 +37,7 @@ brillo
 bruno-bin
 btop
 btrfs-progs
+bun-bin
 cachyos-emerald-kde-theme-git
 cachyos-fish-config
 cachyos-hello
@@ -249,11 +250,10 @@ ntfs-3g
 ntp
 nvtop
 nwg-look
-obs-studio-browser
+obs-vaapi
 obsidian
 octopi
 odt2txt
-okular
 openbsd-netcat
 opencl-mesa
 opendesktop-fonts
@@ -263,7 +263,6 @@ paru
 pavucontrol
 perl
 pgadmin4-desktop-bin
-phonon-qt6-vlc
 pipewire-alsa
 pipewire-pulse
 pkgfile
@@ -378,7 +377,6 @@ uwsm
 v4l2loopback-dkms
 vesktop-bin
 vim
-vlc-plugins-all
 vpl-gpu-rt
 vscodium-bin-marketplace
 vulkan-intel
