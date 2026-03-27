@@ -112,10 +112,10 @@ local config = {
       },
       format = {
         enabled = false,
-        settings = {
-          url = vim.fn.expand("~/eclipse-java-google-style.xml"),
-          profile = "GoogleStyle",
-        },
+        -- settings = {
+        --   url = vim.fn.expand("~/eclipse-java-google-style.xml"),
+        --   profile = "GoogleStyle",
+        -- },
       },
     },
   },

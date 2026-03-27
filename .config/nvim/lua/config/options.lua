@@ -11,6 +11,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
   end,
 })
 
+vim.opt.fillchars:append({ eob = "~" })
 vim.opt.listchars:append({
   multispace = space,
   lead = space,
