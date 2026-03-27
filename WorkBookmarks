@@ -4,7 +4,7 @@
       "bookmark_bar": {
          "children": [ {
             "date_added": "13412796641465475",
-            "date_last_used": "13414505480954425",
+            "date_last_used": "0",
             "guid": "77e2e1a5-851c-404e-aab4-9c62d80d1965",
             "id": "5",
             "meta_info": {
@@ -15,7 +15,7 @@
             "url": "https://drive.google.com/drive/folders/1z869SInkzxwySxjvz2SF26hTRu5_ZSst"
          }, {
             "date_added": "13413552026120311",
-            "date_last_used": "13414508207513215",
+            "date_last_used": "0",
             "guid": "53587361-7688-4af3-86ab-5c0088fb927a",
             "id": "7",
             "meta_info": {
@@ -26,7 +26,7 @@
             "url": "https://docs.spring.io/spring-framework/reference/"
          }, {
             "date_added": "13413573352097560",
-            "date_last_used": "13414505507155227",
+            "date_last_used": "0",
             "guid": "68122d31-dd52-4790-918c-2f3e0fa24421",
             "id": "8",
             "meta_info": {
@@ -37,7 +37,7 @@
             "url": "https://docs.spring.io/spring-boot/index.html"
          }, {
             "date_added": "13413573376260011",
-            "date_last_used": "13414505510463878",
+            "date_last_used": "0",
             "guid": "654baeb7-a547-4358-8a05-0e8d70ee5787",
             "id": "9",
             "meta_info": {
@@ -48,7 +48,7 @@
             "url": "https://docs.spring.io/spring-security/reference/index.html"
          }, {
             "date_added": "13414765098283162",
-            "date_last_used": "13414782768917142",
+            "date_last_used": "0",
             "guid": "c8c18130-e967-434c-b027-e5dfe35e2bed",
             "id": "12",
             "meta_info": {
@@ -59,7 +59,7 @@
             "url": "https://emojicombos.com/"
          }, {
             "date_added": "13414871871228066",
-            "date_last_used": "13416916921199316",
+            "date_last_used": "0",
             "guid": "fcb5b03b-1e95-4d1c-aff7-f751315cacc2",
             "id": "14",
             "meta_info": {
@@ -92,7 +92,7 @@
             "url": "https://javaevolved.github.io/"
          }, {
             "date_added": "13417790573948981",
-            "date_last_used": "13417802273076708",
+            "date_last_used": "0",
             "guid": "fcf9204f-fe13-4cf4-bd2b-50d850c0580a",
             "id": "20",
             "meta_info": {
@@ -103,7 +103,7 @@
             "url": "https://devdocs.io/"
          }, {
             "date_added": "13418119156241810",
-            "date_last_used": "0",
+            "date_last_used": "13418410669665339",
             "guid": "95e37bd5-ca11-433e-8db9-2feb9d42ebf7",
             "id": "22",
             "meta_info": {
