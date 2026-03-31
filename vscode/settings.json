@@ -1,84 +1,147 @@
 {
-    "editor.fontSize": 19,
-    "editor.fontFamily": "JetBrainsMono Nerd Font",
-    "git.openRepositoryInParentFolders": "never",
-    "keyboard.dispatch": "keyCode",
-    "explorer.confirmDelete": false,
-    "editor.detectIndentation": false,
-    "editor.lineNumbers": "relative",
-    "window.menuBarVisibility": "toggle",
-    "vim.vimrc.enable": true,
-    "vim.vimrc.path": "~/.config/.vimrc",
-    "vim.handleKeys": {
-        "<C-p>": true,
-        "<C-s>": true,
-        "<C-z>": false,
-        "<C-w>": true,
-        "<C-n>": true
-    },
-    "vim.leader": "<Space>",
-    "vim.hlsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.normalModeKeyBindingsNonRecursive": [
-        // switch b/w buffers
-        { "before": ["<S-h>"], "commands": [":bprevious"] },
-        { "before": ["<S-l>"], "commands": [":bnext"] },
-
-        // panes
-        {
-            "before": ["<C-h>"],
-            "commands": ["workbench.action.focusLeftGroup"]
-        },
-        {
-            "before": ["<C-j>"],
-            "commands": ["workbench.action.focusBelowGroup"]
-        },
-        {
-            "before": ["<C-k>"],
-            "commands": ["workbench.action.focusAboveGroup"]
-        },
-        {
-            "before": ["<C-l>"],
-            "commands": ["workbench.action.focusRightGroup"]
-        },
-        {
-            "before": ["<leader>", "c", "a"],
-            "commands": ["editor.action.quickFix"]
-        }
-    ],
-    "vim.visualModeKeyBindings": [
-        // Stay in visual mode while indenting
-        { "before": ["<"], "commands": ["editor.action.outdentLines"] },
-        { "before": [">"], "commands": ["editor.action.indentLines"] },
-        // Move selected lines while staying in visual mode
-        { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
-        { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
-        // toggle comment selection
-        { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
-    ],
-    "editor.formatOnSave": true,
-    "vim.useCtrlKeys": true,
-    "editor.minimap.enabled": false,
-    "editor.fontLigatures": true,
-    "breadcrumbs.enabled": false,
-    "workbench.settings.showAISearchToggle": false,
-    "chat.disableAIFeatures": true,
-    "debug.console.fontSize": 16,
-    "terminal.integrated.fontSize": 17,
-    "workbench.activityBar.location": "top",
-    "basedpyright.importStrategy": "useBundled",
-    "basedpyright.analysis.inlayHints.callArgumentNames": false,
-    "basedpyright.analysis.inlayHints.functionReturnTypes": false,
-    "basedpyright.analysis.inlayHints.callArgumentNamesMatching": false,
-    "basedpyright.analysis.inlayHints.genericTypes": false,
-    "basedpyright.analysis.inlayHints.variableTypes": false,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "workbench.iconTheme": "material-icon-theme",
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "basedpyright.analysis.logLevel": "Warning",
-    "basedpyright.analysis.typeCheckingMode": "basic",
-    "editor.cursorBlinking": "solid",
-    "editor.formatOnSaveMode": "file"
+	"editor.fontSize": 18,
+	"editor.fontFamily": "CaskaydiaCove Nerd Font",
+	"git.openRepositoryInParentFolders": "never",
+	"keyboard.dispatch": "keyCode",
+	"explorer.confirmDelete": false,
+	"editor.detectIndentation": false,
+	"editor.lineNumbers": "relative",
+	"vim.vimrc.enable": true,
+	"vim.vimrc.path": "~/.config/.vimrc",
+	"vim.handleKeys": {
+		"<C-p>": true,
+		"<C-s>": true,
+		"<C-z>": false,
+		"<C-w>": true,
+		"<C-n>": true,
+		"<A-u>": true,
+		"<A-d>": true
+	},
+	"vim.leader": "<Space>",
+	"vim.hlsearch": true,
+	"vim.useSystemClipboard": true,
+	"vim.normalModeKeyBindingsNonRecursive": [
+		// switch b/w buffers
+		{
+			"before": ["<S-h>"],
+			"commands": [":bprevious"]
+		},
+		{
+			"before": ["<S-l>"],
+			"commands": [":bnext"]
+		},
+		// panes
+		{
+			"before": ["<C-h>"],
+			"commands": ["workbench.action.focusLeftGroup"]
+		},
+		{
+			"before": ["<C-j>"],
+			"commands": ["workbench.action.focusBelowGroup"]
+		},
+		{
+			"before": ["<C-k>"],
+			"commands": ["workbench.action.focusAboveGroup"]
+		},
+		{
+			"before": ["<C-l>"],
+			"commands": ["workbench.action.focusRightGroup"]
+		},
+		{
+			"before": ["<leader>", "c", "a"],
+			"commands": ["editor.action.quickFix"]
+		}
+	],
+	"vim.visualModeKeyBindings": [
+		// Stay in visual mode while indenting
+		{
+			"before": ["<"],
+			"commands": ["editor.action.outdentLines"]
+		},
+		{
+			"before": [">"],
+			"commands": ["editor.action.indentLines"]
+		},
+		// Move selected lines while staying in visual mode
+		{
+			"before": ["J"],
+			"commands": ["editor.action.moveLinesDownAction"]
+		},
+		{
+			"before": ["K"],
+			"commands": ["editor.action.moveLinesUpAction"]
+		},
+		// toggle comment selection
+		{
+			"before": ["leader", "c"],
+			"commands": ["editor.action.commentLine"]
+		}
+	],
+	"editor.formatOnSave": true,
+	"vim.useCtrlKeys": true,
+	"editor.fontLigatures": true,
+	"breadcrumbs.enabled": false,
+	"workbench.settings.showAISearchToggle": false,
+	"chat.disableAIFeatures": false,
+	"debug.console.fontSize": 16,
+	"terminal.integrated.fontSize": 17,
+	"workbench.activityBar.location": "top",
+	"terminal.integrated.defaultProfile.linux": "zsh",
+	"editor.cursorBlinking": "solid",
+	"editor.formatOnSaveMode": "file",
+	"python.languageServer": "None",
+	"git.confirmSync": false,
+	"http.systemCertificatesNode": true,
+	"workbench.iconTheme": "material-icon-theme",
+	"editor.defaultFormatter": "biomejs.biome",
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.tabSize": 2
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.tabSize": 2
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.tabSize": 2
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.tabSize": 2
+	},
+	"[css]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.tabSize": 2
+	},
+	"[python]": {
+		"editor.defaultFormatter": "charliermarsh.ruff",
+		"editor.tabSize": 4
+	},
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.tabSize": 2
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.tabSize": 2
+	},
+	"workbench.startupEditor": "none",
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": false,
+		"markdown": false,
+		"scminput": false,
+		"python": true,
+		"javascript": true
+	},
+	"editor.insertSpaces": true,
+	"editor.tabSize": 2,
+	"window.titleBarStyle": "custom",
+	"window.customMenuBarAltFocus": false,
+	"workbench.colorTheme": "Experimental Dark",
+	"biome.configurationPath": "/home/harry/.config/biome/biome.json",
+	"chat.viewSessions.orientation": "stacked",
+	"ty.inlayHints.callArgumentNames": false,
+	"ty.inlayHints.variableTypes": false
 }

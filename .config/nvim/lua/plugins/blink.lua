@@ -46,11 +46,6 @@ return {
       ["<C-k>"] = { "scroll_documentation_up", "fallback" },
     },
 
-    -- appearance = {
-    --   use_nvim_cmp_as_default = false,
-    --   nerd_font_variant = "normal",
-    -- },
-
     signature = {
       enabled = false,
       window = {
@@ -65,7 +60,7 @@ return {
       menu = {
         border = "rounded",
         auto_show = true,
-        auto_show_delay_ms = 150,
+        auto_show_delay_ms = 250,
         draw = {
           treesitter = { "lsp" },
           components = {
@@ -74,7 +69,6 @@ return {
                 local kind_icon, _, _ = require("mini.icons").get("lsp", ctx.kind)
                 return kind_icon
               end,
-              -- (optional) use highlights from mini.icons
               highlight = function(ctx)
                 local _, hl, _ = require("mini.icons").get("lsp", ctx.kind)
                 return hl
@@ -101,14 +95,10 @@ return {
       },
     },
 
-    -- snippets = { preset = "luasnip" },
-    -- Default list of enabled providers defined so that you can extend it
-    -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
       default = { "lsp", "snippets", "buffer", "path" },
       providers = {},
     },
-
     cmdline = {
       enabled = false,
     },
