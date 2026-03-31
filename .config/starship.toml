@@ -11,8 +11,8 @@ add_newline = false
 # format = "[@$hostname]()"
 
 [character]
-success_symbol = "[\\$](#6e94b2)"
-error_symbol = "[\\$](red)"
+success_symbol = "[#](#6e94b2)"
+error_symbol = "[#](red)"
 
 [line_break]
 disabled = false
