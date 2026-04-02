@@ -16,7 +16,7 @@ keybind = alt+eight=unbind
 keybind = alt+nine=unbind
 window-decoration = none
 app-notifications = no-clipboard-copy
-font-family = JetBrainsMono Nerd Font
+font-family = CaskaydiaCove Nerd Font
 adjust-cursor-thickness = 2
 
 cursor-color = #d97757
