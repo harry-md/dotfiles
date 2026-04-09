@@ -52,6 +52,15 @@ return {
     },
     indent = {
       enabled = true,
+      indent = { enabled = true },
+      scope = {
+        enabled = true,
+        only_current = true,
+      },
+      chunk = {
+        enabled = true,
+        only_current = true,
+      },
     },
     scroll = {
       enabled = true,

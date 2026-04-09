@@ -18,7 +18,7 @@ return {
     },
     formatters = {
       ["palantir-java-format"] = {
-        command = vim.fn.expand("~/.local/bin/palantir-java-format"),
+        command = vim.fn.expand("~/.local/bin/palantir-java-format-linux-glibc_x86-64.bin"),
         args = { "--aosp", "-" },
         stdin = true,
       },

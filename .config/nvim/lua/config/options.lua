@@ -119,6 +119,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#141415" })
     -- vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#141415" })
     -- vim.api.nvim_set_hl(0, "SnippetTabstopActive", { bg = "none" })
+    vim.api.nvim_set_hl(0, "SnacksIndentChunk", { bg = "none", fg = "#d97757" })
   end,
 })
 

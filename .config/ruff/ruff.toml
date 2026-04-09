@@ -1,11 +1,10 @@
-target-version = "py313"
+target-version = "py314"
 line-length = 88
 indent-width = 4
 
 [lint]
 select = ["E", "F", "W", "I", "B", "ANN", "T20"]
 ignore = ["F841", "B008", "ANN201", "I001", "ANN204", "F401", "ANN001"]
-# ignore = [ "F401", "B008" ]
 fixable = ["ALL"]
 unfixable = []
 
