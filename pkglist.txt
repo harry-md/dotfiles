@@ -11,6 +11,7 @@ alsa-plugins
 alsa-utils
 amazon-fonts
 android-tools
+antigravity
 appmenu-gtk-module
 arch-audit
 aria2
@@ -100,7 +101,6 @@ fcitx5
 fcitx5-bamboo
 fcitx5-configtool
 fcitx5-gtk
-fcitx5-lotus-bin
 fcitx5-unikey
 ffmpegthumbnailer
 ffmpegthumbs
@@ -157,7 +157,7 @@ intel-gpu-tools
 intel-media-driver
 intel-ucode
 inter-font
-iptables-nft
+iptables
 iwd
 jetbrains-toolbox
 jfsutils
@@ -205,6 +205,7 @@ logrotate
 lorien-bin
 lsb-release
 lsscsi
+luajit-tiktoken-bin
 luarocks
 lvm2
 lynis
@@ -228,9 +229,7 @@ nano-syntax-highlighting
 nautilus
 ncdu
 nemo
-neovide
-neovim-git
-netbeans
+neovim
 netcdf
 netctl
 networkmanager
@@ -314,6 +313,7 @@ qt6-serialport
 qt6-wayland
 qt6-webview
 qt6ct
+qwen-code
 rclone
 readest
 rebuild-detector
@@ -343,6 +343,7 @@ swtpm
 syncthing
 sysfsutils
 systemd-boot-manager
+tableplus
 telegram-desktop
 texinfo
 thunar
@@ -377,6 +378,7 @@ uwsm
 v4l2loopback-dkms
 vesktop-bin
 vim
+vlc-plugins-base
 vpl-gpu-rt
 vscodium-bin-marketplace
 vulkan-intel
@@ -412,7 +414,6 @@ xsettings-client
 xsettingsd
 yay
 yazi
-yt-dlp
 zathura
 zathura-pdf-mupdf
 zed

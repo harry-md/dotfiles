@@ -22,7 +22,6 @@ adjust-cursor-thickness = 2
 cursor-color = #d97757
 palette = 0=#252530
 palette = 1=#f97f6f 
-# palette = 1=#d8647e
 palette = 2=#7fa563
 palette = 3=#f3be7c
 palette = 4=#6e94b2

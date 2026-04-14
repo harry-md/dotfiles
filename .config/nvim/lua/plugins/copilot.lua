@@ -9,11 +9,10 @@ return {
       auto_trigger = false,
       hide_during_completion = false,
       keymap = {
-        accept = "<Tab>",
+        accept = "<A-\\>",
         next = "<A-]>",
         prev = "<A-[>",
         dismiss = "<C-]>",
-        toggle_auto_trigger = "<A-\\>",
       },
     },
     panel = { enabled = false },
@@ -21,8 +20,8 @@ return {
       markdown = false,
       help = false,
       sh = function()
+        -- disable for .env files
         if string.match(vim.fs.basename(vim.api.nvim_buf_get_name(0)), "^%.env.*") then
-          -- disable for .env files
           return false
         end
         return true
