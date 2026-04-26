@@ -34,25 +34,28 @@ set("n", "Y", "y$")
 set("n", "dbw", "vbd")
 set("n", "O", "O<esc>", opts)
 set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-set("v", "<leader>p", "_dP'", { desc = "[p]aste without override register" })
 
-set("n", "<S-h>", ":bprevious<CR>", { desc = "Switch to previous buffer" })
+set("n", "<S-h>", "<C-^>", { desc = "MRU (Most Recently Used)" })
 set("n", "<S-l>", ":bnext<CR>", { desc = "Switch to next buffer" })
 
 set({ "i", "c", "t" }, "<A-w>", "<C-w>")
 set({ "n", "v" }, "<A-u>", "<C-u>")
 set({ "n", "v" }, "<A-d>", "<C-d>")
 set("n", "<A-o>", "<C-o>", { silent = true })
+
 set("c", "<A-y>", "<CR>", { silent = true })
 set({ "n", "i", "v", "c" }, "<A-n>", "<C-n>", { silent = true })
 set({ "n", "i", "v", "c" }, "<A-p>", "<C-p>", { silent = true })
 set({ "n", "i", "v", "c" }, "<A-y>", "<C-y>", { silent = true })
-set("n", "<leader>z", ":lua Snacks.zen()<CR>", { silent = true })
 set("n", "K", ':lua vim.lsp.buf.hover({ border = "rounded" })<CR>', { silent = true })
 
--- -- go to definition
-set("n", "gd", ":lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+-- go to definition
+set("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true })
+-- go to references
+set("n", "gD", vim.lsp.buf.references, { desc = "Go to references" })
 
 -- delete buffer
 set("n", "<S-x>", ":bd<CR>", {})
 set("n", "<leader><space>", ":lua Snacks.picker.files()<CR>", { silent = true })
+
+set("x", "p", "P", { noremap = true })

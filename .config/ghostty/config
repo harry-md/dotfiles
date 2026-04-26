@@ -18,7 +18,6 @@ window-decoration = none
 app-notifications = no-clipboard-copy
 font-family = JetBrainsMono Nerd Font
 adjust-cursor-thickness = 2
-
 cursor-color = #d97757
 palette = 0=#252530
 palette = 1=#f97f6f 

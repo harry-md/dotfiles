@@ -9,10 +9,11 @@ return {
       auto_trigger = false,
       hide_during_completion = false,
       keymap = {
-        accept = "<A-\\>",
+        accept = "<C-e>",
         next = "<A-]>",
         prev = "<A-[>",
         dismiss = "<C-]>",
+        toggle_auto_trigger = "<A-\\>",
       },
     },
     panel = { enabled = false },

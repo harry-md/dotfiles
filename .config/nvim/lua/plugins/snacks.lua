@@ -152,7 +152,7 @@ return {
       refresh = 50, -- refresh at most every 50ms
     },
     quickfile = { enabled = true },
-    statuscolumn = { enabled = false },
+    statuscolumn = { enabled = true },
     words = { enabled = true },
     lazygit = { enabled = true },
     git = {

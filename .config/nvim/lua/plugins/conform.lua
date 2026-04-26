@@ -15,6 +15,7 @@ return {
       tsx = { "biome" },
       typescript = { "biome" },
       json = { "biome" },
+      sql = { "sqlfmt" },
     },
     formatters = {
       ["palantir-java-format"] = {
