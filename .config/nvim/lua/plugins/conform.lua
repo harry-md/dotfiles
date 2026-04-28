@@ -23,6 +23,9 @@ return {
         args = { "--aosp", "-" },
         stdin = true,
       },
+      ["sqlfmt"] = {
+        args = { "--dialect", "clickhouse", "--fast", "-" },
+      },
     },
   },
 }

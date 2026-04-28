@@ -65,7 +65,7 @@ return {
     scroll = {
       enabled = true,
       animate = {
-        duration = { step = 30, total = 300 },
+        duration = { step = 20, total = 200 },
         easing = "linear",
       },
       -- faster animation when repeating scroll after delay
