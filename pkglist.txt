@@ -25,6 +25,7 @@ base-devel
 bash-completion
 bind
 biome
+blocky
 bluedevil
 blueman
 bluez
@@ -79,10 +80,12 @@ dialog
 diffutils
 dmidecode
 dmraid
+dms-shell
 dnsmasq
 docker
 docker-compose
 dolphin
+dos2unix
 dosfstools
 downgrade
 duf
@@ -113,6 +116,7 @@ fsarchiver
 fuzzel
 fwupd
 gdb
+genymotion
 ghostty
 gimp
 git
@@ -214,6 +218,7 @@ man-db
 man-pages
 mangowc
 mariadb-libs
+matugen
 mdadm
 meld
 mesa
@@ -285,6 +290,7 @@ postgresql-libs
 power-profiles-daemon
 powerdevil
 prettier
+profile-sync-daemon
 pv
 python
 python-adblock
@@ -313,7 +319,7 @@ qt6-serialport
 qt6-wayland
 qt6-webview
 qt6ct
-qwen-code
+quickshell-git
 rclone
 readest
 rebuild-detector
@@ -329,6 +335,7 @@ ruff
 rust
 s-nail
 satty
+scrcpy
 sddm
 sg3_utils
 smartmontools
@@ -392,8 +399,10 @@ wlr-randr
 wlsunset
 wofi
 wpa_supplicant
+wtype
 xclip
 xdg-desktop-portal
+xdg-desktop-portal-gnome
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-kde
 xdg-user-dirs
