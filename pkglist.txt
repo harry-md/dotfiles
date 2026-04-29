@@ -298,6 +298,7 @@ python-defusedxml
 python-packaging
 qbittorrent
 qemu-base
+qt5-wayland
 qt5ct
 qt6-3d
 qt6-charts
@@ -421,6 +422,7 @@ xorg-xrandr
 xournalpp
 xsettings-client
 xsettingsd
+xwayland-satellite
 yay
 yazi
 zathura

@@ -1,9 +1,13 @@
 return {
   "zbirenbaum/copilot.lua",
+  version = false,
   cmd = "Copilot",
   build = ":Copilot auth",
   event = "InsertEnter",
   opts = {
+    server = {
+      memory = 800,
+    },
     suggestion = {
       enabled = true,
       auto_trigger = false,

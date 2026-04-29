@@ -1,7 +1,6 @@
 // =================================================================
 // DANK MATERIAL SHELL (DMS) INTEGRATION
 // =================================================================
-spawn-at-startup "dms"
 include "dms/colors.kdl"
 include "dms/layout.kdl"
 include "dms/alttab.kdl"
@@ -18,6 +17,7 @@ environment {
     XWAYLAND "1"
     GDK_DPI_SCALE "1"
     GDK_SCALE "1"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
 // =================================================================
@@ -102,13 +102,13 @@ layout {
         off
     }
     shadow {
-        off
+        on
     }
 }
 
 gestures {
     hot-corners {
-        off
+        top-left
     }
 }
 
@@ -197,6 +197,8 @@ window-rule {
     match app-id="(?i)Emulator" title="Emulator"
     
     open-floating true
+    default-column-width { fixed 1100; }
+    default-window-height { fixed 700; }
 }
 
 window-rule {
