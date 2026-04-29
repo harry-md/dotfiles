@@ -225,7 +225,6 @@ binds {
     Mod+B { spawn "dms" "ipc" "call" "bar" "toggle" "index" "0"; }
     Mod+Tab { focus-workspace-previous; }
 
-    // Di chuyển Focus (H J K L)
     Mod+H { focus-column-left; }
     Mod+Shift+Q { focus-column-left; }
     Mod+L { focus-column-right; }
