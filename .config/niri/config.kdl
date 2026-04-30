@@ -42,8 +42,8 @@ output "eDP-1" {
 // spawn-at-startup "hypridle"
 // spawn-at-startup "hyprpaper"
 // spawn-at-startup "clipse" "-listen"
-// spawn-at-startup "wl-clip-persist" "--clipboard" "both"
-// spawn-at-startup "wl-copy" ""
+spawn-at-startup "wl-clip-persist" "--clipboard" "both"
+spawn-at-startup "wl-copy" ""
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
 spawn-at-startup "xsettingsd"
@@ -108,7 +108,8 @@ layout {
 
 gestures {
     hot-corners {
-        top-left
+        off
+        // top-left
     }
 }
 
@@ -119,52 +120,64 @@ window-rule {
 }
 
 animations {
-    off
-    workspace-switch {
-        spring damping-ratio=1.0 stiffness=1200 epsilon=0.0001
-    }
+    on
 
-    window-open {
-        duration-ms 100
+    workspace-switch {
+        // spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+        duration-ms 200
         curve "ease-out-expo"
     }
 
-    window-close {
-        duration-ms 100
-        curve "ease-out-quad"
+    window-open {
+        duration-ms 250
+        curve "ease-out-expo"
+        // scale-from 0.6
     }
 
+    window-close {
+        duration-ms 200
+        curve "ease-out-quad"
+        // scale-to 0.6
+    }
+    
     horizontal-view-movement {
-        spring damping-ratio=1.0 stiffness=1200 epsilon=0.0001
+        duration-ms 200
+        curve "ease-out-expo"
     }
 
     window-movement {
-        spring damping-ratio=1.0 stiffness=1200 epsilon=0.0001
+        duration-ms 200
+        curve "ease-out-expo"
     }
-
+    
     window-resize {
-        spring damping-ratio=1.0 stiffness=1200 epsilon=0.0001
+        duration-ms 200
+        curve "ease-out-expo"
     }
 
     config-notification-open-close {
-        spring damping-ratio=0.6 stiffness=1200 epsilon=0.001
+        duration-ms 200
+        curve "ease-out-expo"
     }
-
+    
     exit-confirmation-open-close {
-        spring damping-ratio=0.6 stiffness=1200 epsilon=0.01
+        duration-ms 200
+        curve "ease-out-expo"
     }
 
     screenshot-ui-open {
         duration-ms 200
-        curve "ease-out-quad"
+        curve "ease-out-expo"
     }
 
     overview-open-close {
-        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+        duration-ms 200
+        curve "ease-out-expo"
     }
 
     recent-windows-close {
-        spring damping-ratio=1.0 stiffness=800 epsilon=0.001
+        duration-ms 200
+        curve "ease-out-expo"
     }
 }
 
@@ -224,6 +237,7 @@ binds {
     Mod+F { fullscreen-window; }
     Mod+B { spawn "dms" "ipc" "call" "bar" "toggle" "index" "0"; }
     Mod+Tab { focus-workspace-previous; }
+    Mod+O { toggle-overview; }
 
     Mod+H { focus-column-left; }
     Mod+Shift+Q { focus-column-left; }
