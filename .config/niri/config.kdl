@@ -114,7 +114,7 @@ gestures {
 }
 
 window-rule {
-    geometry-corner-radius 11
+    geometry-corner-radius 20
     clip-to-geometry true
     draw-border-with-background false
 }
@@ -125,59 +125,57 @@ animations {
     workspace-switch {
         // spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
         duration-ms 200
-        curve "ease-out-expo"
+        curve "ease-out-quad"
     }
 
     window-open {
-        duration-ms 250
+        duration-ms 200
         curve "ease-out-expo"
-        // scale-from 0.6
     }
 
     window-close {
         duration-ms 200
         curve "ease-out-quad"
-        // scale-to 0.6
     }
     
     horizontal-view-movement {
         duration-ms 200
-        curve "ease-out-expo"
+        curve "ease-out-quad"
     }
 
     window-movement {
         duration-ms 200
-        curve "ease-out-expo"
+        curve "ease-out-quad"
     }
     
     window-resize {
         duration-ms 200
-        curve "ease-out-expo"
+        curve "ease-out-quad"
     }
 
     config-notification-open-close {
         duration-ms 200
-        curve "ease-out-expo"
+        curve "ease-out-quad"
     }
     
     exit-confirmation-open-close {
         duration-ms 200
-        curve "ease-out-expo"
+        curve "ease-out-quad"
     }
 
     screenshot-ui-open {
         duration-ms 200
-        curve "ease-out-expo"
+        curve "ease-out-quad"
     }
 
     overview-open-close {
         duration-ms 200
-        curve "ease-out-expo"
+        curve "ease-out-quad"
     }
 
     recent-windows-close {
         duration-ms 200
-        curve "ease-out-expo"
+        curve "ease-out-quad"
     }
 }
 
@@ -283,3 +281,5 @@ binds {
 
     Mod+G { spawn "sh" "-c" "$HOME/.local/scripts/niri-monitor-toggle.sh"; }
 }
+
+// spawn-at-startup "qs" "-c" "noctalia-shell"

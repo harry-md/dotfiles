@@ -6,6 +6,7 @@ return {
   event = "InsertEnter",
   opts = {
     server = {
+      enabled = false,
       memory = 800,
     },
     suggestion = {
