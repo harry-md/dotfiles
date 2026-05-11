@@ -61,3 +61,9 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
+
+bindkey "^[e" end-of-line
+bindkey "^[w" backward-kill-word
+bindkey "^[l" clear-screen
+bindkey "^[[1;3D" backward-word
+bindkey "^[[1;3C" forward-word

@@ -23,8 +23,10 @@ set("c", "<C-e>", "<end>")
 -- resize splits
 set("n", "<A-.>", "<c-w>5<")
 set("n", "<A-,>", "<c-w>5>")
-set("n", "<A-t>", "<C-W>+")
-set("n", "<A-s>", "<C-W>-")
+-- set("n", "<A-t>", "<C-W>+")
+-- set("n", "<A-s>", "<C-W>-")
+
+set({ "n", "i" }, "<A-s>", "<esc>:w<CR>")
 
 -- for terminal mode
 vim.api.nvim_set_keymap("t", "<esc>", "<C-\\><C-n>", { noremap = true })

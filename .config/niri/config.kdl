@@ -42,8 +42,8 @@ output "eDP-1" {
 // spawn-at-startup "hypridle"
 // spawn-at-startup "hyprpaper"
 // spawn-at-startup "clipse" "-listen"
-spawn-at-startup "wl-clip-persist" "--clipboard" "both"
-spawn-at-startup "wl-copy" ""
+// spawn-at-startup "wl-clip-persist" "--clipboard" "regular"
+spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
 spawn-at-startup "xsettingsd"
@@ -60,6 +60,7 @@ input {
         xkb {
             layout "us"
             options "caps:escape"
+            // options "ctrl:nocaps"
         }
         repeat-rate 45
         repeat-delay 300
@@ -90,7 +91,7 @@ layout {
         proportion 0.5
         proportion 1.0
     }
-    default-column-width { proportion 0.7; }
+    default-column-width { proportion 0.5; }
 
     border {
         width 1
@@ -185,7 +186,7 @@ animations {
 window-rule {
     match app-id="org.gnome.Nautilus"
     open-floating true
-    default-column-width { fixed 900; }
+    default-column-width { fixed 1000; }
     default-window-height { fixed 1000; }
     default-floating-position x=10 y=25
 }
@@ -232,6 +233,7 @@ binds {
     // Mod+Space { spawn "wofi" "--show" "drun"; }
     Mod+P { spawn "hyprpicker" "-a"; }
     // Mod+C { spawn "alacritty" "--class" "clipse" "-e" "clipse"; }
+    Mod+C { spawn "bash" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
     Mod+F { fullscreen-window; }
     Mod+B { spawn "dms" "ipc" "call" "bar" "toggle" "index" "0"; }
     Mod+Tab { focus-workspace-previous; }

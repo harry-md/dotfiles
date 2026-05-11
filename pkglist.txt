@@ -33,6 +33,7 @@ bluez-hid2hci
 bluez-libs
 bluez-utils
 bottom
+bpftune-git
 brave-bin
 breeze-gtk
 brillo
@@ -68,7 +69,6 @@ cliphist
 clipse
 cmake
 consolas-font
-cosmic-greeter
 cpio
 cpupower
 croc
@@ -165,6 +165,7 @@ iptables
 iwd
 jetbrains-toolbox
 jfsutils
+kanata-bin
 kate
 kcalc
 kde-gtk-config
@@ -240,8 +241,10 @@ netctl
 networkmanager
 networkmanager-openvpn
 nfs-utils
+ngrok
 nilfs-utils
 niri
+noctalia-shell
 nodejs
 notcurses
 noto-color-emoji-fontconfig
@@ -266,7 +269,6 @@ pacman-contrib
 paru
 pavucontrol
 perl
-pgadmin4-desktop-bin
 pipewire-alsa
 pipewire-pulse
 pkgfile
@@ -283,6 +285,7 @@ plasma-workspace
 plocate
 plymouth
 plymouth-kcm
+pngquant
 pnpm
 podofo
 poppler-glib
@@ -320,7 +323,6 @@ qt6-serialport
 qt6-wayland
 qt6-webview
 qt6ct
-quickshell-git
 rclone
 readest
 rebuild-detector
