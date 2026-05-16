@@ -6,9 +6,11 @@ set("n", "<leader>rn", ":IncRename ")
 set("v", "<C-a>", "ggVG", { desc = "Select [a]ll" })
 -- jump between buffers
 set("n", "<c-j>", "<c-w><c-j>")
+set("n", "<c-l>", "<c-w><c-l>")
 set("n", "<c-h>", "<c-w><c-h>")
 set("n", "<c-k>", "<c-w><c-k>")
-set("n", "<c-l>", "<c-w><c-l>")
+set("n", "<Esc>h", "<c-w><c-h>", { silent = true })
+set("n", "<Esc>l", "<c-w><c-l>", { silent = true })
 
 -- jump to next diagnostics
 set("n", "<leader>dn", require("snacks.picker").diagnostics, { desc = "Jump to [n]ext [d]iagnostics" })
@@ -40,7 +42,7 @@ set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 set("n", "<S-h>", "<C-^>", { desc = "MRU (Most Recently Used)" })
 set("n", "<S-l>", ":bnext<CR>", { desc = "Switch to next buffer" })
 
-set({ "i", "c", "t" }, "<A-w>", "<C-w>")
+set({ "i", "c", "t", "x" }, "<A-w>", "<C-w>")
 set({ "n", "v" }, "<A-u>", "<C-u>")
 set({ "n", "v" }, "<A-d>", "<C-d>")
 set("n", "<A-o>", "<C-o>", { silent = true })
@@ -61,3 +63,5 @@ set("n", "<S-x>", ":bd<CR>", {})
 set("n", "<leader><space>", ":lua Snacks.picker.files()<CR>", { silent = true })
 
 set("x", "p", "P", { noremap = true })
+set({ "i", "n", "x" }, "<C-c>", "<esc>")
+set({ "i", "n", "x" }, "<A-f>", "<esc>")

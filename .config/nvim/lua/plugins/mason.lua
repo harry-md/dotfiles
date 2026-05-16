@@ -21,7 +21,6 @@ return {
       "emmet-ls",
       "prettierd",
       "gitui",
-      "hyprls",
       "lemminx",
       "ruff",
       "ty",

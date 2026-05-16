@@ -174,7 +174,6 @@ kdegraphics-thumbnailers
 kdeplasma-addons
 kdialog
 keepassxc
-keyd
 kinfocenter
 kio-admin
 kitty
@@ -263,6 +262,7 @@ octopi
 odt2txt
 openbsd-netcat
 opencl-mesa
+opencode
 opendesktop-fonts
 openssh
 pacman-contrib
