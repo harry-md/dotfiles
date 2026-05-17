@@ -228,7 +228,7 @@ window-rule {
 // KEYBINDS
 // =================================================================
 binds {
-    Mod+Q { spawn "kitty"; }
+    Mod+Q { spawn "ghostty"; }
     Alt+C { close-window; }
     Mod+E { spawn "nautilus"; }
     Mod+V { toggle-window-floating; }

@@ -4,6 +4,6 @@
 // ! PLACE YOUR CUSTOM CONFIGURATION ELSEWHERE !
 
 cursor {
-    xcursor-theme "macos-tahoe-cursor"
+    xcursor-theme "Adwai"
     xcursor-size 24
 }

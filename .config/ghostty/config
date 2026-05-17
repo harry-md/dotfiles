@@ -4,7 +4,7 @@ cursor-style-blink = false
 background-opacity = 1.0
 background-blur = false
 cursor-text = #060606
-font-size = 18
+font-size = 16.6
 keybind = alt+one=unbind
 keybind = alt+two=unbind
 keybind = alt+three=unbind
@@ -40,3 +40,4 @@ foreground = #faf9f5
 selection-background = #252530
 selection-foreground = #cdcdcd
 split-divider-color = #878787
+custom-shader = shaders/cursor_smear.glsl
