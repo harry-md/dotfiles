@@ -6,31 +6,6 @@ return {
         bold = true,
         italic = false,
         transparent = false,
-        -- style = {
-        --   boolean = "none",
-        --   number = "none",
-        --   float = "none",
-        --   error = "bold",
-        --   comments = "italic",
-        --   conditionals = "none",
-        --   functions = "none",
-        --   headings = "bold",
-        --   operators = "none",
-        --   strings = "none",
-        --   variables = "none",
-        --
-        --   keywords = "none",
-        --   keyword_return = "italic",
-        --   keywords_loop = "none",
-        --   keywords_label = "none",
-        --   keywords_exception = "none",
-        --
-        --   builtin_constants = "bold",
-        --   builtin_functions = "none",
-        --   builtin_types = "bold",
-        --   builtin_variables = "none",
-        -- },
-        -- Override colors
         colors = {
           bg = "#141413",
           fg = "#faf9f5",

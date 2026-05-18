@@ -346,6 +346,7 @@ sof-firmware
 spectacle
 speech-dispatcher
 spoofdpi
+spotify
 starship
 stow
 sudo
@@ -376,6 +377,7 @@ ttf-meslo-nerd
 ttf-ms-fonts
 ttf-opensans
 tumbler
+ty
 udftools
 ufw
 unrar
