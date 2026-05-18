@@ -68,7 +68,7 @@ abbr mkdir 'mkdir -p'
 abbr ping 'ping -c 5'
 abbr la 'ls -lah --color=always --group-directories-first'
 # alias l='ls -lh --color=always --group-directories-first'
-alias l='ls'
+alias l='eza -l --color=always --group-directories-first --icons'
 alias winboot='sudo efibootmgr --bootnext 0003; sudo reboot'
 alias mintboot='sudo efibootmgr --bootnext 0004; sudo reboot'
 
