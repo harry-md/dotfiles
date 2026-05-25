@@ -12,9 +12,6 @@ set("n", "<c-k>", "<c-w><c-k>")
 set("n", "<Esc>h", "<c-w><c-h>", { silent = true })
 set("n", "<Esc>l", "<c-w><c-l>", { silent = true })
 
--- jump to next diagnostics
-set("n", "<leader>dn", require("snacks.picker").diagnostics, { desc = "Jump to [n]ext [d]iagnostics" })
-
 -- keymap for cmd mode
 set("c", "<C-h>", "<BS>")
 set("c", "<C-f>", "<right>")
@@ -28,7 +25,7 @@ set("n", "<A-,>", "<c-w>5>")
 -- set("n", "<A-t>", "<C-W>+")
 -- set("n", "<A-s>", "<C-W>-")
 
-set({ "n", "i" }, "<A-s>", "<esc>:w<CR>")
+set({ "n", "i", "x" }, "<A-s>", "<esc>:w<CR>")
 
 -- for terminal mode
 vim.api.nvim_set_keymap("t", "<esc>", "<C-\\><C-n>", { noremap = true })
@@ -42,7 +39,7 @@ set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 set("n", "<S-h>", "<C-^>", { desc = "MRU (Most Recently Used)" })
 set("n", "<S-l>", ":bnext<CR>", { desc = "Switch to next buffer" })
 
-set({ "i", "c", "t", "x" }, "<A-w>", "<C-w>")
+set({ "n", "i", "c", "t", "v", "x" }, "<A-w>", "<C-w>")
 set({ "n", "v" }, "<A-u>", "<C-u>")
 set({ "n", "v" }, "<A-d>", "<C-d>")
 set("n", "<A-o>", "<C-o>", { silent = true })
@@ -61,6 +58,9 @@ set("n", "gD", vim.lsp.buf.references, { desc = "Go to references" })
 -- delete buffer
 set("n", "<S-x>", ":bd<CR>", {})
 set("n", "<leader><space>", ":lua Snacks.picker.files()<CR>", { silent = true })
+-- jump to next diagnostics
+set("n", "<leader>dn", require("snacks.picker").diagnostics, { desc = "Jump to [n]ext [d]iagnostics" })
+set("n", "<leader>/", require("snacks.picker").grep, { desc = "Grep" })
 
 set("x", "p", "P", { noremap = true })
 set({ "i", "n", "x" }, "<C-c>", "<esc>")

@@ -289,5 +289,3 @@ binds {
 }
 
 // spawn-at-startup "qs" "-c" "noctalia-shell"
-
-include "dms/outputs.kdl"

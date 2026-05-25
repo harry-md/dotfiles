@@ -29,7 +29,7 @@ return {
       "tailwindcss-language-server",
       "tombi",
       -- "typescript-language-server",
-      "vtsls",
+      -- "vtsls",
       "yaml-language-server",
       "jdtls",
     },

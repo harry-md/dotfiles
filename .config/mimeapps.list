@@ -26,3 +26,4 @@ x-scheme-handler/clickup=ClickUp.desktop
 x-scheme-handler/about=helium.desktop
 x-scheme-handler/unknown=helium.desktop
 x-scheme-handler/mailto=helium.desktop
+x-scheme-handler/antigravity=antigravity.desktop

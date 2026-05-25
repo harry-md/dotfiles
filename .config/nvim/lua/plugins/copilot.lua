@@ -15,7 +15,7 @@ return {
       auto_trigger = false,
       hide_during_completion = false,
       keymap = {
-        accept = "<C-e>",
+        accept = "<A-e>",
         next = "<A-]>",
         prev = "<A-[>",
         dismiss = "<C-]>",

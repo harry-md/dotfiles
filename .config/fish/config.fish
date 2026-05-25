@@ -1,6 +1,7 @@
 source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 set fish_greeting
+set -g fish_completion_limit 100
 set -gx EDITOR /usr/bin/nvim
 set -gx VISUAL /usr/bin/nvim
 set -gx TERMINAL /usr/bin/ghostty
@@ -20,10 +21,10 @@ zoxide init fish | source
 starship init fish | source
 fzf --fish | source
 
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
+alias ..='z ..'
+alias ...='z ../..'
+alias ....='z ../../..'
+alias .....='z ../../../..'
 
 alias update='sudo pacman -Syu; paru -Syu'
 alias install='sudo pacman -S'
@@ -56,9 +57,9 @@ alias dl='aria2c -x 16 -s 16'
 alias sde='sudoedit'
 
 alias t="tmux new -s home"
-alias ta='tmux attach -t'
-alias tk='tmux kill-session -t'
-alias tl='tmux ls'
+abbr ta 'tmux attach -t'
+abbr tk 'tmux kill-session -t'
+abbr tl 'tmux ls'
 
 abbr df 'df -h'
 abbr rm 'rm -i --preserve-root'
@@ -66,7 +67,7 @@ abbr cp 'cp -i'
 abbr mv 'mv -i'
 abbr mkdir 'mkdir -p'
 abbr ping 'ping -c 5'
-abbr la 'ls -lah --color=always --group-directories-first'
+alias la='ls -lah --color=always --group-directories-first'
 # alias l='ls -lh --color=always --group-directories-first'
 alias l='eza -l --color=always --group-directories-first --icons'
 alias winboot='sudo efibootmgr --bootnext 0003; sudo reboot'
@@ -77,3 +78,5 @@ bind \ew backward-kill-word
 bind \el clear-screen
 bind \e\[1\;3D backward-word
 bind \e\[1\;3C forward-word
+
+complete -c paru -n "string match -r -- '-S[a-z]*s|--search' (commandline -txt)" -e

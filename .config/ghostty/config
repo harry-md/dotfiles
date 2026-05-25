@@ -40,4 +40,5 @@ foreground = #faf9f5
 selection-background = #252530
 selection-foreground = #cdcdcd
 split-divider-color = #878787
+keybind = ctrl+,=unbind
 # custom-shader = shaders/cursor_smear.glsl
