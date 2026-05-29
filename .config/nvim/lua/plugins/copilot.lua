@@ -7,12 +7,12 @@ return {
   event = "InsertEnter",
   opts = {
     server = {
-      enabled = false,
+      enabled = true,
       memory = 800,
     },
     suggestion = {
       enabled = true,
-      auto_trigger = false,
+      auto_trigger = true,
       hide_during_completion = false,
       keymap = {
         accept = "<A-e>",
@@ -28,7 +28,7 @@ return {
       help = false,
       sh = function()
         -- disable for .env files
-        if string.match(vim.fs.basename(vim.api.nvim_buf_get_name(0)), "^%.env.*") then
+        if string.match(vim.fs.basename(vim.api.nvim_buf_get_name(0)), "^%env.*") then
           return false
         end
         return true

@@ -125,7 +125,7 @@ window-rule {
 }
 
 animations {
-    on
+    off
 
     workspace-switch {
         // spring damping-ratio=1.0 stiffness=800 epsilon=0.0001

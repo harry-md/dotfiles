@@ -56,9 +56,10 @@ return {
       scope = {
         enabled = true,
         only_current = true,
+        hl = "SnacksIndentScope",
       },
       chunk = {
-        enabled = true,
+        enabled = false,
         only_current = true,
       },
     },

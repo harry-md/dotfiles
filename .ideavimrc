@@ -48,6 +48,9 @@ map s <Action>(flash.search)
 inoremap <C-s> <esc>:w<CR>
 nnoremap <C-s> <esc>:w<CR>
 vnoremap <C-s> <esc>:w<CR>
+inoremap <A-s> <esc>:w<CR>
+nnoremap <A-s> <esc>:w<CR>
+vnoremap <A-s> <esc>:w<CR>
 set relativenumber
 set number
 set tabstop=4

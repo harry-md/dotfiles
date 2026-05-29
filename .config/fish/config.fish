@@ -6,20 +6,13 @@ set -gx EDITOR /usr/bin/nvim
 set -gx VISUAL /usr/bin/nvim
 set -gx TERMINAL /usr/bin/ghostty
 set -gx FIREFOX /usr/bin/librewolf
-set -gx FZF_COMPLETION_TRIGGER '::'
 set -gx MANPAGER 'nvim +Man!'
-
-# fish_add_path "$HOME/.local/bin"
 
 set -gx ANDROID_HOME "$HOME/Android/Sdk"
 fish_add_path "$ANDROID_HOME/emulator"
 fish_add_path "$ANDROID_HOME/platform-tools"
 fish_add_path "$ANDROID_HOME/tools"
 fish_add_path "$ANDROID_HOME/tools/bin"
-
-zoxide init fish | source
-starship init fish | source
-fzf --fish | source
 
 alias ..='z ..'
 alias ...='z ../..'
@@ -62,7 +55,7 @@ abbr tk 'tmux kill-session -t'
 abbr tl 'tmux ls'
 
 abbr df 'df -h'
-abbr rm 'rm -i --preserve-root'
+abbr rm 'rm -i'
 abbr cp 'cp -i'
 abbr mv 'mv -i'
 abbr mkdir 'mkdir -p'
@@ -80,3 +73,7 @@ bind \e\[1\;3D backward-word
 bind \e\[1\;3C forward-word
 
 complete -c paru -n "string match -r -- '-S[a-z]*s|--search' (commandline -txt)" -e
+
+zoxide init fish | source
+starship init fish | source
+fzf_configure_bindings --processes=\cp
