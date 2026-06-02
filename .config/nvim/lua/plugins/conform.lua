@@ -1,5 +1,6 @@
 return {
   "stevearc/conform.nvim",
+  lazy = false,
   opts = {
     formatters_by_ft = {
       html = {},
@@ -11,9 +12,9 @@ return {
       js = { "biome" },
       jsx = { "biome" },
       javascript = { "biome" },
+      typescript = { "biome" },
       ts = { "biome" },
       tsx = { "biome" },
-      typescript = { "biome" },
       json = { "biome" },
       sql = { "sqlfmt" },
     },

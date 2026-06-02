@@ -95,8 +95,10 @@ layout {
 
     border {
         width 1
-        active-color "#ffffff44"
-        inactive-color "#ffffff11"
+        // active-color "#ffffff40"
+        // inactive-color "#ffffff08"
+        active-gradient from="#ffffff30" to="#ffffff08" angle=180
+        inactive-gradient from="#ffffff15" to="#ffffff02" angle=180
     }
 
     focus-ring {
@@ -104,6 +106,10 @@ layout {
     }
     shadow {
         on
+        softness 16
+        spread 1
+        offset x=0 y=4
+        color "#00000075"
     }
 }
 
@@ -119,7 +125,7 @@ overview {
 }
 
 window-rule {
-    geometry-corner-radius 16
+    geometry-corner-radius 24
     clip-to-geometry true
     draw-border-with-background false
 }
@@ -213,7 +219,7 @@ window-rule {
     match app-id="(?i)Emulator" title="Emulator"
     
     open-floating true
-    default-column-width { fixed 1400; }
+    default-column-width { fixed 1500; }
     default-window-height { fixed 900; }
 }
 
