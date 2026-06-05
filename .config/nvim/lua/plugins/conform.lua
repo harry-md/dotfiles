@@ -10,6 +10,7 @@ return {
       java = { "palantir-java-format" },
       xml = { "lemminx" },
       js = { "biome" },
+      javascriptreact = { "biome" },
       jsx = { "biome" },
       javascript = { "biome" },
       typescript = { "biome" },
@@ -17,6 +18,9 @@ return {
       tsx = { "biome" },
       json = { "biome" },
       sql = { "sqlfmt" },
+    },
+    default_format_opts = {
+      lsp_format = "never",
     },
     formatters = {
       ["palantir-java-format"] = {

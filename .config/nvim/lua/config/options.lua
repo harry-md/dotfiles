@@ -51,16 +51,19 @@ opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,t:ver25-blinkon0-blin
 -- Completion window transparency
 opt.pumblend = 0
 
--- highlight things
-local fg = "#cdcdcd"
-local bg = "#1c1f20"
-local comment = "#606079"
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
   callback = function()
     vim.api.nvim_set_hl(0, "LspReferenceRead", {})
     vim.api.nvim_set_hl(0, "LspReferenceWrite", {})
     vim.api.nvim_set_hl(0, "LspReferenceText", {})
+    vim.api.nvim_set_hl(0, "BlinkCmpMenuSelection", { bg = "#393B42" })
+    vim.api.nvim_set_hl(0, "BlinkCmpMenu", { bg = "#141415" })
+    vim.api.nvim_set_hl(0, "StatusLine", { bg = "#141415" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#141415" })
+    vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = "#d97757" })
+    vim.api.nvim_set_hl(0, "SnacksIndent", { fg = "#393B42" })
+    vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "#262624" })
     -- vim.api.nvim_set_hl(0, "MiniStatuslineModeCommand", { fg = fg, bg = background })
     -- vim.api.nvim_set_hl(0, "MiniStatuslineModeInsert", { fg = fg, bg = background })
     -- vim.api.nvim_set_hl(0, "MiniStatuslineModeNormal", { fg = fg, bg = background })
@@ -100,9 +103,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     -- vim.api.nvim_set_hl(0, "ElInsertInactive", { fg = fg, bg = "none" })
     -- vim.api.nvim_set_hl(0, "ElMoreInactive", { fg = fg, bg = "none" })
     -- vim.api.nvim_set_hl(0, "ElNormalInactive", { fg = fg, bg = "none" })
-    vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = "#d97757" })
-    vim.api.nvim_set_hl(0, "SnacksIndent", { fg = "#393B42" })
-    vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "#262624" })
     -- vim.api.nvim_set_hl(0, "BlinkCmpMenu", { bg = "#141415" })
     -- vim.api.nvim_set_hl(0, "BlinkCmpKind", { bg = "#141415" })
     -- vim.api.nvim_set_hl(0, "BlinkCmpScrollBarGutter", { bg = "#0e0e0e" })

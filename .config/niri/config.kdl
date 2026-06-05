@@ -131,10 +131,10 @@ window-rule {
 }
 
 animations {
-    off
+    on
 
     workspace-switch {
-        // spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+        // spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
         duration-ms 250
         curve "ease-out-cubic"
     }
