@@ -8,7 +8,7 @@ return {
       scss = { "prettierd" },
       markdown = { "prettierd" },
       java = { "palantir-java-format" },
-      xml = { "lemminx" },
+      xml = { "xmlformatter" },
       js = { "biome" },
       javascriptreact = { "biome" },
       jsx = { "biome" },
