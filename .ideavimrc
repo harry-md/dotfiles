@@ -44,7 +44,6 @@ vnoremap <C-k> 10k
 nnoremap O O<esc>
 nnoremap <S-h> :bp<CR>
 nnoremap <S-l> :bn<CR>
-map s <Action>(flash.search)
 inoremap <C-s> <esc>:w<CR>
 nnoremap <C-s> <esc>:w<CR>
 vnoremap <C-s> <esc>:w<CR>
@@ -59,3 +58,8 @@ set expandtab
 set ideajoin
 set clipboard=unnamedplus
 set clipboard+=ideaput
+map s <Action>(flash.search)
+nnoremap <space><space> :action GotoFile<CR>
+inoremap <A-q> :action CodeCompletion<CR>
+vnoremap < <gv
+vnoremap > >gv
