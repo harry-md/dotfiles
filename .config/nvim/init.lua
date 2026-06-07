@@ -1,6 +1,6 @@
 require("config.lazy")
 
-vim.cmd.colorscheme("vscode")
+vim.cmd.colorscheme("vague")
 require("oil").setup()
 require("treesitter-context").setup()
 -- require("el").setup({})

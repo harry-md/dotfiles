@@ -88,5 +88,4 @@ return {
       palette = {},
     },
   },
-  { "Mofiqul/vscode.nvim" },
 }
