@@ -1,12 +1,12 @@
 // =================================================================
 // DANK MATERIAL SHELL (DMS) INTEGRATION
 // =================================================================
-include "dms/colors.kdl"
-include "dms/layout.kdl"
-include "dms/alttab.kdl"
-include "dms/binds.kdl"
-include "dms/cursor.kdl"
-include "dms/windowrules.kdl"
+// include "dms/colors.kdl"
+// include "dms/layout.kdl"
+// include "dms/alttab.kdl"
+// include "dms/binds.kdl"
+// include "dms/cursor.kdl"
+// include "dms/windowrules.kdl"
 
 // =================================================================
 // ENVIRONMENT VARIABLES
@@ -18,6 +18,10 @@ environment {
     GDK_DPI_SCALE "1"
     GDK_SCALE "1"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
+}
+
+hotkey-overlay {
+    skip-at-startup
 }
 
 // =================================================================
@@ -125,67 +129,67 @@ overview {
 }
 
 window-rule {
-    geometry-corner-radius 24
+    geometry-corner-radius 20
     clip-to-geometry true
     draw-border-with-background false
 }
 
 animations {
-    off
+    on
 
     workspace-switch {
         // spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
-        duration-ms 250
+        duration-ms 200
         curve "ease-out-cubic"
     }
 
     window-open {
-        duration-ms 250
+        duration-ms 200
         curve "ease-out-expo"
     }
 
     window-close {
-        duration-ms 250
+        duration-ms 200
         curve "ease-out-cubic"
     }
     
     horizontal-view-movement {
-        duration-ms 250
+        duration-ms 200
         curve "ease-out-cubic"
     }
 
     window-movement {
-        duration-ms 250
+        duration-ms 200
         curve "ease-out-cubic"
     }
     
     window-resize {
-        duration-ms 250
+        duration-ms 200
         curve "ease-out-cubic"
     }
 
     config-notification-open-close {
-        duration-ms 250
+        duration-ms 200
         curve "ease-out-cubic"
     }
     
     exit-confirmation-open-close {
-        duration-ms 250
+        duration-ms 200
         curve "ease-out-cubic"
     }
 
     screenshot-ui-open {
-        duration-ms 250
+        duration-ms 200
         curve "ease-out-cubic"
     }
 
     overview-open-close {
-        duration-ms 250
+        duration-ms 200
         curve "ease-out-cubic"
     }
 
     recent-windows-close {
-        duration-ms 250
+        duration-ms 200
         curve "ease-out-cubic"
     }
 }
@@ -240,6 +244,8 @@ binds {
     Mod+V { toggle-window-floating; }
     Mod+Shift+F { maximize-window-to-edges; }
     Alt+Space { spawn "tofi-drun" "--drun-launch=true"; }
+    Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
     // Mod+Space { spawn "wofi" "--show" "drun"; }
     Mod+P { spawn "hyprpicker" "-a"; }
     // Mod+C { spawn "alacritty" "--class" "clipse" "-e" "clipse"; }
@@ -288,12 +294,18 @@ binds {
     Mod+Shift+9 { move-window-to-workspace 9; }
     Mod+Shift+0 { move-window-to-workspace 10; }
 
-    Print { spawn "sh" "-c" "dms screenshot region --stdout | satty --filename - --output-filename $HOME/Downloads/Screenshot-$(date '+%Y-%m-%d-%H%M%S').png --copy-command wl-copy --early-exit --initial-tool brush"; }
-    Mod+Shift+S { spawn "sh" "-c" "dms screenshot region --stdout | satty --filename - --output-filename $HOME/Downloads/Screenshot-$(date '+%Y-%m-%d-%H%M%S').png --copy-command wl-copy --early-exit --initial-tool brush"; }
+    // Print { spawn "sh" "-c" "dms screenshot region --stdout | satty --filename - --output-filename $HOME/Downloads/Screenshot-$(date '+%Y-%m-%d-%H%M%S').png --copy-command wl-copy --early-exit --initial-tool brush"; }
+    // Mod+Shift+S { spawn "sh" "-c" "dms screenshot region --stdout | satty --filename - --output-filename $HOME/Downloads/Screenshot-$(date '+%Y-%m-%d-%H%M%S').png --copy-command wl-copy --early-exit --initial-tool brush"; }
+    Print { spawn "noctalia" "msg" "screenshot-region"; }
+    Mod+Shift+S { spawn "noctalia" "msg" "screenshot-region"; }
 
     Mod+G { spawn "sh" "-c" "$HOME/.local/scripts/niri-monitor-toggle.sh"; }
+    
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Equal { set-column-width "+10%"; }
+    
 }
 
-// spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "noctalia"
 
-include "dms/outputs.kdl"
+// include "dms/outputs.kdl"

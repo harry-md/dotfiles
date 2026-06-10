@@ -77,3 +77,8 @@ complete -c paru -n "string match -r -- '-S[a-z]*s|--search' (commandline -txt)"
 zoxide init fish | source
 starship init fish | source
 fzf_configure_bindings --processes=\cp
+
+export XMODIFIERS=@im=fcitx
+export QT_IM_MODULE=fcitx
+export QT_IM_MODULES="wayland;fcitx"
+export GLFW_IM_MODULE=ibus
