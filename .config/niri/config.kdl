@@ -24,6 +24,7 @@ hotkey-overlay {
     skip-at-startup
 }
 
+
 // =================================================================
 // MONITORS (OUTPUTS)
 // =================================================================
@@ -99,10 +100,10 @@ layout {
 
     border {
         width 1
-        // active-color "#ffffff40"
-        // inactive-color "#ffffff08"
         active-gradient from="#ffffff30" to="#ffffff08" angle=180
-        inactive-gradient from="#ffffff15" to="#ffffff02" angle=180
+        inactive-gradient from="#ffffff10" to="#ffffff02" angle=180
+        // active-color "#ffffff30"
+        // inactive-color "#ffffff10"
     }
 
     focus-ring {
@@ -110,11 +111,16 @@ layout {
     }
     shadow {
         on
-        softness 16
-        spread 1
-        offset x=0 y=4
-        color "#00000075"
+        softness 30
+        spread 0
+        offset x=0 y=8
+        color "#00000080"
     }
+}
+
+cursor {
+    xcursor-theme "macOS"
+    xcursor-size 28
 }
 
 gestures {
@@ -129,7 +135,7 @@ overview {
 }
 
 window-rule {
-    geometry-corner-radius 20
+    geometry-corner-radius 16
     clip-to-geometry true
     draw-border-with-background false
 }
@@ -300,7 +306,7 @@ binds {
     Mod+Shift+S { spawn "noctalia" "msg" "screenshot-region"; }
 
     Mod+G { spawn "sh" "-c" "$HOME/.local/scripts/niri-monitor-toggle.sh"; }
-    
+    Mod+F4 { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
     Mod+Minus { set-column-width "-10%"; }
     Mod+Equal { set-column-width "+10%"; }
     

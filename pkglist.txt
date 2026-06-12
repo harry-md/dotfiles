@@ -12,6 +12,7 @@ alsa-utils
 amazon-fonts
 android-tools
 antigravity
+antigravity-ide
 appmenu-gtk-module
 arch-audit
 aria2
@@ -20,11 +21,13 @@ arrow
 ast-grep
 auto-cpufreq
 awesome-terminal-fonts
+azure-cli
 base
 base-devel
 bash-completion
 bind
 biome
+blanket
 blocky
 bluedevil
 blueman
@@ -46,11 +49,11 @@ cachyos-fish-config
 cachyos-hello
 cachyos-hooks
 cachyos-iridescent-kde
-cachyos-kde-settings
 cachyos-kernel-manager
 cachyos-keyring
 cachyos-micro-settings
 cachyos-mirrorlist
+cachyos-niri-noctalia
 cachyos-nord-kde-theme-git
 cachyos-packageinstaller
 cachyos-plymouth-bootanimation
@@ -73,6 +76,7 @@ cpio
 cpupower
 croc
 cryptsetup
+curlie
 dbeaver
 device-mapper
 dhclient
@@ -91,6 +95,7 @@ downgrade
 duf
 dunst
 e2fsprogs
+easyeffects
 efibootmgr
 efitools
 egl-wayland
@@ -104,11 +109,13 @@ fcitx5
 fcitx5-bamboo
 fcitx5-configtool
 fcitx5-gtk
+fcitx5-lotus-bin
 fcitx5-unikey
 ffmpegthumbnailer
 ffmpegthumbs
 filelight
 firefox
+foliate
 foot
 foot-terminfo
 freerdp
@@ -116,7 +123,6 @@ fsarchiver
 fuzzel
 fwupd
 gdb
-genymotion
 ghostty
 gimp
 git
@@ -144,7 +150,6 @@ hdf5
 hdparm
 helium-browser-bin
 htop
-httpie
 httpie-desktop-bin
 hwdetect
 hwinfo
@@ -213,10 +218,9 @@ luajit-tiktoken-bin
 luarocks
 lvm2
 lynis
-macos-tahoe-cursor
 man-db
 man-pages
-mangowc
+mangowm
 mariadb-libs
 matugen
 mdadm
@@ -243,6 +247,7 @@ nfs-utils
 ngrok
 nilfs-utils
 niri
+noctalia-git
 noctalia-shell
 nodejs
 notcurses
@@ -260,10 +265,12 @@ obs-vaapi
 obsidian
 octopi
 odt2txt
+okular
 openbsd-netcat
 opencl-mesa
 opencode
 opendesktop-fonts
+openoffice-bin
 openssh
 pacman-contrib
 paru
@@ -289,6 +296,7 @@ pngquant
 pnpm
 podofo
 poppler-glib
+postgresql
 postgresql-libs
 power-profiles-daemon
 powerdevil
@@ -343,6 +351,7 @@ sddm
 sg3_utils
 smartmontools
 sof-firmware
+solanum
 spectacle
 speech-dispatcher
 spoofdpi
@@ -357,6 +366,12 @@ systemd-boot-manager
 tableplus
 telegram-desktop
 texinfo
+texlive-bin
+texlive-binextra
+texlive-fontsextra
+texlive-fontsrecommended
+texlive-latex
+texlive-latexextra
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
@@ -395,6 +410,7 @@ vpl-gpu-rt
 vscodium-bin-marketplace
 vulkan-intel
 waybar
+wev
 wget
 which
 wireless-regdb
@@ -429,6 +445,8 @@ xsettingsd
 xwayland-satellite
 yay
 yazi
+yelp
+zam-plugins-lv2
 zathura
 zathura-pdf-mupdf
 zed
