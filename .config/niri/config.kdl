@@ -119,8 +119,8 @@ layout {
 }
 
 cursor {
-    xcursor-theme "macOS"
-    xcursor-size 28
+    xcursor-theme "Yaru"
+    xcursor-size 24
 }
 
 gestures {
@@ -145,57 +145,57 @@ animations {
 
     workspace-switch {
         // spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
-        duration-ms 200
+        duration-ms 150
         curve "ease-out-cubic"
     }
 
     window-open {
-        duration-ms 200
+        duration-ms 150
         curve "ease-out-expo"
     }
 
     window-close {
-        duration-ms 200
+        duration-ms 150
         curve "ease-out-cubic"
     }
     
     horizontal-view-movement {
-        duration-ms 200
+        duration-ms 150
         curve "ease-out-cubic"
     }
 
     window-movement {
-        duration-ms 200
+        duration-ms 150
         curve "ease-out-cubic"
     }
     
     window-resize {
-        duration-ms 200
+        duration-ms 150
         curve "ease-out-cubic"
     }
 
     config-notification-open-close {
-        duration-ms 200
+        duration-ms 150
         curve "ease-out-cubic"
     }
     
     exit-confirmation-open-close {
-        duration-ms 200
+        duration-ms 150
         curve "ease-out-cubic"
     }
 
     screenshot-ui-open {
-        duration-ms 200
+        duration-ms 150
         curve "ease-out-cubic"
     }
 
     overview-open-close {
-        duration-ms 200
+        duration-ms 150
         curve "ease-out-cubic"
     }
 
     recent-windows-close {
-        duration-ms 200
+        duration-ms 150
         curve "ease-out-cubic"
     }
 }

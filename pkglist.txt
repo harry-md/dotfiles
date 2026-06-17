@@ -27,7 +27,6 @@ base-devel
 bash-completion
 bind
 biome
-blanket
 blocky
 bluedevil
 blueman
@@ -75,6 +74,7 @@ consolas-font
 cpio
 cpupower
 croc
+crun
 cryptsetup
 curlie
 dbeaver
@@ -114,8 +114,6 @@ fcitx5-unikey
 ffmpegthumbnailer
 ffmpegthumbs
 filelight
-firefox
-foliate
 foot
 foot-terminfo
 freerdp
@@ -238,6 +236,7 @@ nano-syntax-highlighting
 nautilus
 ncdu
 nemo
+neovide
 neovim
 netcdf
 netctl
@@ -294,6 +293,9 @@ plymouth
 plymouth-kcm
 pngquant
 pnpm
+podlet
+podman
+podman-compose
 podofo
 poppler-glib
 postgresql
