@@ -17,6 +17,7 @@ return {
       ts = { "biome" },
       tsx = { "biome" },
       json = { "biome" },
+      jsonc = { "biome" },
       sql = { "sqlfmt" },
     },
     default_format_opts = {

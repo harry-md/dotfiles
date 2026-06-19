@@ -18,6 +18,15 @@ local config = {
   -- !IMPORTANT make javadoc visible when typing completion
   capabilities = require("blink-cmp").get_lsp_capabilities(),
 
+  on_attach = function(client, bufnr)
+    -- Kiểm tra xem jdtls có trả về khả năng cung cấp Semantic Tokens không
+    if client.server_capabilities.semanticTokensProvider then
+      -- Ép Neovim ưu tiên khởi động Semantic Tokens cho buffer hiện tại
+      -- Điều này giúp giữ màu dựa trên ngữ nghĩa của LSP kể cả khi Tree-sitter gãy cú pháp
+      vim.lsp.semantic_tokens.start(bufnr, client.id)
+    end
+  end,
+
   cmd = {
     "java",
     -- "-XX:+UseG1GC",

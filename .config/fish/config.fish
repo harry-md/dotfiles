@@ -78,3 +78,7 @@ export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
 export QT_IM_MODULES="wayland;fcitx"
 export GLFW_IM_MODULE=ibus
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/harry/.local/bin" $PATH

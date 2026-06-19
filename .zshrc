@@ -68,3 +68,7 @@ bindkey "^[w" backward-kill-word
 bindkey "^[l" clear-screen
 bindkey "^[[1;3D" backward-word
 bindkey "^[[1;3C" forward-word
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/harry/.local/bin:$PATH"
