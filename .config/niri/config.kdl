@@ -119,8 +119,8 @@ layout {
 }
 
 cursor {
-    xcursor-theme "macOS"
-    xcursor-size 24
+    xcursor-theme "macOS-White"
+    xcursor-size 28
 }
 
 gestures {
