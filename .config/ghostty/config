@@ -37,10 +37,10 @@ palette = 13=#c9b1ca
 palette = 14=#bebeda
 palette = 15=#d7d7d7
 # background = #141413
-background = #121212
+background = #080808
 foreground = #cdcdcd
 selection-background = #252530
 selection-foreground = #cdcdcd
 split-divider-color = #878787
 keybind = ctrl+,=unbind
-custom-shader = shaders/cursor_smear.glsl
+#custom-shader = shaders/cursor_smear.glsl

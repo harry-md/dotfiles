@@ -12,6 +12,7 @@ alsa-utils
 amazon-fonts
 android-tools
 antigravity
+antigravity-cli
 antigravity-ide
 appmenu-gtk-module
 arch-audit
@@ -42,7 +43,7 @@ brillo
 bruno-bin
 btop
 btrfs-progs
-bun-bin
+bun
 cachyos-emerald-kde-theme-git
 cachyos-fish-config
 cachyos-hello
@@ -77,6 +78,7 @@ croc
 crun
 cryptsetup
 curlie
+cursor-bin
 dbeaver
 device-mapper
 dhclient
@@ -165,9 +167,11 @@ intel-media-driver
 intel-ucode
 inter-font
 iptables
+iriunwebcam-bin
 iwd
 jetbrains-toolbox
 jfsutils
+jmeter
 kanata-bin
 kate
 kcalc
@@ -212,13 +216,13 @@ logrotate
 lorien-bin
 lsb-release
 lsscsi
-luajit-tiktoken-bin
 luarocks
 lvm2
 lynis
 man-db
 man-pages
 mangowm
+mariadb
 mariadb-libs
 matugen
 mdadm
@@ -236,7 +240,6 @@ nano-syntax-highlighting
 nautilus
 ncdu
 nemo
-neovide
 neovim
 netcdf
 netctl
@@ -275,6 +278,7 @@ pacman-contrib
 paru
 pavucontrol
 perl
+pgloader
 pipewire-alsa
 pipewire-pulse
 pkgfile
@@ -405,6 +409,8 @@ usbutils
 uv
 uwsm
 v4l2loopback-dkms
+v4l2loopback-utils
+valkey
 vesktop-bin
 vim
 vlc-plugins-base
@@ -422,6 +428,7 @@ wlr-randr
 wlsunset
 wofi
 wpa_supplicant
+wrk
 wtype
 xclip
 xdg-desktop-portal

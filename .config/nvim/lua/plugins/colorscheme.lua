@@ -8,8 +8,8 @@ return {
         italic = false,
         transparent = false,
         colors = {
-          bg = "#121212",
-          fg = "#faf9f5",
+          bg = "#080808",
+          fg = "#cdcdcd",
           -- floatBorder = "#878787",
           -- line = "#282830",
           -- comment = "#646477",
