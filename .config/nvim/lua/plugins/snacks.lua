@@ -321,7 +321,6 @@ return {
             -- add the following keymap to your config
             -- ["<Esc>"] = { "close", mode = { "n", "i" } },
             ["/"] = "toggle_focus",
-            ["<A-w>"] = { "<C-w>", mode = { "i", "n" }, expr = false },
             ["<C-Down>"] = { "history_forward", mode = { "i", "n" } },
             ["<C-Up>"] = { "history_back", mode = { "i", "n" } },
             ["<C-c>"] = { "cancel", mode = "i" },

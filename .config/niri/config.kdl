@@ -50,6 +50,7 @@ output "eDP-1" {
 // spawn-at-startup "wl-clip-persist" "--clipboard" "regular"
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
+spawn-at-startup "/usr/bin/emacs --daemon"
 spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
 spawn-at-startup "xsettingsd"
 spawn-at-startup "fcitx5" "-d"
@@ -119,7 +120,7 @@ layout {
 }
 
 cursor {
-    xcursor-theme "Qogir-white-cursors"
+    xcursor-theme "Yaru"
     xcursor-size 24
 }
 

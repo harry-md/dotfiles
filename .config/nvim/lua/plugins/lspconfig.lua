@@ -50,6 +50,7 @@ return {
       -- LSP Server Settings
       ---@type table<string, vim.lsp.Config|{mason?:boolean, enabled?:boolean}|boolean>
       servers = {
+        jdtls = {},
         -- configuration for all lsp servers
         ["*"] = {
           keys = {
@@ -100,6 +101,9 @@ return {
       -- return true if you don't want this server to be setup with lspconfig
       ---@type table<string, fun(server:string, opts: vim.lsp.Config):boolean?>
       setup = {
+        jdtls = function()
+          return true
+        end,
         -- example to setup with typescript.nvim
         -- tsserver = function(_, opts)
         --   require("typescript").setup({ server = opts })
