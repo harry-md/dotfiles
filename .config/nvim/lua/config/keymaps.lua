@@ -39,15 +39,14 @@ set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 set("n", "<S-h>", "<C-^>", { desc = "MRU (Most Recently Used)" })
 set("n", "<S-l>", ":bnext<CR>", { desc = "Switch to next buffer" })
 
-set({ "n", "i", "c", "t", "v", "x" }, "<A-w>", "<C-w>")
+set({ "n", "i", "c", "t", "v", "x" }, "<A-w>", "<C-w>", { remap = true, silent = true })
 set({ "n", "v" }, "<A-u>", "<C-u>")
 set({ "n", "v" }, "<A-d>", "<C-d>")
 set("n", "<A-o>", "<C-o>", { silent = true })
 
-set("c", "<A-y>", "<CR>", { silent = true })
-set({ "n", "i", "v", "c" }, "<A-n>", "<C-n>", { silent = true })
-set({ "n", "i", "v", "c" }, "<A-p>", "<C-p>", { silent = true })
-set({ "n", "i", "v", "c" }, "<A-y>", "<C-y>", { silent = true })
+set({ "c", "n", "i", "v" }, "<A-y>", "<C-y>", { remap = true, silent = true })
+set({ "n", "i", "v", "c" }, "<A-n>", "<C-n>", { remap = true, silent = true })
+set({ "n", "i", "v", "c" }, "<A-p>", "<C-p>", { remap = true, silent = true })
 set("n", "K", ':lua vim.lsp.buf.hover({ border = "rounded" })<CR>', { silent = true })
 
 -- go to definition

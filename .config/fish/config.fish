@@ -80,3 +80,9 @@ export GLFW_IM_MODULE=ibus
 
 # Added by Antigravity CLI installer
 set -gx PATH "/home/harry/.local/bin" $PATH
+
+function nlog
+    nvim --clean -c "set nowrap" -c "tnoremap <Esc> <C-\><C-n>" -c "term echo -e '\e[?7l'; $argv"
+end
+
+source "$HOME/.cargo/env.fish"

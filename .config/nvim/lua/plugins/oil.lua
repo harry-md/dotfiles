@@ -23,4 +23,15 @@ return {
       ["g\\"] = { "actions.toggle_trash", mode = "n" },
     },
   },
+  init = function()
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "oil",
+      callback = function()
+        vim.keymap.set("n", "l", function()
+          require("oil").select()
+        end, { buffer = true, desc = "Open folder/file" })
+        vim.keymap.set("n", "h", "-", { buffer = true, remap = true, desc = "Go to parent" })
+      end,
+    })
+  end,
 }

@@ -14,6 +14,32 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function(ev)
+    local ft = vim.bo[ev.buf].filetype
+    local name = vim.api.nvim_buf_get_name(ev.buf)
+    if ft:match("fff") or name:match("fff") then
+      vim.keymap.set({ "i", "n", "c" }, "<A-y>", "<CR>", {
+        buffer = ev.buf,
+        remap = true,
+        silent = true,
+      })
+
+      vim.keymap.set({ "i", "n", "c" }, "<A-d>", "<C-d>", {
+        buffer = ev.buf,
+        remap = true,
+        silent = true,
+      })
+
+      vim.keymap.set({ "i", "n", "c" }, "<A-u>", "<C-u>", {
+        buffer = ev.buf,
+        remap = true,
+        silent = true,
+      })
+    end
+  end,
+})
+
 -- CÁCH AN TOÀN, GIỮ LẠI ĐỀ PHÒNG. DÙNG ĐỂ LOẠI BỎ jdt:// KHI HOVER TRONG FILE JAVA
 -- local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
 -- function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)

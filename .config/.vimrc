@@ -3,6 +3,7 @@ let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)"
 let g:highlightedyank_highlight_duration = "500"
 nnoremap Y y$
 inoremap <A-n> <C-n>
+inoremap <A-w> <C-w>
 inoremap <A-p> <C-p>
 nnoremap <A-u> <C-u>
 nnoremap <A-d> <C-d>
