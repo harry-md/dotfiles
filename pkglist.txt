@@ -48,12 +48,12 @@ cachyos-emerald-kde-theme-git
 cachyos-fish-config
 cachyos-hello
 cachyos-hooks
+cachyos-hypr-noctalia
 cachyos-iridescent-kde
 cachyos-kernel-manager
 cachyos-keyring
 cachyos-micro-settings
 cachyos-mirrorlist
-cachyos-niri-noctalia
 cachyos-nord-kde-theme-git
 cachyos-packageinstaller
 cachyos-plymouth-bootanimation
@@ -78,7 +78,6 @@ croc
 crun
 cryptsetup
 curlie
-cursor-bin
 dbeaver
 device-mapper
 dhclient
@@ -103,6 +102,7 @@ efitools
 egl-wayland
 eslint
 ethtool
+evince
 ex-vi-compat
 exfatprogs
 f2fs-tools
@@ -211,6 +211,7 @@ linux-cachyos-lts
 linux-cachyos-lts-headers
 linux-firmware
 lldb
+lnav
 localsend
 logrotate
 lorien-bin
@@ -268,6 +269,7 @@ obsidian
 octopi
 odt2txt
 okular
+openai-codex
 openbsd-netcat
 opencl-mesa
 opencode
@@ -349,7 +351,6 @@ rsync
 rtkit
 ruby
 ruff
-rust
 s-nail
 satty
 scrcpy
@@ -419,6 +420,7 @@ vscodium-bin-marketplace
 vulkan-intel
 waybar
 wev
+wezterm
 wget
 which
 wireless-regdb
