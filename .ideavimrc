@@ -38,6 +38,8 @@ inoremap <A-p> <C-p>
 inoremap <A-w> <C-w>
 nnoremap <A-u> <C-u>
 nnoremap <A-d> <C-d>
+vnoremap <A-u> <C-u>
+vnoremap <A-d> <C-d>
 nnoremap <C-j> 10jzz
 nnoremap <C-k> 10kzz
 vnoremap <C-j> 10j
@@ -57,10 +59,14 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set ideajoin
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 set clipboard+=ideaput
 map s <Action>(flash.search)
 nnoremap <space><space> :action GotoFile<CR>
 inoremap <A-q> :action CodeCompletion<CR>
 vnoremap < <gv
 vnoremap > >gv
+cnoremap <C-S-v> <C-r>+
+inoremap<C-S-v> <C-r>+
+nnoremap <C-S-v> "+p
+vnoremap <C-S-v> "+p

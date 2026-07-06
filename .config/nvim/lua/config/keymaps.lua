@@ -1,9 +1,6 @@
 local opts = { silent = true }
 local set = vim.keymap.set
 
--- rename keymap
-set("n", "<leader>rn", ":IncRename ")
-set("v", "<C-a>", "ggVG", { desc = "Select [a]ll" })
 -- jump between buffers
 set("n", "<c-j>", "<c-w><c-j>")
 set("n", "<c-l>", "<c-w><c-l>")
