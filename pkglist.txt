@@ -48,7 +48,6 @@ cachyos-emerald-kde-theme-git
 cachyos-fish-config
 cachyos-hello
 cachyos-hooks
-cachyos-hypr-noctalia
 cachyos-iridescent-kde
 cachyos-kernel-manager
 cachyos-keyring
@@ -135,7 +134,6 @@ go
 gophertube-bin
 gpart
 gparted
-grimblast-git
 gst-libav
 gst-plugin-pipewire
 gst-plugin-va
@@ -153,13 +151,6 @@ htop
 httpie-desktop-bin
 hwdetect
 hwinfo
-hypridle
-hyprland
-hyprlock
-hyprpaper
-hyprpicker
-hyprpolkitagent
-hyprshot
 imv
 inetutils
 intel-gpu-tools
@@ -171,8 +162,6 @@ iriunwebcam-bin
 iwd
 jetbrains-toolbox
 jfsutils
-jmeter
-kanata-bin
 kate
 kcalc
 kde-gtk-config
@@ -413,6 +402,7 @@ v4l2loopback-dkms
 v4l2loopback-utils
 valkey
 vesktop-bin
+vicinae-bin
 vim
 vlc-plugins-base
 vpl-gpu-rt
@@ -435,7 +425,6 @@ wtype
 xclip
 xdg-desktop-portal
 xdg-desktop-portal-gnome
-xdg-desktop-portal-hyprland
 xdg-desktop-portal-kde
 xdg-user-dirs
 xdg-utils

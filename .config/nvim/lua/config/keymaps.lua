@@ -36,7 +36,12 @@ set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 set("n", "<S-h>", "<C-^>", { desc = "MRU (Most Recently Used)" })
 set("n", "<S-l>", ":bnext<CR>", { desc = "Switch to next buffer" })
 
-set({ "n", "i", "c", "t", "v", "x" }, "<A-w>", "<C-w>", { remap = true, silent = true })
+set({ "n", "i", "t", "v", "x" }, "<A-w>", "<C-w>", { remap = true, silent = true })
+set("c", "<A-w>", "<C-w>", {
+  remap = true,
+  noremap = true,
+})
+
 set({ "n", "v" }, "<A-u>", "<C-u>")
 set({ "n", "v" }, "<A-d>", "<C-d>")
 set("n", "<A-o>", "<C-o>", { silent = true })

@@ -70,3 +70,4 @@ cnoremap <C-S-v> <C-r>+
 inoremap<C-S-v> <C-r>+
 nnoremap <C-S-v> "+p
 vnoremap <C-S-v> "+p
+imap <A-e> <Action>(InsertInlineCompletionAction)
