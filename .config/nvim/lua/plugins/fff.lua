@@ -8,6 +8,13 @@ return {
       enabled = false,
       show_scores = false,
     },
+    layout = {
+      height = 0.85,
+      width = 0.85,
+      prompt_position = "top",
+      flex = { size = 130, wrap = "bottom" },
+      border = nil,
+    },
   },
   lazy = false,
   keys = {
