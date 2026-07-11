@@ -1,131 +1,146 @@
 {
-   "checksum": "cfc3023d6c959490c8cf068d34bed1e0",
+   "checksum": "33b7f397c4eb28c83de65bbacf3d629f",
    "roots": {
       "bookmark_bar": {
          "children": [ {
-            "date_added": "13412796641465475",
-            "date_last_used": "0",
-            "guid": "77e2e1a5-851c-404e-aab4-9c62d80d1965",
+            "date_added": "13412796641000000",
+            "date_last_used": "13422518399483337",
+            "guid": "5ccd9d90-9c95-417e-aaa1-294ef613a019",
             "id": "5",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
             "name": "Tài liệu OU-renew - Google Drive",
             "type": "url",
             "url": "https://drive.google.com/drive/folders/1z869SInkzxwySxjvz2SF26hTRu5_ZSst"
          }, {
-            "date_added": "13413552026120311",
+            "date_added": "13414765098000000",
             "date_last_used": "0",
-            "guid": "53587361-7688-4af3-86ab-5c0088fb927a",
-            "id": "7",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
-            "name": "Spring ",
-            "type": "url",
-            "url": "https://docs.spring.io/spring-framework/reference/"
-         }, {
-            "date_added": "13413573352097560",
-            "date_last_used": "0",
-            "guid": "68122d31-dd52-4790-918c-2f3e0fa24421",
-            "id": "8",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
-            "name": "Spring Boot",
-            "type": "url",
-            "url": "https://docs.spring.io/spring-boot/index.html"
-         }, {
-            "date_added": "13413573376260011",
-            "date_last_used": "0",
-            "guid": "654baeb7-a547-4358-8a05-0e8d70ee5787",
+            "guid": "5962f510-f691-4919-ac8d-49bba29fce7a",
             "id": "9",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
-            "name": "Spring Docs",
-            "type": "url",
-            "url": "https://docs.spring.io/spring-security/reference/index.html"
-         }, {
-            "date_added": "13414765098283162",
-            "date_last_used": "0",
-            "guid": "c8c18130-e967-434c-b027-e5dfe35e2bed",
-            "id": "12",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
             "name": "Emoji",
             "type": "url",
             "url": "https://emojicombos.com/"
          }, {
-            "date_added": "13414871871228066",
+            "date_added": "13414944611000000",
             "date_last_used": "0",
-            "guid": "fcb5b03b-1e95-4d1c-aff7-f751315cacc2",
-            "id": "14",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
-            "name": "Note",
-            "type": "url",
-            "url": "https://harry-md.github.io/Note/"
-         }, {
-            "date_added": "13414944611648974",
-            "date_last_used": "0",
-            "guid": "2b60e0ee-ded1-4ef3-8960-42f6b8469664",
-            "id": "16",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
+            "guid": "5ef23216-6e03-4ed8-884a-e805150c1d07",
+            "id": "11",
             "name": "fmhy",
             "type": "url",
             "url": "https://fmhy.net/"
          }, {
-            "date_added": "13415906584217431",
+            "date_added": "13415906584000000",
             "date_last_used": "0",
-            "guid": "c0dc340b-8fbc-4507-a65d-afe5d526ea01",
-            "id": "18",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
+            "guid": "91a3a52e-1f6c-426a-acf5-86f70dc95805",
+            "id": "12",
             "name": "java.evolved",
             "type": "url",
             "url": "https://javaevolved.github.io/"
          }, {
-            "date_added": "13417790573948981",
-            "date_last_used": "0",
-            "guid": "fcf9204f-fe13-4cf4-bd2b-50d850c0580a",
-            "id": "20",
-            "meta_info": {
-               "power_bookmark_meta": ""
-            },
+            "date_added": "13417790573000000",
+            "date_last_used": "13425492554826720",
+            "guid": "9fe16556-32fb-497a-a21c-161e475aa5cc",
+            "id": "13",
             "name": "DevDocs",
             "type": "url",
             "url": "https://devdocs.io/"
          }, {
-            "date_added": "13418119156241810",
-            "date_last_used": "13418410669665339",
-            "guid": "95e37bd5-ca11-433e-8db9-2feb9d42ebf7",
+            "date_added": "13418119156000000",
+            "date_last_used": "0",
+            "guid": "d9bcaa41-1a59-45b7-96f9-713a7fe6e521",
+            "id": "14",
+            "name": "Maven Repository",
+            "type": "url",
+            "url": "https://repo1.maven.org/maven2/"
+         }, {
+            "date_added": "13422302404737566",
+            "date_last_used": "13424080458140557",
+            "guid": "00c3c61d-011f-4998-9fd8-6071e344f19a",
+            "id": "20",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Messenger",
+            "type": "url",
+            "url": "https://www.facebook.com/messages"
+         }, {
+            "date_added": "13423769196696128",
+            "date_last_used": "13428087262420841",
+            "guid": "4cd7cfc6-eb61-4fe4-9656-8215fc028e85",
             "id": "22",
             "meta_info": {
                "power_bookmark_meta": ""
             },
-            "name": "Maven Repository",
+            "name": "Azure Portal",
             "type": "url",
-            "url": "https://repo1.maven.org/maven2/"
+            "url": "https://portal.azure.com/#home"
+         }, {
+            "date_added": "13423769234114023",
+            "date_last_used": "13426526574341293",
+            "guid": "af0a4375-4f6f-45d3-b77e-8e8219549904",
+            "id": "23",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Upstash",
+            "type": "url",
+            "url": "https://console.upstash.com/redis?teamid=0"
+         }, {
+            "date_added": "13427650830819971",
+            "date_last_used": "13428237896207266",
+            "guid": "7c71a229-6264-4b11-aea1-0699aa6cbd95",
+            "id": "27",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Engineering Knowledge Base",
+            "type": "url",
+            "url": "https://luminhkhuong.dev/"
+         }, {
+            "date_added": "13428237877028872",
+            "date_last_used": "0",
+            "guid": "8e0510c4-5426-4992-8232-0230d929d825",
+            "id": "29",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Chatbox",
+            "type": "url",
+            "url": "https://web.chatboxai.app/"
+         }, {
+            "date_added": "13428237882163582",
+            "date_last_used": "0",
+            "guid": "9c99b841-8646-4d9f-b06b-bfc8192fbf66",
+            "id": "30",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Home · LobeHub",
+            "type": "url",
+            "url": "https://app.lobehub.com/"
          } ],
-         "date_added": "13412784044824905",
+         "date_added": "13418968624363703",
          "date_last_used": "0",
-         "date_modified": "13418119156241810",
+         "date_modified": "13428237882163582",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
-         "name": "Bookmarks",
+         "name": "Bookmarks bar",
          "type": "folder"
       },
       "other": {
-         "children": [  ],
-         "date_added": "13412784044824910",
+         "children": [ {
+            "date_added": "13421313472832020",
+            "date_last_used": "0",
+            "guid": "29586561-f113-43af-9507-049fc3d53659",
+            "id": "16",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "PostgreSQL Docs",
+            "type": "url",
+            "url": "https://www.postgresql.org/docs/current/index.html"
+         } ],
+         "date_added": "13418968624363703",
          "date_last_used": "0",
-         "date_modified": "13412796641465475",
+         "date_modified": "13422207440552402",
          "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
          "id": "2",
          "name": "Other bookmarks",
@@ -133,7 +148,7 @@
       },
       "synced": {
          "children": [  ],
-         "date_added": "13412784044824914",
+         "date_added": "13418968624363703",
          "date_last_used": "0",
          "date_modified": "0",
          "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",

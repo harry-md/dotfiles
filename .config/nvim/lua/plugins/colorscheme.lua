@@ -8,7 +8,7 @@ return {
         italic = false,
         transparent = false,
         colors = {
-          bg = "#0e0e0e",
+          bg = "#060606",
           fg = "#cdcdcd",
           -- floatBorder = "#878787",
           -- line = "#282830",
