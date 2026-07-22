@@ -16,6 +16,7 @@ return {
       typescript = { "biome" },
       ts = { "biome" },
       tsx = { "biome" },
+      typescriptreact = { "biome" },
       json = { "biome" },
       jsonc = { "biome" },
       sql = { "sqlfmt" },

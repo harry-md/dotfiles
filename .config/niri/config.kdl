@@ -120,7 +120,7 @@ layout {
 }
 
 cursor {
-    xcursor-theme "Yaru"
+    xcursor-theme "MacOS-Tahoe-Cursor"
     xcursor-size 24
 }
 
