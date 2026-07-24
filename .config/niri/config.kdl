@@ -120,7 +120,7 @@ layout {
 }
 
 cursor {
-    xcursor-theme "MacOS-Tahoe-Cursor"
+    xcursor-theme "Yaru"
     xcursor-size 24
 }
 
@@ -241,11 +241,12 @@ window-rule {
     block-out-from "screen-capture"
 }
 
+//
 // =================================================================
 // KEYBINDS
 // =================================================================
 binds {
-    Mod+Q { spawn "ghostty"; }
+    Mod+Q { spawn "foot"; }
     Alt+C { close-window; }
     Mod+E { spawn "nautilus"; }
     Mod+V { toggle-window-floating; }
