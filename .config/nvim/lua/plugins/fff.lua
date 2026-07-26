@@ -4,6 +4,11 @@ return {
     require("fff.download").download_or_build_binary()
   end,
   opts = {
+    max_threads = 2,
+    enable_home_dir_scanning = false,
+    frecency = {
+      enabled = false,
+    },
     debug = {
       enabled = false,
       show_scores = false,

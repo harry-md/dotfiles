@@ -46,9 +46,9 @@ set({ "n", "v" }, "<A-u>", "<C-u>")
 set({ "n", "v" }, "<A-d>", "<C-d>")
 set("n", "<A-o>", "<C-o>", { silent = true })
 
-set({ "c", "n", "i", "v" }, "<A-y>", "<C-y>", { remap = true, silent = true })
-set({ "n", "i", "v", "c" }, "<A-n>", "<C-n>", { remap = true, silent = true })
-set({ "n", "i", "v", "c" }, "<A-p>", "<C-p>", { remap = true, silent = true })
+set({ "n", "i", "t", "v", "x" }, "<A-y>", "<C-y>", { remap = true, silent = true })
+set({ "n", "i", "t", "v", "x" }, "<A-n>", "<C-n>", { remap = true, silent = true })
+set({ "n", "i", "t", "v", "x" }, "<A-p>", "<C-p>", { remap = true, silent = true })
 set("n", "K", ':lua vim.lsp.buf.hover({ border = "rounded" })<CR>', { silent = true })
 
 -- go to definition
@@ -58,10 +58,11 @@ set("n", "gD", vim.lsp.buf.references, { desc = "Go to references" })
 
 -- delete buffer
 set("n", "<S-x>", ":bd<CR>", {})
-set("n", "<leader><space>", ":lua Snacks.picker.files()<CR>", { silent = true })
+set("n", "ff", ":lua Snacks.picker.files()<CR>", { silent = true })
 -- jump to next diagnostics
 set("n", "<leader>dn", require("snacks.picker").diagnostics, { desc = "Jump to [n]ext [d]iagnostics" })
-set("n", "<leader>/", require("snacks.picker").grep, { desc = "Grep" })
+-- <>
+set("n", "fg", require("snacks.picker").grep, { desc = "Grep" })
 
 set("x", "p", "P", { noremap = true })
 set({ "i", "n", "x" }, "<C-c>", "<esc>")

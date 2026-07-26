@@ -11,4 +11,6 @@ return {
   { "nvim-neo-tree/neo-tree.nvim", enabled = false },
   { "Exafunction/windsurf.nvim", enabled = false },
   { "zbirenbaum/copilot.lua", enabled = false },
+  -- { "nvim-treesitter/nvim-treesitter-context", enabled = false },
+  { "dmtrKovalenko/fff.nvim", enabled = false },
 }

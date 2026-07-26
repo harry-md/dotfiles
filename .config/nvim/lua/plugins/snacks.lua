@@ -175,10 +175,14 @@ return {
         "*.SYS",
         "*.XLL",
         "*.parquet",
+        "node_modules/*",
       },
       enabled = true,
       prompt = " ",
       sources = {
+        grep = {
+          regex = false,
+        },
         explorer = {
           -- We override the layout settings here
           layout = {
@@ -340,6 +344,8 @@ return {
             ["<a-m>"] = { "toggle_maximize", mode = { "i", "n" } },
             ["<c-p>"] = { "list_up", mode = { "i", "n" } },
             ["<a-w>"] = { "fallback" },
+            ["<a-n>"] = { "fallback" },
+            ["<a-p>"] = { "fallback" },
             ["<c-a>"] = { "select_all", mode = { "n", "i" } },
             ["<c-k>"] = { "preview_scroll_up", mode = { "i", "n" } },
             ["<c-j>"] = { "preview_scroll_down", mode = { "i", "n" } },
