@@ -1,6 +1,7 @@
 return {
   {
     "harry-md/vague.nvim",
+    -- "vague-theme/vague.nvim",
     version = "1.7.0",
     config = function()
       require("vague").setup({
