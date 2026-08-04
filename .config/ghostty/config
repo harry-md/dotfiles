@@ -17,7 +17,8 @@ keybind = alt+nine=unbind
 window-decoration = none
 app-notifications = no-clipboard-copy
 #font-family = JetBrainsMono Nerd Font
-font-family = Berkeley Mono
+font-family = CaskaydiaCove NF
+#font-family = Berkeley Mono
 adjust-cell-height = 0
 adjust-cursor-thickness = 1
 #cursor-color = #d97757
@@ -38,8 +39,8 @@ palette = 12=#8ba9c1
 palette = 13=#c9b1ca
 palette = 14=#bebeda
 palette = 15=#d7d7d7
-# background = #141413
-background = #060606
+#background = #141413
+background = #0f0f0f
 foreground = #cdcdcd
 selection-background = #252530
 selection-foreground = #cdcdcd

@@ -1,6 +1,7 @@
 return {
   "zbirenbaum/copilot.lua",
   version = false,
+  ft = { "lua", "python", "sh", "bash", "java", "javascript", "typescript", "javascriptreact", "typescriptreact" },
   enable = true,
   cmd = "Copilot",
   build = ":Copilot auth",

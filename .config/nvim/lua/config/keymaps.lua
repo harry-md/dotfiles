@@ -54,7 +54,8 @@ set("n", "K", ':lua vim.lsp.buf.hover({ border = "rounded" })<CR>', { silent = t
 -- go to definition
 set("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true })
 -- go to references
-set("n", "gD", vim.lsp.buf.references, { desc = "Go to references" })
+-- set("n", "gD", vim.lsp.buf.references, { desc = "Go to references" })
+set("n", "gD", "<CMD>Glance references<CR>", { desc = "Go to references (Glance)" })
 
 -- delete buffer
 set("n", "<S-x>", ":bd<CR>", {})

@@ -6,7 +6,7 @@
 
 @define-color accent_color #ffffff;
 @define-color accent_bg_color #ffffff;
-@define-color accent_fg_color #353020;
+@define-color accent_fg_color #1b1b1b;
 
 @define-color destructive_bg_color #ffb4ab;
 @define-color destructive_fg_color #690005;
@@ -14,35 +14,35 @@
 @define-color error_bg_color #ffb4ab;
 @define-color error_fg_color #690005;
 
-@define-color window_bg_color #141312;
-@define-color window_fg_color #e6e2de;
+@define-color window_bg_color #131313;
+@define-color window_fg_color #e2e2e2;
 
-@define-color view_bg_color #141312;
-@define-color view_fg_color #e6e2de;
+@define-color view_bg_color #131313;
+@define-color view_fg_color #e2e2e2;
 
-@define-color headerbar_bg_color #141312;
-@define-color headerbar_fg_color #e6e2de;
+@define-color headerbar_bg_color #131313;
+@define-color headerbar_fg_color #e2e2e2;
 @define-color headerbar_backdrop_color @window_bg_color;
 
-@define-color popover_bg_color #201f1e;
-@define-color popover_fg_color #e6e2de;
+@define-color popover_bg_color #1f1f1f;
+@define-color popover_fg_color #e2e2e2;
 
-@define-color card_bg_color #201f1e;
-@define-color card_fg_color #e6e2de;
+@define-color card_bg_color #1f1f1f;
+@define-color card_fg_color #e2e2e2;
 
-@define-color dialog_bg_color #141312;
-@define-color dialog_fg_color #e6e2de;
+@define-color dialog_bg_color #131313;
+@define-color dialog_fg_color #e2e2e2;
 
-@define-color overview_bg_color #201f1e;
-@define-color overview_fg_color #e6e2de;
+@define-color overview_bg_color #1f1f1f;
+@define-color overview_fg_color #e2e2e2;
 
-@define-color sidebar_bg_color #201f1e;
-@define-color sidebar_fg_color #e6e2de;
+@define-color sidebar_bg_color #1f1f1f;
+@define-color sidebar_fg_color #e2e2e2;
 @define-color sidebar_backdrop_color @window_bg_color;
 @define-color sidebar_border_color @window_bg_color;
 
-@define-color secondary_sidebar_bg_color #141312;
-@define-color secondary_sidebar_fg_color #e6e2de;
+@define-color secondary_sidebar_bg_color #131313;
+@define-color secondary_sidebar_fg_color #e2e2e2;
 
 /* Backdrop/unfocused states */
 @define-color theme_unfocused_fg_color @window_fg_color;
@@ -55,7 +55,7 @@
 :root {
     --accent-color: #ffffff;
     --accent-bg-color: #ffffff; 
-    --accent-fg-color: #353020;
+    --accent-fg-color: #1b1b1b;
 
     --destructive-bg-color: #ffb4ab;
     --destructive-fg-color: #690005;
@@ -64,40 +64,40 @@
     --error-fg-color: #690005;
     --error-color: #ffb4ab;
 
-    --window-bg-color: #141312;
-    --window-fg-color: #e6e2de;
+    --window-bg-color: #131313;
+    --window-fg-color: #e2e2e2;
 
-    --view-bg-color: #141312;
-    --view-fg-color: #e6e2de;
+    --view-bg-color: #131313;
+    --view-fg-color: #e2e2e2;
 
-    --headerbar-bg-color: #141312;
-    --headerbar-fg-color: #e6e2de;
+    --headerbar-bg-color: #131313;
+    --headerbar-fg-color: #e2e2e2;
     --headerbar-backdrop-color: @window_bg_color;
 
-    --popover-bg-color: #201f1e;
-    --popover-fg-color: #e6e2de;
+    --popover-bg-color: #1f1f1f;
+    --popover-fg-color: #e2e2e2;
 
-    --card-bg-color: #201f1e;
-    --card-fg-color: #e6e2de;
+    --card-bg-color: #1f1f1f;
+    --card-fg-color: #e2e2e2;
 
-    --dialog-bg-color: #141312;
-    --dialog-fg-color: #e6e2de;
+    --dialog-bg-color: #131313;
+    --dialog-fg-color: #e2e2e2;
 
-    --overview-bg-color: #201f1e;
-    --overview-fg-color: #e6e2de;
+    --overview-bg-color: #1f1f1f;
+    --overview-fg-color: #e2e2e2;
 
-    --sidebar-bg-color: #201f1e;
-    --sidebar-fg-color: #e6e2de;
+    --sidebar-bg-color: #1f1f1f;
+    --sidebar-fg-color: #e2e2e2;
     --sidebar-backdrop-color: @window_bg_color;
     --sidebar-border-color: @window_bg_color;
 
-    --warning-bg-color: #dee5d2;
-    --warning-fg-color: #606758;
-    --warning-color: #ffffff;
+    --warning-bg-color: #919191;
+    --warning-fg-color: #000000;
+    --warning-color: #e2e2e2;
 
-    --success-color: #ccc6ba;
-    --success-bg-color: #4a473e;
-    --success-fg-color: #bab5a9;
+    --success-color: #c6c6c6;
+    --success-bg-color: #474747;
+    --success-fg-color: #e2e2e2;
     
     --shade-color: rgba(0, 0, 0, 0.36);
 }

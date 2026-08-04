@@ -11,9 +11,6 @@ alsa-plugins
 alsa-utils
 amazon-fonts
 android-tools
-antigravity
-antigravity-cli
-antigravity-ide
 appmenu-gtk-module
 arch-audit
 aria2
@@ -67,6 +64,8 @@ cava
 chafa
 char-white
 chwd
+claude-code
+claude-desktop
 cliphist
 clipse
 cmake
@@ -76,7 +75,6 @@ cpupower
 croc
 crun
 cryptsetup
-curlie
 dbeaver
 device-mapper
 dhclient
@@ -95,7 +93,6 @@ downgrade
 duf
 dunst
 e2fsprogs
-easyeffects
 efibootmgr
 efitools
 egl-wayland
@@ -131,7 +128,6 @@ glances
 gnome-keyring
 gnome-system-monitor
 go
-gophertube-bin
 gpart
 gparted
 gst-libav
@@ -151,6 +147,7 @@ htop
 httpie-desktop-bin
 hwdetect
 hwinfo
+hyprpicker
 imv
 inetutils
 intel-gpu-tools
@@ -219,6 +216,7 @@ mdadm
 meld
 mesa
 mesa-utils
+meson
 micro
 mkinitcpio
 modemmanager
@@ -238,8 +236,9 @@ networkmanager-openvpn
 nfs-utils
 ngrok
 nilfs-utils
+ninja
 niri
-noctalia-git
+noctalia
 noctalia-shell
 nodejs
 notcurses
@@ -258,7 +257,6 @@ obsidian
 octopi
 odt2txt
 okular
-openai-codex
 openbsd-netcat
 opencl-mesa
 opencode
@@ -304,6 +302,7 @@ python
 python-adblock
 python-defusedxml
 python-packaging
+python-tqdm
 qbittorrent
 qemu-base
 qt5-wayland
@@ -344,6 +343,7 @@ s-nail
 satty
 scrcpy
 sddm
+seahorse
 sg3_utils
 smartmontools
 sof-firmware
@@ -353,6 +353,7 @@ speech-dispatcher
 spoofdpi
 spotify
 starship
+stb
 stow
 sudo
 swtpm
@@ -402,7 +403,6 @@ v4l2loopback-dkms
 v4l2loopback-utils
 valkey
 vesktop-bin
-vicinae-bin
 vim
 vlc-plugins-base
 vpl-gpu-rt
@@ -439,7 +439,6 @@ xorg-xinit
 xorg-xinput
 xorg-xkill
 xorg-xrandr
-xournalpp
 xsettings-client
 xsettingsd
 xwayland-satellite
@@ -449,6 +448,5 @@ yelp
 zam-plugins-lv2
 zathura
 zathura-pdf-mupdf
-zed
 zip
 zoxide

@@ -203,7 +203,7 @@ return {
 
           layout = {
             box = "horizontal",
-            width = 0.8,
+            width = 0.85,
             min_width = 120, -- 120
             height = 0.85,
             {

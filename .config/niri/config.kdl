@@ -83,6 +83,7 @@ input {
     mouse {
         accel-speed -0.10
         accel-profile "flat"
+        scroll-factor 1.5
     }
 }
 
@@ -142,7 +143,7 @@ window-rule {
 }
 
 animations {
-    off
+    on
 
     workspace-switch {
         // spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
@@ -219,6 +220,13 @@ window-rule {
 }
 
 window-rule {
+    match app-id="com.mitchellh.ghostty"
+    match app-id="vesktop"
+    open-maximized-to-edges true
+}
+
+
+window-rule {
     match title=r#"(?i)^(Welcome to.*|Sign in.*|Open File|Save File|Preferences|Settings|Confirm.*|Warning.*)$"#
     match title=r#"(?i)(?i).*(file|directory|folder|open|save|preferences|settings|welcome).*"#
     match app-id=r#"(?i)^(xdg-desktop-portal.*|polkit-kde-authentication-agent-1|xdg-desktop-portal-gtk|org\.gnome\.SystemMonitor)$"#
@@ -246,7 +254,7 @@ window-rule {
 // KEYBINDS
 // =================================================================
 binds {
-    Mod+Q { spawn "foot"; }
+    Mod+Q { spawn "ghostty"; }
     Alt+C { close-window; }
     Mod+E { spawn "nautilus"; }
     Mod+V { toggle-window-floating; }
