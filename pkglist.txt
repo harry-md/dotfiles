@@ -203,6 +203,7 @@ logrotate
 lorien-bin
 lsb-release
 lsscsi
+luametatex
 luarocks
 lvm2
 lynis
@@ -369,6 +370,8 @@ texlive-fontsextra
 texlive-fontsrecommended
 texlive-latex
 texlive-latexextra
+texlive-luatex
+texlive-xetex
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
@@ -383,10 +386,12 @@ tree-sitter-javascript
 tree-sitter-python
 tree-sitter-rust
 ttf-bitstream-vera
+ttf-carlito
+ttf-croscore
 ttf-dejavu
 ttf-liberation
 ttf-meslo-nerd
-ttf-ms-fonts
+ttf-ms-win11-auto
 ttf-opensans
 tumbler
 ty
@@ -407,6 +412,7 @@ vim
 vlc-plugins-base
 vpl-gpu-rt
 vscodium-bin-marketplace
+vulkan-headers
 vulkan-intel
 waybar
 wev

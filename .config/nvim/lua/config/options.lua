@@ -54,9 +54,9 @@ opt.pumblend = 0
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
   callback = function()
-    vim.api.nvim_set_hl(0, "LspReferenceRead", { bg = "#333333" })
-    vim.api.nvim_set_hl(0, "LspReferenceWrite", { bg = "#333333" })
-    vim.api.nvim_set_hl(0, "LspReferenceText", { bg = "#333333" })
+    -- vim.api.nvim_set_hl(0, "LspReferenceRead", { bg = "#333333" })
+    -- vim.api.nvim_set_hl(0, "LspReferenceWrite", { bg = "#333333" })
+    -- vim.api.nvim_set_hl(0, "LspReferenceText", { bg = "#333333" })
 
     vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "#141415" })
     vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = "#d97757" })

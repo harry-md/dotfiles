@@ -45,7 +45,7 @@ ModifierOnlyKeyTimeout=250
 0=Tab
 
 [Behavior]
-# Active By Default
+# Activate input method by default
 ActiveByDefault=False
 # Reset state on Focus In
 resetStateWhenFocusIn=No
@@ -61,8 +61,8 @@ showInputMethodInformationWhenFocusIn=False
 CompactInputMethodInformation=True
 # Show first input method information
 ShowFirstInputMethodInformation=True
-# Default page size
-DefaultPageSize=5
+# Default Candidates per page
+DefaultPageSize=1
 # Override XKB Option
 OverrideXkbOption=False
 # Custom XKB Option
