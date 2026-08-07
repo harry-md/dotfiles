@@ -10,7 +10,7 @@ return {
   -- { "folke/which-key.nvim", enabled = false },
   { "nvim-neo-tree/neo-tree.nvim", enabled = false },
   { "Exafunction/windsurf.nvim", enabled = false },
-  -- { "zbirenbaum/copilot.lua", enabled = false },
+  { "zbirenbaum/copilot.lua", enabled = false },
   -- { "nvim-treesitter/nvim-treesitter-context", enabled = false },
   { "dmtrKovalenko/fff.nvim", enabled = false },
   { "nvimdev/lspsaga.nvim", enabled = false },

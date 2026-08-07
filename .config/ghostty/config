@@ -4,7 +4,7 @@ cursor-style-blink = false
 background-opacity = 1.0
 background-blur = false
 cursor-text = #060606
-font-size = 16.6
+font-size = 14.6
 keybind = alt+one=unbind
 keybind = alt+two=unbind
 keybind = alt+three=unbind
@@ -16,9 +16,7 @@ keybind = alt+eight=unbind
 keybind = alt+nine=unbind
 window-decoration = none
 app-notifications = no-clipboard-copy
-#font-family = JetBrainsMono Nerd Font
-font-family = CaskaydiaCove NF
-#font-family = Berkeley Mono
+font-family = JetBrainsMono Nerd Font
 adjust-cell-height = 0
 adjust-cursor-thickness = 1
 

@@ -121,7 +121,7 @@ layout {
 }
 
 cursor {
-    xcursor-theme "macOS"
+    xcursor-theme "Yaru"
     xcursor-size 24
 }
 

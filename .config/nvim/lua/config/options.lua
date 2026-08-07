@@ -20,6 +20,7 @@ vim.opt.listchars:append({
 })
 -- opt.scrolloff = 6
 
+opt.wrap = true
 opt.showtabline = 0
 opt.statuscolumn = ""
 opt.shortmess = "ltToOCFnc"
