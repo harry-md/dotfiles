@@ -4,7 +4,7 @@ cursor-style-blink = false
 background-opacity = 1.0
 background-blur = false
 cursor-text = #060606
-font-size = 14.6
+font-size = 16.6
 keybind = alt+one=unbind
 keybind = alt+two=unbind
 keybind = alt+three=unbind
@@ -20,7 +20,7 @@ font-family = JetBrainsMono Nerd Font
 adjust-cell-height = 0
 adjust-cursor-thickness = 1
 
-#cursor-color = #d97757
+cursor-color = #cdcdcd
 palette = 0=#252530
 palette = 1=#d8647e
 palette = 2=#7fa563
@@ -39,7 +39,6 @@ palette = 14=#bebeda
 palette = 15=#d7d7d7
 background = #0e0e0e
 foreground = #cdcdcd
-cursor-color = cell-foreground
 cursor-text = cell-background
 selection-background = #252530
 selection-foreground = #cdcdcd

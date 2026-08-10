@@ -83,7 +83,7 @@ input {
     mouse {
         accel-speed -0.10
         accel-profile "flat"
-        scroll-factor 1.5
+        scroll-factor 1.75
     }
 }
 
@@ -208,7 +208,7 @@ animations {
 window-rule {
     open-floating true
     match app-id="org.gnome.Nautilus"
-    default-column-width { fixed 1000; }
+    default-column-width { fixed 1100; }
     default-window-height { fixed 1000; }
     default-floating-position x=10 y=40
 }

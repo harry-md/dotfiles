@@ -14,4 +14,5 @@ return {
   -- { "nvim-treesitter/nvim-treesitter-context", enabled = false },
   { "dmtrKovalenko/fff.nvim", enabled = false },
   { "nvimdev/lspsaga.nvim", enabled = false },
+  { "gipo355/nvim-intellij-lsp", enabled = false },
 }

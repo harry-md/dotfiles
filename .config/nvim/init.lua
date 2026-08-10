@@ -29,3 +29,4 @@ if vim.g.neovide then
   vim.g.neovide_floating_blur_amount_x = 30
   vim.g.neovide_floating_blur_amount_y = 30
 end
+vim.lsp.enable("intellij")
