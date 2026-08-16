@@ -9,8 +9,8 @@ return {
         italic = false,
         transparent = false,
         colors = {
-          bg = "#0f0f0f",
-          -- fg = "#cdcdcd",
+          bg = "#080808",
+          -- fg = "#cfcfcf",
           -- floatBorder = "#878787",
           -- line = "#282830",
           -- comment = "#646477",
