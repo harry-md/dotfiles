@@ -63,9 +63,8 @@ catfish
 cava
 chafa
 char-white
+chatgpt-desktop-bin
 chwd
-claude-code
-claude-desktop
 cliphist
 clipse
 cmake
@@ -159,6 +158,7 @@ iriunwebcam-bin
 iwd
 jetbrains-toolbox
 jfsutils
+jmeter
 kate
 kcalc
 kde-gtk-config
@@ -390,7 +390,6 @@ ttf-carlito
 ttf-croscore
 ttf-dejavu
 ttf-liberation
-ttf-meslo-nerd
 ttf-ms-win11-auto
 ttf-opensans
 tumbler

@@ -3,13 +3,7 @@ return {
   lazy = false,
   opts = {
     formatters_by_ft = {
-      tex = { "tex-fmt" },
-      html = {},
       css = { "biome" },
-      scss = { "prettierd" },
-      markdown = { "prettierd" },
-      java = { "palantir-java-format" },
-      xml = { "xmlformatter" },
       js = { "biome" },
       javascriptreact = { "biome" },
       jsx = { "biome" },
@@ -20,7 +14,12 @@ return {
       typescriptreact = { "biome" },
       json = { "biome" },
       jsonc = { "biome" },
-      sql = { "sqlfmt" },
+      tex = { "tex-fmt" },
+      html = {},
+      markdown = { "dprint" },
+      dockerfile = { "dprint" },
+      java = { "palantir-java-format" },
+      xml = { "xmlformatter" },
     },
     default_format_opts = {
       lsp_format = "never",

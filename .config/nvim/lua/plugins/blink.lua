@@ -61,7 +61,7 @@ return {
       menu = {
         border = "rounded",
         auto_show = true,
-        auto_show_delay_ms = 150,
+        auto_show_delay_ms = 125,
         draw = {
           treesitter = { "lsp" },
           components = {

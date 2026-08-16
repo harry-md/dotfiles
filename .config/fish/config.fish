@@ -23,6 +23,7 @@ alias install='sudo pacman -S'
 alias remove='sudo pacman -Rns'
 alias search='pacman -Ss'
 alias ainstall='paru -S'
+alias gd='git difftool'
 alias asearch='paru -Ss'
 alias aremove='paru -Rns'
 

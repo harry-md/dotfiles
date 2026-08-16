@@ -32,4 +32,5 @@ x-scheme-handler/jetbrains=jetbrainsd.desktop;
 x-scheme-handler/mailto=firefox.desktop;
 x-scheme-handler/readest=readest-handler.desktop;
 x-scheme-handler/spotify=spotify.desktop;
+x-scheme-handler/zcode=zcode.desktop;
 x-scheme-handler/zed=dev.zed.Zed.desktop;

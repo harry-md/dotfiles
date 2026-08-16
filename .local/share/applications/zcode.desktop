@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=ZCode
+Comment=ZCode Desktop App
+Exec="/home/harry/Downloads/ZCode-3.7.7-linux-x64.AppImage" %U
+Terminal=false
+Type=Application
+Icon=zcode
+Categories=Development;
+MimeType=x-scheme-handler/zcode;
+StartupWMClass=ZCode
