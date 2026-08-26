@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Clio
+Exec=/opt/helium-browser-bin/helium-wrapper --profile-directory=Default --app-id=efakfjgfdlbackjpbjejjdhmpelonmee
+Icon=chrome-efakfjgfdlbackjpbjejjdhmpelonmee-Default
+StartupWMClass=crx_efakfjgfdlbackjpbjejjdhmpelonmee

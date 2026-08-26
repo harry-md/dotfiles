@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Astah UML
+Comment=UML modeling tool
+Exec=/home/harry/Downloads/astah_uml/astah
+Icon=/home/harry/Downloads/astah_uml/astah.ico
+Terminal=false
+Categories=Development;IDE;
+StartupNotify=true

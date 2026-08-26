@@ -55,9 +55,6 @@ nnoremap <A-s> <esc>:w<CR>
 vnoremap <A-s> <esc>:w<CR>
 set relativenumber
 set number
-set tabstop=4
-set shiftwidth=4
-set expandtab
 set ideajoin
 set clipboard+=unnamedplus
 set clipboard+=ideaput
@@ -70,3 +67,4 @@ inoremap<C-S-v> <C-r>+
 nnoremap <C-S-v> "+p
 vnoremap <C-S-v> "+p
 imap <A-e> <Action>(InsertInlineCompletionAction)
+vnoremap p P
