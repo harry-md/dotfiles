@@ -1,5 +1,5 @@
 {
-   "checksum": "33b7f397c4eb28c83de65bbacf3d629f",
+   "checksum": "740a8e4d5db4e80ac03ba3d7081a6b0f",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -10,14 +10,6 @@
             "name": "Tài liệu OU-renew - Google Drive",
             "type": "url",
             "url": "https://drive.google.com/drive/folders/1z869SInkzxwySxjvz2SF26hTRu5_ZSst"
-         }, {
-            "date_added": "13414765098000000",
-            "date_last_used": "0",
-            "guid": "5962f510-f691-4919-ac8d-49bba29fce7a",
-            "id": "9",
-            "name": "Emoji",
-            "type": "url",
-            "url": "https://emojicombos.com/"
          }, {
             "date_added": "13414944611000000",
             "date_last_used": "0",
@@ -35,24 +27,8 @@
             "type": "url",
             "url": "https://javaevolved.github.io/"
          }, {
-            "date_added": "13417790573000000",
-            "date_last_used": "13425492554826720",
-            "guid": "9fe16556-32fb-497a-a21c-161e475aa5cc",
-            "id": "13",
-            "name": "DevDocs",
-            "type": "url",
-            "url": "https://devdocs.io/"
-         }, {
-            "date_added": "13418119156000000",
-            "date_last_used": "0",
-            "guid": "d9bcaa41-1a59-45b7-96f9-713a7fe6e521",
-            "id": "14",
-            "name": "Maven Repository",
-            "type": "url",
-            "url": "https://repo1.maven.org/maven2/"
-         }, {
             "date_added": "13422302404737566",
-            "date_last_used": "13424080458140557",
+            "date_last_used": "13430739721046880",
             "guid": "00c3c61d-011f-4998-9fd8-6071e344f19a",
             "id": "20",
             "meta_info": {
@@ -63,7 +39,7 @@
             "url": "https://www.facebook.com/messages"
          }, {
             "date_added": "13423769196696128",
-            "date_last_used": "13428087262420841",
+            "date_last_used": "13432210160632237",
             "guid": "4cd7cfc6-eb61-4fe4-9656-8215fc028e85",
             "id": "22",
             "meta_info": {
@@ -74,7 +50,7 @@
             "url": "https://portal.azure.com/#home"
          }, {
             "date_added": "13423769234114023",
-            "date_last_used": "13426526574341293",
+            "date_last_used": "13432105692970748",
             "guid": "af0a4375-4f6f-45d3-b77e-8e8219549904",
             "id": "23",
             "meta_info": {
@@ -85,7 +61,7 @@
             "url": "https://console.upstash.com/redis?teamid=0"
          }, {
             "date_added": "13427650830819971",
-            "date_last_used": "13428237896207266",
+            "date_last_used": "13429716817151255",
             "guid": "7c71a229-6264-4b11-aea1-0699aa6cbd95",
             "id": "27",
             "meta_info": {
@@ -95,31 +71,64 @@
             "type": "url",
             "url": "https://luminhkhuong.dev/"
          }, {
-            "date_added": "13428237877028872",
-            "date_last_used": "0",
-            "guid": "8e0510c4-5426-4992-8232-0230d929d825",
-            "id": "29",
+            "date_added": "13428777026616494",
+            "date_last_used": "13432063452390831",
+            "guid": "d491e61e-d6b9-4a24-a6b9-001fb06a2aad",
+            "id": "32",
             "meta_info": {
                "power_bookmark_meta": ""
             },
-            "name": "Chatbox",
+            "name": "JDK",
             "type": "url",
-            "url": "https://web.chatboxai.app/"
+            "url": "https://github.com/openjdk/jdk"
          }, {
-            "date_added": "13428237882163582",
+            "date_added": "13428956013686424",
             "date_last_used": "0",
-            "guid": "9c99b841-8646-4d9f-b06b-bfc8192fbf66",
-            "id": "30",
+            "guid": "a3dbf088-7422-4a53-8c06-6924ed1eea06",
+            "id": "34",
             "meta_info": {
                "power_bookmark_meta": ""
             },
-            "name": "Home · LobeHub",
+            "name": "CPython",
             "type": "url",
-            "url": "https://app.lobehub.com/"
+            "url": "https://github.com/python/cpython"
+         }, {
+            "date_added": "13428956365347814",
+            "date_last_used": "0",
+            "guid": "43860444-37f5-40ca-86c3-f5a482ac5ff2",
+            "id": "35",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Python Docs",
+            "type": "url",
+            "url": "https://docs.python.org/3/"
+         }, {
+            "date_added": "13429295377718640",
+            "date_last_used": "13432014782268862",
+            "guid": "98c87303-a35e-4019-a2ae-5e3bfdb68199",
+            "id": "37",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Spring",
+            "type": "url",
+            "url": "https://github.com/spring-projects/spring-framework"
+         }, {
+            "date_added": "13432052053147230",
+            "date_last_used": "0",
+            "guid": "c492649d-6f97-4bda-b5f3-94fe6731513f",
+            "id": "39",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Freedium",
+            "type": "url",
+            "url": "https://freedium-mirror.cfd/"
          } ],
          "date_added": "13418968624363703",
          "date_last_used": "0",
-         "date_modified": "13428237882163582",
+         "date_modified": "13432052053147230",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bookmarks bar",
