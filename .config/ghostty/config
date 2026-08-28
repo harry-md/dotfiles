@@ -4,8 +4,7 @@ cursor-style-blink = false
 background-opacity = 1.0
 background-blur = false
 cursor-text = #060606
-#font-size = 15.3
-font-size = 16.6
+font-size = 15.3
 keybind = alt+one=unbind
 keybind = alt+two=unbind
 keybind = alt+three=unbind
@@ -17,8 +16,7 @@ keybind = alt+eight=unbind
 keybind = alt+nine=unbind
 window-decoration = none
 app-notifications = no-clipboard-copy
-#font-family = JetBrainsMono Nerd Font
-font-family = Consolas
+font-family = JetBrainsMono Nerd Font
 #adjust-cell-height = 10%
 adjust-cursor-thickness = 1
 
