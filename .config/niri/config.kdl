@@ -74,14 +74,14 @@ input {
     touchpad {
         tap
         natural-scroll
-        scroll-factor 0.25
+        scroll-factor 0.5
         dwt 
-        accel-speed 0.4
+        accel-speed 0.2
         accel-profile "adaptive"
     }
     
     mouse {
-        accel-speed -0.10
+        accel-speed -0.2
         accel-profile "flat"
         scroll-factor 2.0
     }
@@ -138,13 +138,13 @@ overview {
 }
 
 window-rule {
-    geometry-corner-radius 16
+    geometry-corner-radius 24
     clip-to-geometry true
     draw-border-with-background false
 }
 
 animations {
-    on
+    off
 
     workspace-switch {
         // spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001

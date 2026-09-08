@@ -12,6 +12,10 @@ return {
       },
     },
     zen = {
+      backdrop = {
+        transparent = true,
+        blend = 100,
+      },
       enabled = true,
       toggles = {
         dim = false,

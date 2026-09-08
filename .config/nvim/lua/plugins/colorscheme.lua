@@ -9,7 +9,7 @@ return {
         italic = false,
         transparent = false,
         colors = {
-          bg = "#080808",
+          bg = "#0e0e0e",
           -- fg = "#cfcfcf",
           -- floatBorder = "#878787",
           -- line = "#282830",

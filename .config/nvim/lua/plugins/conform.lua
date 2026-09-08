@@ -3,6 +3,7 @@ return {
   lazy = false,
   opts = {
     formatters_by_ft = {
+      py = { "ruff" },
       css = { "biome" },
       js = { "biome" },
       javascriptreact = { "biome" },

@@ -24,7 +24,7 @@ opt.wrap = true
 opt.showtabline = 0
 opt.statuscolumn = ""
 opt.shortmess = "ltToOCFnc"
-opt.cursorline = false
+opt.cursorline = true
 opt.inccommand = "split"
 opt.smartcase = true
 opt.ignorecase = true
@@ -62,6 +62,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "#141415" })
     vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = "#d97757" })
     vim.api.nvim_set_hl(0, "SnacksIndent", { fg = "#393B42" })
+    vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1f2024" })
 
     -- vim.api.nvim_set_hl(0, "BlinkCmpMenuSelection", { bg = "#393B42" })
     -- vim.api.nvim_set_hl(0, "BlinkCmpMenu", { bg = "#111111" })

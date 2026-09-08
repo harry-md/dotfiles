@@ -3,8 +3,7 @@ shell-integration-features = no-cursor,no-sudo,no-title
 cursor-style-blink = false
 background-opacity = 1.0
 background-blur = false
-cursor-text = #060606
-font-size = 15.3
+font-size = 14.3
 keybind = alt+one=unbind
 keybind = alt+two=unbind
 keybind = alt+three=unbind
@@ -37,7 +36,7 @@ palette = 12=#8ba9c1
 palette = 13=#c9b1ca
 palette = 14=#bebeda
 palette = 15=#d7d7d7
-background = #080808
+background = #0e0e0e
 foreground = #cfcfcf
 cursor-text = cell-background
 selection-background = #252530

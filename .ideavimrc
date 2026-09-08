@@ -68,3 +68,7 @@ nnoremap <C-S-v> "+p
 vnoremap <C-S-v> "+p
 imap <A-e> <Action>(InsertInlineCompletionAction)
 vnoremap p P
+vnoremap <A-k> :action MoveLineUp<CR>
+vnoremap <A-j> :action MoveLineDown<CR>
+nnoremap <A-k> :action MoveLineUp<CR>
+nnoremap <A-j> :action MoveLineDown<CR>

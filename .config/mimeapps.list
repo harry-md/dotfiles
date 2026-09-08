@@ -1,5 +1,4 @@
 [Default Applications]
-# Browser / Web Handlers
 text/html=helium.desktop
 x-scheme-handler/http=helium.desktop
 x-scheme-handler/https=helium.desktop
@@ -10,13 +9,9 @@ application/rdf+xml=helium.desktop
 application/rss+xml=helium.desktop
 application/xml=helium.desktop
 text/xml=helium.desktop
-
-# Other Applications
 application/pdf=org.pwmt.zathura.desktop
 application/sql=io.dbeaver.DBeaver.desktop
 x-scheme-handler/jetbrains=jetbrainsd.desktop
-
-# Handlers you explicitly left blank
 x-scheme-handler/ipfs=
 x-scheme-handler/ipns=
 x-scheme-handler/discord=vesktop.desktop
@@ -32,3 +27,8 @@ x-scheme-handler/webcal=helium.desktop
 x-scheme-handler/zcode=zcode.desktop
 x-scheme-handler/codex=chatgpt.desktop
 x-scheme-handler/readest-onedrive=readest-handler.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop
+application/msword=libreoffice-writer.desktop
+text/markdown=cursor.desktop
+
+[Added Associations]
