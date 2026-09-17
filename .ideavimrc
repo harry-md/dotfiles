@@ -72,3 +72,4 @@ vnoremap <A-k> :action MoveLineUp<CR>
 vnoremap <A-j> :action MoveLineDown<CR>
 nnoremap <A-k> :action MoveLineUp<CR>
 nnoremap <A-j> :action MoveLineDown<CR>
+nmap ff <Action>(GotoFile)

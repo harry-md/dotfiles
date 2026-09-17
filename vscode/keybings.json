@@ -1,81 +1,64 @@
 [
   {
-    "key": "ctrl+n",
-    "command": "selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion",
-  },
-  {
     "key": "alt+n",
     "command": "selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion",
-  },
-  {
-    "key": "ctrl+down",
-    "command": "-selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion",
-  },
-  {
-    "key": "ctrl+p",
-    "command": "selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion",
+    "when": "editorTextFocus && suggestWidgetVisible"
   },
   {
     "key": "alt+p",
     "command": "selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion",
+    "when": "editorTextFocus && suggestWidgetVisible"
   },
   {
-    "key": "ctrl+up",
-    "command": "-selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion",
-  },
-  // NAVIGATION
-  {
-    "key": "ctrl+shift+a",
-    "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus",
+    "key": "alt+w",
+    "command": "deleteWordLeft",
+    "when": "editorTextFocus && vim.active && vim.mode == 'Insert'"
   },
   {
-    "key": "ctrl+shift+b",
-    "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus",
+    "key": "alt+s",
+    "command": "runCommands",
+    "args": {
+      "commands": ["workbench.action.files.save", "extension.vim_escape"]
+    },
+    "when": "editorTextFocus && vim.active"
   },
   {
-    "key": "ctrl+shift+j",
-    "command": "workbench.action.togglePanel",
+    "key": "ctrl+s",
+    "command": "runCommands",
+    "args": {
+      "commands": ["workbench.action.files.save", "extension.vim_escape"]
+    },
+    "when": "editorTextFocus && vim.active"
   },
   {
-    "key": "ctrl+shift+n",
-    "command": "workbench.action.terminal.new",
-    "when": "terminalFocus",
+    "key": "alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualLine')"
   },
   {
-    "key": "ctrl+shift+w",
-    "command": "workbench.action.terminal.kill",
-    "when": "terminalFocus",
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualLine')"
   },
   {
-    "key": "ctrl+y",
-    "command": "acceptSelectedSuggestion",
-    "when": "acceptSuggestionOnEnter && suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus",
-  },
-  {
-    "key": "enter",
-    "command": "-acceptSelectedSuggestion",
-    "when": "acceptSuggestionOnEnter && suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus",
-  },
-  {
-    "key": "alt+y",
-    "command": "acceptSelectedSuggestion",
-    "when": "acceptSuggestionOnEnter && suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus",
+    "key": "alt+q",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorTextFocus && vim.active && vim.mode == 'Insert'"
   },
   {
     "key": "alt+u",
-    "command": "-jdk.java.goto.super.implementation",
-    "when": "editorHasCodeActionsProvider && editorTextFocus",
-},
-{
-    "key": "ctrl+e",
-    "command": "-workbench.action.quickOpen"
-},
+    "command": "vim.remap",
+    "args": {
+      "after": ["<C-u>"]
+    },
+    "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualLine')"
+  },
+  {
+    "key": "alt+d",
+    "command": "vim.remap",
+    "args": {
+      "after": ["<C-d>"]
+    },
+    "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualLine')"
+  }
 ]

@@ -57,6 +57,7 @@ spawn-at-startup "xhost" "+SI:localuser:root"
 spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "color-scheme" "prefer-dark"
 spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "gtk-theme" "adw-gtk3-dark"
 // spawn-at-startup "vicinae" "server"
+spawn-at-startup "zlaunch"
 
 // =================================================================
 // INPUT & DEVICES
@@ -76,14 +77,14 @@ input {
         natural-scroll
         scroll-factor 0.5
         dwt 
-        accel-speed 0.2
+        accel-speed 0.6
         accel-profile "adaptive"
     }
     
     mouse {
         accel-speed -0.2
         accel-profile "flat"
-        scroll-factor 2.0
+        scroll-factor 1.75
     }
 }
 
@@ -138,7 +139,7 @@ overview {
 }
 
 window-rule {
-    geometry-corner-radius 24
+    geometry-corner-radius 18
     clip-to-geometry true
     draw-border-with-background false
 }
@@ -261,7 +262,9 @@ binds {
     Mod+V { toggle-window-floating; }
     Mod+Shift+F { maximize-window-to-edges; }
     Alt+Space { spawn "tofi-drun" "--drun-launch=true"; }
-    Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+Space { spawn-sh "zlaunch toggle"; }
+    // Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
+    // Mod+Space { spawn-sh "$HOME/.local/bin/rofi-launcher" }
     // Mod+Space repeat=false { spawn "vicinae" "toggle"; }
     Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
     // Mod+Space { spawn "wofi" "--show" "drun"; }

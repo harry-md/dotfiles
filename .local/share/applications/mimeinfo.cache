@@ -15,4 +15,3 @@ x-scheme-handler/jetbrains=jetbrainsd.desktop;
 x-scheme-handler/readest=readest-handler.desktop;
 x-scheme-handler/readest-onedrive=readest-handler.desktop;
 x-scheme-handler/spotify=spotify.desktop;
-x-scheme-handler/zcode=zcode.desktop;

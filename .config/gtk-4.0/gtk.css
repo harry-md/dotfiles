@@ -1,4 +1,9 @@
-@import url('libadwaita.css');
-@import url('libadwaita-tweaks.css');
+@import url("libadwaita.css");
+@import url("libadwaita-tweaks.css");
 
 @import url("noctalia.css");
+
+/* GNOME Papers document view container */
+.document-view {
+  background-color: #1e1e2e;
+}

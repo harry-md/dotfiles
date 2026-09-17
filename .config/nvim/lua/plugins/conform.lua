@@ -15,7 +15,7 @@ return {
       typescriptreact = { "biome" },
       json = { "biome" },
       jsonc = { "biome" },
-      tex = { "tex-fmt" },
+      tex = { "bibtex-tidy" },
       html = {},
       markdown = { "dprint" },
       dockerfile = { "dprint" },

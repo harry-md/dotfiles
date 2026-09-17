@@ -9,7 +9,7 @@ application/rdf+xml=helium.desktop
 application/rss+xml=helium.desktop
 application/xml=helium.desktop
 text/xml=helium.desktop
-application/pdf=org.pwmt.zathura.desktop
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
 application/sql=io.dbeaver.DBeaver.desktop
 x-scheme-handler/jetbrains=jetbrainsd.desktop
 x-scheme-handler/ipfs=
@@ -30,5 +30,10 @@ x-scheme-handler/readest-onedrive=readest-handler.desktop
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop
 application/msword=libreoffice-writer.desktop
 text/markdown=cursor.desktop
+application/epub+zip=com.github.johnfactotum.Foliate.desktop
+image/avif=imv.desktop
 
 [Added Associations]
+application/epub+zip=com.github.johnfactotum.Foliate.desktop;
+application/pdf=org.gnome.Evince.desktop;org.pwmt.zathura-pdf-mupdf.desktop;
+image/avif=org.kde.gwenview.desktop;imv.desktop;

@@ -1,0 +1,221 @@
+* {
+    bg:             #0d0d0d;
+    bg-alt:         #1f1f1f;
+    bg-hover:       #191919;
+
+    fg:             #eeeeee;
+    fg-muted:       #888888;
+
+    border-color:   #2a2a2a;
+
+    background-color: transparent;
+    text-color:       @fg;
+
+    font: "Inter 12";
+}
+
+window {
+    width: 600px;
+    height: 400px;
+
+    location: center;
+    anchor: center;
+
+    background-color: @bg;
+
+    border: 1px;
+    border-color: @border-color;
+    border-radius: 14px;
+
+    padding: 0px;
+}
+
+mainbox {
+    background-color: transparent;
+
+    padding: 0px;
+    spacing: 0px;
+
+    children: [
+        inputbar,
+        mode-switcher,
+        message,
+        listview
+    ];
+}
+
+/* =========================
+   SEARCH BAR
+   ========================= */
+
+inputbar {
+    background-color: transparent;
+
+    padding: 14px 20px;
+    margin: 0px;
+
+    spacing: 10px;
+
+    border: 0px 0px 1px 0px;
+    border-color: @border-color;
+
+    children: [
+        textbox-prompt-colon,
+        entry
+    ];
+}
+
+textbox-prompt-colon {
+    expand: false;
+
+    str: "";
+
+    text-color: @fg-muted;
+
+    vertical-align: 0.5;
+
+    font: "Symbols Nerd Font 13";
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+
+    padding: 1px 0px;
+
+    placeholder: "Search";
+    placeholder-color: #666666;
+
+    vertical-align: 0.5;
+
+    cursor: text;
+}
+
+/* =========================
+   RESULTS
+   ========================= */
+
+listview {
+    background-color: transparent;
+
+    padding: 12px 10px 10px 10px;
+
+    margin: 0px;
+
+    spacing: 2px;
+
+    columns: 1;
+    lines: 7;
+
+    fixed-height: false;
+
+    scrollbar: false;
+    cycle: true;
+}
+
+/* =========================
+   RESULT ITEM
+   ========================= */
+
+element {
+    background-color: transparent;
+
+    /* top right bottom left */
+    padding: 9px 9px 9px 6px;
+
+    margin: 0px;
+
+    spacing: 10px;
+
+    border: 0px;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+element-icon {
+    size: 24px;
+    /*
+     * Bù lại 3px cho drun icon.
+     * Emoji không có element-icon nên sẽ dịch trái 3px.
+     */
+    margin: 0px 2px 0px 3px;
+
+    background-color: transparent;
+}
+
+element selected.normal {
+    background-color: @bg-alt;
+    text-color: @fg;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element-icon {
+    size: 24px;
+
+    margin: 0px 2px 0px 0px;
+
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+
+    text-color: inherit;
+
+    vertical-align: 0.5;
+
+    highlight: bold #ffffff;
+}
+
+/* Hide extra UI */
+scrollbar {
+    width: 0px;
+}
+
+message {
+    enabled: true;
+
+    background-color: @bg-alt;
+
+    margin: 8px 10px 2px 10px;
+    padding: 10px 12px;
+
+    border: 0px;
+    border-radius: 6px;
+}
+
+textbox {
+    background-color: transparent;
+    text-color: @fg;
+
+    vertical-align: 0.5;
+}
+
+mode-switcher {
+    background-color: transparent;
+
+    padding: 7px 10px;
+    spacing: 2px;
+
+    border: 0px 0px 1px 0px;
+    border-color: @border-color;
+}
+
+button {
+    background-color: transparent;
+    text-color: @fg-muted;
+
+    padding: 5px 12px;
+
+    border-radius: 5px;
+}
+
+button selected {
+    background-color: @bg-alt;
+    text-color: @fg;
+}
