@@ -3,7 +3,8 @@ return {
   lazy = false,
   opts = {
     formatters_by_ft = {
-      py = { "ruff" },
+      py = { "ruff_format" },
+      python = { "ruff_format" },
       css = { "biome" },
       js = { "biome" },
       javascriptreact = { "biome" },
@@ -15,7 +16,6 @@ return {
       typescriptreact = { "biome" },
       json = { "biome" },
       jsonc = { "biome" },
-      tex = { "bibtex-tidy" },
       html = {},
       markdown = { "dprint" },
       dockerfile = { "dprint" },

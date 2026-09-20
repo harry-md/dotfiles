@@ -2,6 +2,7 @@ return {
   "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
+
   opts = {
     scratch = {
       enabled = true,
@@ -12,9 +13,13 @@ return {
       },
     },
     zen = {
-      backdrop = {
-        transparent = true,
-        blend = 100,
+      win = {
+        width = 120,
+        backdrop = {
+          transparent = false,
+          blend = 0,
+          -- bg = "#0e0e0e",
+        },
       },
       enabled = true,
       toggles = {
@@ -30,7 +35,7 @@ return {
         tabline = true,
       },
       ---@type snacks.win.Config
-      win = { style = "zen" },
+      -- win = { style = "zen" },
       --- Callback when the window is opened.
       ---@param win snacks.win
       on_open = function(win) end,
@@ -53,6 +58,7 @@ return {
       enabled = false,
       replace_netrw = true,
       layout = { preset = "sidebar", preview = false },
+      width = "50",
     },
     indent = {
       enabled = true,
@@ -83,7 +89,7 @@ return {
     input = { enabled = true },
     bigfile = { enabled = true },
     image = {
-      enabled = true,
+      enabled = false,
     },
     terminal = {
       enabled = false,
@@ -188,7 +194,6 @@ return {
           regex = false,
         },
         explorer = {
-          -- We override the layout settings here
           layout = {
             preset = "sidebar",
             preview = false,
@@ -200,15 +205,34 @@ return {
         },
       },
       focus = "input",
-      layout = "my_custom",
+      -- layout = "my_custom",
+      layout = "custom",
       layouts = {
+        custom = {
+          layout = {
+            box = "vertical",
+            backdrop = false,
+            row = -1,
+            width = 0,
+            height = 0.4,
+            border = "top",
+            title = " {title} {live} {flags}",
+            title_pos = "left",
+            {
+              box = "horizontal",
+              { win = "list", border = "none" },
+              { win = "preview", title = "{preview}", width = 0.7, border = "left" },
+            },
+            { win = "input", height = 1, border = "bottom" },
+          },
+        },
         my_custom = {
           cycle = true,
 
           layout = {
             box = "horizontal",
             width = 0.85,
-            min_width = 120, -- 120
+            min_width = 120,
             height = 0.85,
             {
               box = "vertical",
@@ -219,32 +243,6 @@ return {
             },
             { win = "preview", title = "{preview}", border = "rounded", width = 0.6 },
           },
-
-          -- layout = "custom",
-          -- layouts = {
-          --   custom = {
-          --     layout = {
-          --       box = "vertical",
-          --       backdrop = false,
-          --       row = -1,
-          --       width = 0,
-          --       height = 0.5,
-          --       border = "none",
-          --       title = " {title} {live} {flags}",
-          --       title_pos = "left",
-          --       {
-          --         box = "horizontal",
-          --         { win = "list", border = "rounded" },
-          --         { win = "preview", title = "{preview}", width = 0.6, border = "rounded" },
-          --       },
-          --       {
-          --         win = "input",
-          --         height = 1,
-          --         border = "none",
-          --       },
-          --     },
-          --   },
-          -- },
         },
       },
       ---@class snacks.picker.matcher.Config
@@ -556,7 +554,19 @@ return {
       },
     },
   },
+
   keys = {},
+
+  config = function(_, opts)
+    local Snacks = require("snacks")
+
+    Snacks.setup(opts)
+
+    vim.schedule(function()
+      Snacks.zen()
+    end)
+  end,
+
   init = function()
     vim.api.nvim_create_autocmd("User", {
       pattern = "VeryLazy",

@@ -1,5 +1,10 @@
 [
   {
+    "key": "alt+y",
+    "command": "acceptSelectedSuggestion",
+    "when": "editorTextFocus && suggestWidgetVisible"
+  },
+  {
     "key": "alt+n",
     "command": "selectNextSuggestion",
     "when": "editorTextFocus && suggestWidgetVisible"
@@ -60,5 +65,15 @@
       "after": ["<C-d>"]
     },
     "when": "editorTextFocus && vim.active && (vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualLine')"
+  },
+  {
+    "key": "f f",
+    "command": "workbench.action.quickOpen",
+    "when": "!editorTextFocus && !inputFocus"
+  },
+  {
+    "key": "f g",
+    "command": "workbench.action.findInFiles",
+    "when": "!editorTextFocus && !inputFocus"
   }
 ]

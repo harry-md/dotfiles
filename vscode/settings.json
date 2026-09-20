@@ -143,5 +143,15 @@
 	"biome.configurationPath": "/home/harry/.config/biome/biome.json",
 	"chat.viewSessions.orientation": "stacked",
 	"ty.inlayHints.callArgumentNames": false,
-	"ty.inlayHints.variableTypes": false
+	"ty.inlayHints.variableTypes": false,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["f", "g"],
+      "commands": ["workbench.action.findInFiles"]
+    }
+  ]
 }
