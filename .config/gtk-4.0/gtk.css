@@ -1,9 +1,1 @@
-@import url("libadwaita.css");
-@import url("libadwaita-tweaks.css");
-
-@import url("noctalia.css");
-
-/* GNOME Papers document view container */
-.document-view {
-  background-color: #1e1e2e;
-}
+/usr/share/themes/adw-gtk3-dark/gtk-4.0/gtk.css

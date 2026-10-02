@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Excalidraw
+MimeType=application/vnd.excalidraw+json;x-scheme-handler/chromium;
+Exec=/opt/helium-browser-bin/helium-wrapper --profile-directory=Default --app-id=dnfpoenibinnbbckgbhendmlljoobcfg %U
+Icon=/home/harry/.local/share/icons/hicolor/256x256/apps/chrome-dnfpoenibinnbbckgbhendmlljoobcfg-Default.png
+StartupWMClass=crx_dnfpoenibinnbbckgbhendmlljoobcfg

@@ -18,7 +18,7 @@ return {
         backdrop = {
           transparent = false,
           blend = 0,
-          -- bg = "#0e0e0e",
+          bg = "#0e0e0e",
         },
       },
       enabled = true,
@@ -74,7 +74,7 @@ return {
       },
     },
     scroll = {
-      enabled = true,
+      enabled = false,
       animate = {
         duration = { step = 20, total = 200 },
         easing = "linear",
@@ -205,27 +205,26 @@ return {
         },
       },
       focus = "input",
-      -- layout = "my_custom",
-      layout = "custom",
+      layout = "my_custom",
       layouts = {
-        custom = {
-          layout = {
-            box = "vertical",
-            backdrop = false,
-            row = -1,
-            width = 0,
-            height = 0.4,
-            border = "top",
-            title = " {title} {live} {flags}",
-            title_pos = "left",
-            {
-              box = "horizontal",
-              { win = "list", border = "none" },
-              { win = "preview", title = "{preview}", width = 0.7, border = "left" },
-            },
-            { win = "input", height = 1, border = "bottom" },
-          },
-        },
+        -- custom = {
+        --   layout = {
+        --     box = "vertical",
+        --     backdrop = false,
+        --     row = -1,
+        --     width = 0,
+        --     height = 0.6,
+        --     border = "none",
+        --     title = " {title} {live} {flags}",
+        --     title_pos = "left",
+        --     { win = "input", height = 1, border = "single" },
+        --     {
+        --       box = "horizontal",
+        --       { win = "list", border = "single" },
+        --       { win = "preview", title = "{preview}", width = 0.7, border = "single" },
+        --     },
+        --   },
+        -- },
         my_custom = {
           cycle = true,
 
@@ -233,15 +232,16 @@ return {
             box = "horizontal",
             width = 0.85,
             min_width = 120,
-            height = 0.85,
+            height = 0.80,
             {
               box = "vertical",
-              border = "rounded",
+              border = "single",
               title = "{title} {live} {flags}",
+              width = 0.4,
               { win = "input", height = 1, border = "bottom" },
               { win = "list", border = "none" },
             },
-            { win = "preview", title = "{preview}", border = "rounded", width = 0.6 },
+            { win = "preview", title = "{preview}", border = "single", width = 0.6 },
           },
         },
       },
@@ -556,16 +556,6 @@ return {
   },
 
   keys = {},
-
-  config = function(_, opts)
-    local Snacks = require("snacks")
-
-    Snacks.setup(opts)
-
-    vim.schedule(function()
-      Snacks.zen()
-    end)
-  end,
 
   init = function()
     vim.api.nvim_create_autocmd("User", {

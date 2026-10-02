@@ -15,7 +15,7 @@ keybind = alt+eight=unbind
 keybind = alt+nine=unbind
 window-decoration = none
 app-notifications = no-clipboard-copy
-font-family = JetBrainsMono Nerd Font
+font-family = JetBrainsMono NF Medium
 #adjust-cell-height = -20%
 adjust-cursor-thickness = 1
 

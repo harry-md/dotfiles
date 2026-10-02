@@ -22,13 +22,13 @@ local config = {
     "java",
     -- "-XX:+UseG1GC",
     -- "-XX:MaxGCPauseMillis=150",
-    "-XX:+UseZGC", -- for oracle graalvm
-    "-XX:+ZGenerational", -- for oracle graalvm
-    "-Djdk.graal.CompilerConfiguration=enterprise", -- for oracle graalvm
-    "-XX:+UnlockExperimentalVMOptions", -- for oracle graalvm
-    "-XX:+UseGraalJIT", -- for oracle graalvm
-    "-Dgraal.TuneInlinerExploration=1", -- for oracle graalvm
-    "-Dgraal.Vectorization=true", -- for oracle graalvm
+    -- "-XX:+UseZGC", -- for oracle graalvm
+    -- "-XX:+ZGenerational", -- for oracle graalvm
+    -- "-Djdk.graal.CompilerConfiguration=enterprise", -- for oracle graalvm
+    -- "-XX:+UnlockExperimentalVMOptions", -- for oracle graalvm
+    -- "-XX:+UseGraalJIT", -- for oracle graalvm
+    -- "-Dgraal.TuneInlinerExploration=1", -- for oracle graalvm
+    -- "-Dgraal.Vectorization=true", -- for oracle graalvm
     "-Xms1g",
     "-Xmx2g",
     "-XX:+UseStringDeduplication",

@@ -57,7 +57,7 @@ spawn-at-startup "xhost" "+SI:localuser:root"
 spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "color-scheme" "prefer-dark"
 spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "gtk-theme" "adw-gtk3-dark"
 // spawn-at-startup "vicinae" "server"
-spawn-at-startup "zlaunch"
+// spawn-at-startup "zlaunch"
 
 // =================================================================
 // INPUT & DEVICES
@@ -84,7 +84,10 @@ input {
     mouse {
         accel-speed -0.2
         accel-profile "flat"
-        scroll-factor 1.75
+        scroll-factor 1.0
+    }
+    tablet {
+        map-to-focused-output
     }
 }
 
@@ -122,9 +125,8 @@ layout {
 }
 
 cursor {
-    // xcursor-theme "MacOS-Golden-Gate"
-    xcursor-theme "Yaru"
-    xcursor-size 24
+    xcursor-theme "macOS-Tahoe-Tail-Shadow"
+    xcursor-size 32
 }
 
 gestures {
@@ -262,8 +264,8 @@ binds {
     Mod+V { toggle-window-floating; }
     Mod+Shift+F { maximize-window-to-edges; }
     Alt+Space { spawn "tofi-drun" "--drun-launch=true"; }
-    Mod+Space { spawn-sh "zlaunch toggle"; }
-    // Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
+    // Mod+Space { spawn-sh "zlaunch toggle"; }
+    Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
     // Mod+Space { spawn-sh "$HOME/.local/bin/rofi-launcher" }
     // Mod+Space repeat=false { spawn "vicinae" "toggle"; }
     Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
@@ -324,9 +326,8 @@ binds {
     Mod+F4 { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
     Mod+Minus { set-column-width "-10%"; }
     Mod+Equal { set-column-width "+10%"; }
-    
+    Mod+Shift+X { focus-workspace "xppen"; }
 }
 
 spawn-at-startup "noctalia"
 
-// include "dms/outputs.kdl"

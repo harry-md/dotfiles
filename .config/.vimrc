@@ -39,3 +39,11 @@ vnoremap <A-s> <esc>:w<CR>
 
 vnoremap <C-S-v> "+p
 cnoremap <C-S-v> <C-r>+
+
+" Move current line down/up
+nnoremap <A-j> :move .+1<CR>==
+nnoremap <A-k> :move .-2<CR>==
+
+" Move selected block down/up
+vnoremap <A-j> :move '>+1<CR>gv=gv
+vnoremap <A-k> :move '<-2<CR>gv=gv

@@ -7,6 +7,6 @@ Icon=vesktop
 StartupWMClass=vesktop
 GenericName=Internet Messenger
 Categories=Network;
-Keywords=discord;vencord;electron;chat;
+Keywords=discord;vencord
 MimeType=x-scheme-handler/discord;
 Comment=Vesktop is a custom Discord desktop app

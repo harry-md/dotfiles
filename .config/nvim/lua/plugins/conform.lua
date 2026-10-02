@@ -3,8 +3,8 @@ return {
   lazy = false,
   opts = {
     formatters_by_ft = {
-      py = { "ruff_format" },
-      python = { "ruff_format" },
+      py = { "ruff_organize_imports", "ruff_fix", "ruff_format" },
+      python = { "ruff_organize_imports", "ruff_fix", "ruff_format" },
       css = { "biome" },
       js = { "biome" },
       javascriptreact = { "biome" },
@@ -21,6 +21,7 @@ return {
       dockerfile = { "dprint" },
       java = { "palantir-java-format" },
       xml = { "xmlformatter" },
+      c = { "clang-format" },
     },
     default_format_opts = {
       lsp_format = "never",

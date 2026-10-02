@@ -32,8 +32,11 @@ application/msword=libreoffice-writer.desktop
 text/markdown=cursor.desktop
 application/epub+zip=com.github.johnfactotum.Foliate.desktop
 image/avif=imv.desktop
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-calc.desktop
+x-scheme-handler/claude=com.anthropic.Claude.desktop
 
 [Added Associations]
 application/epub+zip=com.github.johnfactotum.Foliate.desktop;
 application/pdf=org.gnome.Evince.desktop;org.pwmt.zathura-pdf-mupdf.desktop;
 image/avif=org.kde.gwenview.desktop;imv.desktop;
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-calc.desktop;
