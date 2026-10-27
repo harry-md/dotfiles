@@ -48,19 +48,20 @@ alias shutdown='sudo shutdown now'
 alias dl='aria2c -x 16 -s 16'
 alias sde='sudoedit'
 
-alias t="tmux new -s home"
-abbr ta 'tmux attach -t'
-abbr tk 'tmux kill-session -t'
-abbr tl 'tmux ls'
+alias h="herdr"
+
+# alias t="tmux new -s home"
+# abbr ta 'tmux attach -t'
+# abbr tk 'tmux kill-session -t'
+# abbr tl 'tmux ls'
 
 abbr df 'df -h'
 abbr mkdir 'mkdir -p'
 abbr ping 'ping -c 5'
-alias la='ls -lah --color=always --group-directories-first'
+# alias la='ls -lah --color=always --group-directories-first'
 # alias l='ls -lh --color=always --group-directories-first'
-alias l='eza -l --color=always --group-directories-first --icons=always'
-alias winboot='sudo efibootmgr --bootnext 0003; sudo reboot'
-alias mintboot='sudo efibootmgr --bootnext 0004; sudo reboot'
+alias l='ls -l'
+alias winboot='sudo efibootmgr --bootnext 0004; sudo reboot'
 
 bind \ee end-of-line
 bind \ew backward-kill-word

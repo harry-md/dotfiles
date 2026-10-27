@@ -11,3 +11,4 @@ unfixable = []
 [lint.per-file-ignores]
 # "__init__.py" = ["F401"]
 "tests/*" = ["S101", "T201", "ANN"]
+

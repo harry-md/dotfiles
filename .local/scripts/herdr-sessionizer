@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+# One Herdr workspace per project. Uses the current Herdr server/socket.
+set -euo pipefail
+
+die() { printf 'herdr-sessionizer: %s\n' "$*" >&2; exit 1; }
+
+(( $# <= 1 )) || die 'Usage: herdr-sessionizer [directory | --home]'
+herdr_bin=${HERDR_BIN_PATH:-herdr}
+command -v "$herdr_bin" >/dev/null || die 'herdr is not installed.'
+command -v jq >/dev/null || die 'jq is required.'
+
+# Do not mistake a socket failure for an empty workspace list.
+if ! workspaces=$("$herdr_bin" workspace list); then
+    die 'Cannot reach Herdr. Start herdr first, then run this script again.'
+fi
+jq -e '.result.workspaces | type == "array"' <<<"$workspaces" >/dev/null ||
+    die 'Unexpected workspace list response.'
+
+# Explicit home target, including compatibility with the former --default flag.
+if [[ ${1:-} == --home || ${1:-} == --default ]]; then
+    set -- "$HOME"
+fi
+
+if (( $# == 1 )); then
+    selected=$1
+else
+    command -v fzf >/dev/null || die 'fzf is required.'
+    roots=()
+    for root in "$HOME/workspace" "$HOME/repos"; do
+        [[ ! -d $root ]] || roots+=("$root")
+    done
+    (( ${#roots[@]} )) || die 'Neither ~/workspace nor ~/repos exists.'
+    if selected=$(find "${roots[@]}" -mindepth 1 -maxdepth 1 -type d -print0 |
+        sort -z | fzf --read0 --bind 'alt-w:backward-kill-word' --prompt='Project > '); then
+        :
+    else
+        status=$?
+        # fzf returns 1 for no match and 130 for cancellation.
+        if (( status == 1 || status == 130 )); then exit 0; fi
+        exit "$status"
+    fi
+fi
+
+[[ -n $selected ]] || exit 0
+[[ -d $selected ]] || die "Directory does not exist: $selected"
+selected=$(cd -- "$selected" && pwd -P)
+home_dir=$(cd -- "$HOME" && pwd -P)
+
+# Include the root name to distinguish ~/workspace/foo from ~/repos/foo.
+label=$selected
+if [[ $selected == "$home_dir" ]]; then
+    label='~'
+else
+    for root in "$HOME/workspace" "$HOME/repos"; do
+        [[ -d $root ]] || continue
+        canonical_root=$(cd -- "$root" && pwd -P)
+        if [[ $selected == "$canonical_root/"* ]]; then
+            label="${root##*/}/${selected#"$canonical_root/"}"
+            break
+        fi
+    done
+fi
+
+workspace_id=$(jq -r --arg label "$label" --arg cwd "$selected" '
+    [.result.workspaces[] | select(.label == $label)] as $labels |
+    (if $label == "~" then $labels
+     else
+       [.result.workspaces[] | select(.worktree.checkout_path? == $cwd)] as $paths |
+       if ($paths | length) > 0 then $paths else $labels end
+     end) |
+    .[0].workspace_id // empty
+' <<<"$workspaces")
+
+if [[ -n $workspace_id ]]; then
+    "$herdr_bin" workspace focus "$workspace_id" >/dev/null
+else
+    "$herdr_bin" workspace create --cwd "$selected" --label "$label" --focus >/dev/null
+fi
+
+# Within Herdr the workspace is already focused. From a regular shell,
+# attach after selecting it (requires an already-running Herdr server).
+if [[ -z ${HERDR_SOCKET_PATH:-} && -z ${HERDR_PANE_ID:-} ]]; then
+    exec "$herdr_bin"
+fi

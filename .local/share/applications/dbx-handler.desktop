@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=DBX
+Exec="/usr/bin/dbx" %u
+Terminal=false
+MimeType=x-scheme-handler/dbx
+NoDisplay=true

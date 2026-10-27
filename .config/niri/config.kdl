@@ -125,7 +125,7 @@ layout {
 }
 
 cursor {
-    xcursor-theme "macOS-Tahoe-Tail-Shadow"
+    xcursor-theme "macOS-Tahoe-Tail-Shadow-White"
     xcursor-size 32
 }
 
@@ -252,8 +252,24 @@ window-rule {
     opacity 0.0
     block-out-from "screen-capture"
 }
+window-rule {
+    match app-id="^Xdg-desktop-portal-gtk$"
 
-//
+    border {
+        off
+    }
+
+    focus-ring {
+        off
+    }
+
+    shadow {
+        off
+    }
+
+    clip-to-geometry true
+}
+
 // =================================================================
 // KEYBINDS
 // =================================================================
@@ -326,7 +342,6 @@ binds {
     Mod+F4 { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
     Mod+Minus { set-column-width "-10%"; }
     Mod+Equal { set-column-width "+10%"; }
-    Mod+Shift+X { focus-workspace "xppen"; }
 }
 
 spawn-at-startup "noctalia"

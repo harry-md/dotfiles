@@ -11,6 +11,7 @@ text/xml=librewolf.desktop;
 x-scheme-handler/chromium=chrome-dnfpoenibinnbbckgbhendmlljoobcfg-Default.desktop;
 x-scheme-handler/claude=com.anthropic.Claude.desktop;
 x-scheme-handler/com.googleusercontent.apps.209390247301-ctpmep68ppfa56r1b8tr35e4qi4p60kq=readest-handler.desktop;
+x-scheme-handler/dbx=dbx-handler.desktop;
 x-scheme-handler/discord=vesktop.desktop;
 x-scheme-handler/http=librewolf.desktop;
 x-scheme-handler/https=librewolf.desktop;

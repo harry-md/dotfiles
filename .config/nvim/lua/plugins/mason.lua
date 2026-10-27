@@ -14,7 +14,8 @@ return {
   },
   opts = {
     ensure_installed = {
-      "biome",
+      "oxfmt",
+      "oxlint",
       "ruff",
       "ty",
       "tombi",
