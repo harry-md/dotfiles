@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=AM PLA-Install Handler
+NoDisplay=true
+Icon=io.github.ivan-hc.AM
+Exec=sh -c 'PLA_APP="${1#pla-install://}"; [ -n "$PLA_APP" ] && export PLA_APP || exit 1; command -v appman >/dev/null 2>&1 && appman pla-install-handler || command -v am >/dev/null 2>&1 && am pla-install-handler' sh %u
+Terminal=true
+MimeType=x-scheme-handler/pla-install;
+Categories=Utility;

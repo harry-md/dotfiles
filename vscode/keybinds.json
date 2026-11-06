@@ -75,5 +75,15 @@
     "key": "f g",
     "command": "workbench.action.findInFiles",
     "when": "!editorTextFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+shift+v",
+    "command": "-markdown.showPreview",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+k v",
+    "command": "-markdown.showPreviewToSide",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
   }
 ]

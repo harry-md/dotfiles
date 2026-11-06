@@ -77,7 +77,7 @@ input {
         natural-scroll
         scroll-factor 0.5
         dwt 
-        accel-speed 0.6
+        accel-speed 0.8
         accel-profile "adaptive"
     }
     
@@ -125,7 +125,7 @@ layout {
 }
 
 cursor {
-    xcursor-theme "macOS-Tahoe-Tail-Shadow-White"
+    xcursor-theme "macOS-Golden-Gate"
     xcursor-size 32
 }
 

@@ -1,2 +1,49 @@
-BasedOnStyle: Microsoft
-ColumnLimit: 80
+---
+Language: Cpp
+BasedOnStyle: LLVM
+
+# ------------------------------------------------------------------------------
+# Indentation & Alignment
+# ------------------------------------------------------------------------------
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never # Avoid tab/space mismatches across MCU vendor IDEs
+ColumnLimit: 100 # Keeps register manipulation readable without excessive wrapping
+
+# Updated: Use 'Consecutive' instead of 'true'
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+AlignConsecutiveMacros: Consecutive
+AlignConsecutiveBitFields: Consecutive
+
+# Keep pointers attached to the variable name (e.g., uint8_t *buffer)
+PointerAlignment: Right
+
+# ------------------------------------------------------------------------------
+# Bracing & Structuring
+# ------------------------------------------------------------------------------
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterFunction: true # Helps identify ISRs and functions cleanly
+  AfterStruct: false
+  AfterEnum: false
+  AfterUnion: false
+  AfterControlStatement: Never
+  BeforeElse: false
+
+# Clean array/struct initialization (e.g., DMA or GPIO initialization structs)
+AlignArrayOfStructures: Right
+Cpp11BracedListStyle: true
+
+# ------------------------------------------------------------------------------
+# Safety & Readability
+# ------------------------------------------------------------------------------
+AllowShortBlocksOnASingleLine: Never
+AllowShortIfStatementsOnASingleLine: Never # Prevent accidental 'if (err) return;' hidden single-liners
+AllowShortLoopsOnASingleLine: false
+
+# Keep comments readable
+CommentPragmas: '^NOLINT'
+AlignTrailingComments: true
+
+...
