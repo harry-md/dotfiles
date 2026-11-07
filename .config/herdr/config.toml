@@ -1,0 +1,60 @@
+# Adapted from ~/.tmux.conf for Herdr 0.9.5.
+onboarding = false
+
+[theme]
+name = "vesper"
+auto_switch = false
+
+[theme.custom]
+panel_bg = "#0e0e0e"
+# surface_dim = "#888888"
+sidebar_bg = "#0e0e0e"
+active_row_bg = "#1f2024"
+selection_bg = "#1f2024"
+
+[terminal]
+# F1/new tabs inherit the focused pane's working directory.
+new_cwd = "follow"
+
+[keys]
+prefix = "ctrl+space"
+new_tab = ["f1", "prefix+c"]
+switch_tab = ["alt+1..9"]
+switch_workspace = "prefix+1..9"
+move_tab_previous = "prefix+comma"
+move_tab_next = "prefix+period"
+focus_pane_left = ["prefix+h", "prefix+left"]
+focus_pane_down = ["prefix+j", "prefix+down"]
+focus_pane_up = ["prefix+k", "prefix+up"]
+focus_pane_right = ["prefix+l", "prefix+right"]
+split_vertical = "prefix+v"
+copy_mode = "prefix+["
+detach = "prefix+d"
+reload_config = "prefix+shift+r"
+workspace_picker = "prefix+w"
+toggle_sidebar = "prefix+b"
+
+[[keys.command]]
+key = "prefix+f"
+type = "popup"
+command = '"$HOME/.local/scripts/herdr-sessionizer"'
+description = "Find a project in workspace or repos"
+width = "85%"
+height = "80%"
+
+[[keys.command]]
+key = "prefix+backtick"
+type = "shell"
+command = '"$HOME/.local/scripts/herdr-sessionizer" --home'
+description = "Switch to the ~ workspace"
+
+[ui]
+mouse_capture = true
+copy_on_select = true
+prompt_new_tab_name = false
+tab_bar_position = "bottom"
+tab_bar_right = [{ type = "datetime", format = "%H:%M %A %Y-%m-%d" }]
+pane_borders = "auto"
+pane_outer_borders = false
+pane_gaps = false
+

@@ -1,8 +1,5 @@
 7zip
 accountsservice
-adobe-source-han-sans-cn-fonts
-adobe-source-han-sans-jp-fonts
-adobe-source-han-sans-kr-fonts
 adw-gtk-theme
 adwaita-dark
 alacritty
@@ -20,7 +17,6 @@ arrow
 ast-grep
 auto-cpufreq
 awesome-terminal-fonts
-azure-cli
 base
 base-devel
 bash-completion
@@ -41,11 +37,9 @@ bruno-bin
 btop
 btrfs-progs
 bun
-cachyos-emerald-kde-theme-git
 cachyos-fish-config
 cachyos-hello
 cachyos-hooks
-cachyos-iridescent-kde
 cachyos-kernel-manager
 cachyos-keyring
 cachyos-micro-settings
@@ -76,8 +70,6 @@ croc
 crun
 cryptsetup
 cursor-bin
-dbeaver
-debtap
 device-mapper
 dhclient
 dialog
@@ -97,7 +89,6 @@ e2fsprogs
 efibootmgr
 efitools
 egl-wayland
-eslint
 esp-idf
 ethtool
 evince
@@ -115,6 +106,7 @@ filelight
 foliate
 foot
 foot-terminfo
+fprintd
 freerdp
 fsarchiver
 fuzzel
@@ -132,12 +124,12 @@ gnome-system-monitor
 go
 gpart
 gparted
-gridcraft-bin
 gst-libav
 gst-plugin-pipewire
 gst-plugin-va
 gst-plugins-bad
 gst-plugins-ugly
+gtk-doc
 gum
 gvfs
 gwenview
@@ -155,13 +147,11 @@ hyprpicker
 ibus
 imv
 inetutils
-inkscape
 intel-gpu-tools
 intel-media-driver
 intel-ucode
 inter-font
 iptables
-iriunwebcam-bin
 iwd
 jetbrains-toolbox
 jfsutils
@@ -169,7 +159,6 @@ jmeter
 k6-bin
 kcalc
 kde-gtk-config
-kdeconnect
 kdegraphics-thumbnailers
 kdeplasma-addons
 kdialog
@@ -185,9 +174,15 @@ less
 lib32-mesa
 lib32-opencl-mesa
 lib32-vulkan-intel
+libcamera
+libcamera-ipa
+libcamera-tools
 libdvdcss
+libfprint-tod-elan0c7f
+libfprint-tod-git
 libgnome-keyring
 libgsf
+libgusb
 libinput-tools
 libopenraw
 libplasma
@@ -219,6 +214,7 @@ mariadb
 mariadb-libs
 matugen
 mdadm
+mechvibes
 meld
 mesa
 mesa-utils
@@ -226,7 +222,6 @@ meson
 micro
 mkinitcpio
 modemmanager
-motrix-bin
 mpv
 mtools
 mysql-workbench
@@ -268,6 +263,7 @@ openai-codex
 openbsd-netcat
 opencl-mesa
 opencode
+opencv
 opendesktop-fonts
 openssh
 oxfmt-bin
@@ -278,8 +274,8 @@ pavucontrol
 perl
 pgcli
 pgloader
-photocraft-bin
 pipewire-alsa
+pipewire-libcamera
 pipewire-pulse
 pkgfile
 plasma-browser-integration
@@ -390,7 +386,6 @@ thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 tlp
-tmux
 tofi
 tree
 tree-sitter-bash
@@ -422,14 +417,12 @@ v4l2loopback-dkms
 v4l2loopback-utils
 valkey
 vesktop-bin
-vicinae-bin
 vlc-plugins-base
 vpl-gpu-rt
 vulkan-headers
 vulkan-intel
 waybar
 wev
-wget
 which
 win2xcur
 wireless-regdb
@@ -439,7 +432,6 @@ wl-clip-persist
 wlr-randr
 wlsunset
 wofi
-wordcraft-bin
 wpa_supplicant
 wrk
 wtype
@@ -449,6 +441,7 @@ xdg-desktop-portal-gnome
 xdg-desktop-portal-kde
 xdg-user-dirs
 xdg-utils
+xdotool
 xf86-input-libinput
 xfsprogs
 xl2tpd
@@ -464,13 +457,11 @@ xsettings-client
 xsettingsd
 xwayland-satellite
 yay
-yazi
 yelp
 zam-plugins-lv2
 zathura
 zathura-pdf-mupdf
 zed
 zip
-zlaunch-bin
 zoxide
 zsh
