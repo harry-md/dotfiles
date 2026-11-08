@@ -125,7 +125,7 @@ layout {
 }
 
 cursor {
-    xcursor-theme "macOS-Golden-Gate"
+    xcursor-theme "macOS-Tahoe-Tail-Shadow"
     xcursor-size 32
 }
 

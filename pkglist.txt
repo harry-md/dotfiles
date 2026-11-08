@@ -263,11 +263,8 @@ openai-codex
 openbsd-netcat
 opencl-mesa
 opencode
-opencv
 opendesktop-fonts
 openssh
-oxfmt-bin
-oxlint-bin
 pacman-contrib
 paru
 pavucontrol
@@ -361,7 +358,6 @@ spectacle
 speech-dispatcher
 spoofdpi
 spotify
-sqlitebrowser
 starship
 stb
 stow
@@ -423,6 +419,7 @@ vulkan-headers
 vulkan-intel
 waybar
 wev
+wget
 which
 win2xcur
 wireless-regdb

@@ -35,6 +35,7 @@ image/avif=imv.desktop
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=ai.storyteller.gridcraft.desktop
 x-scheme-handler/claude=com.anthropic.Claude.desktop
 x-scheme-handler/dbx=dbx-handler.desktop
+text/plain=dev.zed.Zed.desktop
 
 [Added Associations]
 application/epub+zip=com.github.johnfactotum.Foliate.desktop;
@@ -42,3 +43,4 @@ application/pdf=org.gnome.Evince.desktop;org.pwmt.zathura-pdf-mupdf.desktop;
 image/avif=org.kde.gwenview.desktop;imv.desktop;
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-calc.desktop;ai.storyteller.gridcraft.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=ai.storyteller.wordcraft.desktop;
+text/plain=dev.zed.Zed.desktop;

@@ -1,0 +1,225 @@
+{
+  "disable_ai": true,
+  "mouse_wheel_zoom": true,
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true,
+    "anthropic_retention": false,
+  },
+  "terminal": {
+    "font_family": "Berkeley Mono",
+    "font_size": 16.0,
+    "font_weight": 300,
+  },
+  "status_bar": {
+    "experimental.show": false,
+  },
+  "scroll_sensitivity": 2.0,
+  "gutter": {
+    "line_numbers": true,
+  },
+  "minimap": {
+    "show": "always",
+  },
+  "cursor_blink": false,
+  "buffer_font_family": "Berkeley Mono",
+  "buffer_font_weight": 300,
+  "buffer_font_fallbacks": ["JetBrainsMono Nerd Font"],
+  "buffer_font_size": 18.0,
+  "buffer_line_height": {
+    "custom": 1.4,
+  },
+  "line_ending": "prefer_lf",
+  "hard_tabs": false,
+  "tab_size": 2,
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry",
+    },
+  },
+  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "base_keymap": "VSCode",
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+
+
+
+
+  "vim_mode": true,
+  "ui_font_size": 15,
+  "ui_font_family": "Geist",
+  "theme": "VSCode Dark Modern",
+  "format_on_save": "on",
+  "colorize_brackets": true,
+  "languages": {
+    "Python": {
+      "line_ending": "prefer_lf",
+      "hard_tabs": false,
+      "tab_size": 4,
+      "language_servers": ["ty"],
+      "formatter": { "language_server": { "name": "ruff" } },
+    },
+    "CSS": {
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt",
+          },
+        },
+      ],
+    },
+    "HTML": {
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt",
+          },
+        },
+      ],
+    },
+    "JavaScript": {
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt",
+          },
+        },
+        {
+          "code_action": "source.fixAll.oxc",
+        },
+      ],
+    },
+    "JSON": {
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt",
+          },
+        },
+      ],
+    },
+    "JSONC": {
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt",
+          },
+        },
+      ],
+    },
+    "Markdown": {
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt",
+          },
+        },
+      ],
+    },
+    "TypeScript": {
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt",
+          },
+        },
+      ],
+    },
+    "TSX": {
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt",
+          },
+        },
+      ],
+    },
+    "YAML": {
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt",
+          },
+        },
+      ],
+    },
+  },
+  "lsp": {
+    "ty": {},
+    "oxlint": {
+      "initialization_options": {
+        "settings": {
+          "configPath": null,
+          "run": "onType",
+          "disableNestedConfig": false,
+          "fixKind": "safe_fix",
+          "unusedDisableDirectives": "deny",
+        },
+      },
+    },
+    "oxfmt": {
+      "initialization_options": {
+        "settings": {
+          "fmt.configPath": null,
+          "run": "onSave",
+        },
+      },
+    },
+  },
+
+  "markdown_preview": {
+    "font_family": "Geist Serif",
+    "heading_font_weight": 800,
+    "font_size": 18,
+    "max_width": 1200,
+  },
+  "vim": {
+    "use_system_clipboard": "always",
+    "highlight_on_yank_duration": 300,
+    "use_smartcase_find": true,
+  },
+  "toolbar": {
+    "selections_menu": false,
+    "code_actions": false,
+    "agent_review": false,
+    "quick_actions": false,
+    "breadcrumbs": false
+  }
+}

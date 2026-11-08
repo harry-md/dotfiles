@@ -5,7 +5,7 @@ minimumReleaseAge = 86400
 [fmt]
 useTabs = false
 tabWidth = 2
-printWidth = 80
+printWidth = 100
 endOfLine = "lf"
 singleAttributePerLine = false
 sortPackageJson = true

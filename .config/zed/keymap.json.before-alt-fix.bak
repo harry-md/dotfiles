@@ -1,0 +1,129 @@
+// Migrated from ~/.config/.vimrc and ~/dotfiles/vscode/{settings,keybings}.json.
+// Q -> gq intentionally omitted. No formatter or language-server changes.
+// Requires vim_mode=true and vim.use_system_clipboard="always" (already configured).
+// SendKeystrokes falls back to the original binding for self-remaps (O, <, >).
+// H/L switch tabs in the current pane. Alt+j/k use editor line-move actions.
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-v": "editor::Paste"
+    }
+  },
+  {
+    "context": "Editor && mode == full && extension == md",
+    "bindings": {
+      "ctrl-k v": null
+    }
+  },
+  {
+    "context": "Editor && mode == full && (vim_mode == normal || vim_mode == visual) && !menu",
+    "bindings": {
+      "alt-u": "vim::ScrollUp",
+      "alt-d": "vim::ScrollDown",
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+      "ctrl-shift-v": "vim::Paste"
+    }
+  },
+  {
+    "context": "Editor && mode == full && vim_mode == normal && !menu",
+    "bindings": {
+      "shift-y": [
+        "workspace::SendKeystrokes",
+        "y $"
+      ],
+      "ctrl-j": [
+        "workspace::SendKeystrokes",
+        "1 0 j z z"
+      ],
+      "ctrl-k": [
+        "workspace::SendKeystrokes",
+        "1 0 k z z"
+      ],
+      "shift-o": [
+        "workspace::SendKeystrokes",
+        "shift-o escape"
+      ],
+      "shift-h": "pane::ActivatePreviousItem",
+      "shift-l": "pane::ActivateNextItem",
+      "f f": "file_finder::Toggle",
+      "f g": "project_search::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor && mode == full && vim_mode == normal",
+    "bindings": {
+      "ctrl-s": "workspace::Save",
+      "alt-s": "workspace::Save"
+    }
+  },
+  {
+    "context": "Editor && mode == full && (vim_mode == insert || vim_mode == visual)",
+    "bindings": {
+      "ctrl-s": [
+        "workspace::SendKeystrokes",
+        "ctrl-[ ctrl-s"
+      ],
+      "alt-s": [
+        "workspace::SendKeystrokes",
+        "ctrl-[ ctrl-s"
+      ]
+    }
+  },
+  {
+    "context": "Editor && mode == full && vim_mode == visual && !menu",
+    "bindings": {
+      "ctrl-j": [
+        "workspace::SendKeystrokes",
+        "1 0 j"
+      ],
+      "ctrl-k": [
+        "workspace::SendKeystrokes",
+        "1 0 k"
+      ],
+      "<": [
+        "workspace::SendKeystrokes",
+        "< g v"
+      ],
+      ">": [
+        "workspace::SendKeystrokes",
+        "> g v"
+      ],
+      "p": [
+        "vim::Paste",
+        {
+          "preserve_clipboard": true
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor && mode == full && vim_mode == insert",
+    "bindings": {
+      "alt-w": [
+        "editor::DeleteToPreviousWordStart",
+        {
+          "ignore_newlines": false,
+          "ignore_brackets": false
+        }
+      ],
+      "alt-q": "editor::ShowCompletions"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "alt-y": "editor::ConfirmCompletion",
+      "alt-n": "menu::SelectNext",
+      "alt-p": "menu::SelectPrevious"
+    }
+  },
+  {
+    "context": "!Editor && !Terminal && !menu",
+    "bindings": {
+      "f f": "file_finder::Toggle",
+      "f g": "project_search::ToggleFocus"
+    }
+  }
+]
