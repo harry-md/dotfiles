@@ -18,7 +18,6 @@ return {
       jsonc = { "oxfmt" },
       html = {},
       markdown = { "oxfmt" },
-      dockerfile = { "dprint" },
       java = { "palantir-java-format" },
       xml = { "xmlformatter" },
       c = { "clang-format" },

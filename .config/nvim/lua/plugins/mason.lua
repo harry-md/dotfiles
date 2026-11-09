@@ -14,13 +14,9 @@ return {
   },
   opts = {
     ensure_installed = {
-      "oxfmt",
-      "oxlint",
-      "ruff",
-      "ty",
-      "tombi",
-      "vtsls",
       "jdtls",
+      "clang-format",
+      "tex-fmt",
     },
   },
 }

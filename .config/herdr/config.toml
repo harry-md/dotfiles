@@ -52,7 +52,7 @@ description = "Switch to the ~ workspace"
 mouse_capture = true
 copy_on_select = true
 prompt_new_tab_name = false
-tab_bar_position = "bottom"
+tab_bar_position = "top"
 tab_bar_right = [{ type = "datetime", format = "%H:%M %A %Y-%m-%d" }]
 pane_borders = "auto"
 pane_outer_borders = false

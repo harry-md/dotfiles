@@ -7,7 +7,13 @@
   {
     "context": "Editor",
     "bindings": {
-      "ctrl-shift-v": "editor::Paste"
+      "ctrl-shift-v": "editor::Paste",
+      "ctrl-w": [
+        "editor::DeleteToPreviousWordStart",
+        {
+          "ignore_newlines": false
+        }
+      ]
     }
   },
   {
@@ -29,22 +35,10 @@
   {
     "context": "Editor && mode == full && vim_mode == normal && !menu",
     "bindings": {
-      "shift-y": [
-        "workspace::SendKeystrokes",
-        "y $"
-      ],
-      "ctrl-j": [
-        "workspace::SendKeystrokes",
-        "1 0 j z z"
-      ],
-      "ctrl-k": [
-        "workspace::SendKeystrokes",
-        "1 0 k z z"
-      ],
-      "shift-o": [
-        "workspace::SendKeystrokes",
-        "shift-o escape"
-      ],
+      "shift-y": ["workspace::SendKeystrokes", "y $"],
+      "ctrl-j": ["workspace::SendKeystrokes", "1 0 j z z"],
+      "ctrl-k": ["workspace::SendKeystrokes", "1 0 k z z"],
+      "shift-o": ["workspace::SendKeystrokes", "shift-o escape"],
       "shift-h": "pane::ActivatePreviousItem",
       "shift-l": "pane::ActivateNextItem",
       "f f": "file_finder::Toggle",
@@ -61,35 +55,17 @@
   {
     "context": "Editor && mode == full && (vim_mode == insert || vim_mode == visual)",
     "bindings": {
-      "ctrl-s": [
-        "workspace::SendKeystrokes",
-        "ctrl-[ ctrl-s"
-      ],
-      "alt-s": [
-        "workspace::SendKeystrokes",
-        "ctrl-[ ctrl-s"
-      ]
+      "ctrl-s": ["workspace::SendKeystrokes", "ctrl-[ ctrl-s"],
+      "alt-s": ["workspace::SendKeystrokes", "ctrl-[ ctrl-s"]
     }
   },
   {
     "context": "Editor && mode == full && vim_mode == visual && !menu",
     "bindings": {
-      "ctrl-j": [
-        "workspace::SendKeystrokes",
-        "1 0 j"
-      ],
-      "ctrl-k": [
-        "workspace::SendKeystrokes",
-        "1 0 k"
-      ],
-      "<": [
-        "workspace::SendKeystrokes",
-        "< g v"
-      ],
-      ">": [
-        "workspace::SendKeystrokes",
-        "> g v"
-      ],
+      "ctrl-j": ["workspace::SendKeystrokes", "1 0 j"],
+      "ctrl-k": ["workspace::SendKeystrokes", "1 0 k"],
+      "<": ["workspace::SendKeystrokes", "< g v"],
+      ">": ["workspace::SendKeystrokes", "> g v"],
       "p": [
         "vim::Paste",
         {
@@ -101,6 +77,13 @@
   {
     "context": "Editor && mode == full && vim_mode == insert",
     "bindings": {
+      "ctrl-w": [
+        "editor::DeleteToPreviousWordStart",
+        {
+          "ignore_newlines": false,
+          "ignore_brackets": false
+        }
+      ],
       "alt-w": [
         "editor::DeleteToPreviousWordStart",
         {
@@ -109,6 +92,49 @@
         }
       ],
       "alt-q": "editor::ShowCompletions"
+    }
+  },
+  {
+    "context": "VimControlPalette",
+    "bindings": {
+      "ctrl-w": [
+        "editor::DeleteToPreviousWordStart",
+        {
+          "ignore_newlines": false,
+          "ignore_brackets": false
+        }
+      ],
+      "alt-w": [
+        "editor::DeleteToPreviousWordStart",
+        {
+          "ignore_newlines": false,
+          "ignore_brackets": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "VimControlPalette > Editor",
+    "bindings": {
+      "alt-w": [
+        "editor::DeleteToPreviousWordStart",
+        {
+          "ignore_newlines": false,
+          "ignore_brackets": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "Picker > Editor",
+    "bindings": {
+      "alt-w": [
+        "editor::DeleteToPreviousWordStart",
+        {
+          "ignore_newlines": false,
+          "ignore_brackets": false
+        }
+      ]
     }
   },
   {
