@@ -36,6 +36,9 @@ application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=ai.storyteller
 x-scheme-handler/claude=com.anthropic.Claude.desktop
 x-scheme-handler/dbx=dbx-handler.desktop
 text/plain=dev.zed.Zed.desktop
+x-scheme-handler/proton-inbox=proton-mail.desktop
+x-scheme-handler/mailspring=Mailspring.desktop
+x-scheme-handler/opencode=ai.opencode.desktop.desktop
 
 [Added Associations]
 application/epub+zip=com.github.johnfactotum.Foliate.desktop;
@@ -44,3 +47,4 @@ image/avif=org.kde.gwenview.desktop;imv.desktop;
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-calc.desktop;ai.storyteller.gridcraft.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=ai.storyteller.wordcraft.desktop;
 text/plain=dev.zed.Zed.desktop;
+x-scheme-handler/proton-inbox=proton-mail.desktop;

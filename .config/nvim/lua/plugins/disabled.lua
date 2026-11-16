@@ -15,4 +15,5 @@ return {
   { "dmtrKovalenko/fff.nvim", enabled = false },
   { "nvimdev/lspsaga.nvim", enabled = false },
   { "gipo355/nvim-intellij-lsp", enabled = false },
+  { "MeanderingProgrammer/render-markdown.nvim", enabled = false },
 }

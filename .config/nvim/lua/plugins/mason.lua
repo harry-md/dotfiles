@@ -15,7 +15,6 @@ return {
   opts = {
     ensure_installed = {
       "jdtls",
-      "clang-format",
       "tex-fmt",
     },
   },

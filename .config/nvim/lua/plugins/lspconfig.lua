@@ -2,6 +2,7 @@ return {
   "neovim/nvim-lspconfig",
   opts = {
     servers = {
+      clang_format = { mason = false },
       clangd = { mason = false },
       lemminx = { mason = false },
       vtsls = { mason = false },

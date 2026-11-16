@@ -88,3 +88,6 @@ function nlog
 end
 
 source "$HOME/.cargo/env.fish"
+
+# opencode
+fish_add_path /home/harry/.opencode/bin

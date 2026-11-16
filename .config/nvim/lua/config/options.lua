@@ -52,6 +52,11 @@ opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,t:ver25-blinkon0-blin
 -- Completion window transparency
 opt.pumblend = 0
 
+-- set 80 characters column
+opt.colorcolumn = "80"
+opt.wildignorecase = true
+opt.conceallevel = 0
+
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
   callback = function()
@@ -129,7 +134,3 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     -- vim.api.nvim_set_hl(0, "SnacksIndentChunk", { bg = "none", fg = "#d97757" })
   end,
 })
-
--- set 80 characters column
-opt.colorcolumn = "80"
-opt.wildignorecase = true

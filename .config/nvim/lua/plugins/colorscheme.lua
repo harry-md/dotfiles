@@ -10,7 +10,7 @@ return {
         transparent = false,
         colors = {
           bg = "#0e0e0e",
-          -- fg = "#cfcfcf",
+          fg = "#efefef",
           -- floatBorder = "#878787",
           -- line = "#282830",
           -- comment = "#646477",

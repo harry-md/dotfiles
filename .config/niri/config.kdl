@@ -273,6 +273,7 @@ window-rule {
 // =================================================================
 // KEYBINDS
 // =================================================================
+
 binds {
     Mod+Q { spawn "ghostty"; }
     Alt+C { close-window; }
@@ -286,7 +287,8 @@ binds {
     // Mod+Space repeat=false { spawn "vicinae" "toggle"; }
     Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
     // Mod+Space { spawn "wofi" "--show" "drun"; }
-    Mod+P { spawn "hyprpicker" "-a"; }
+    Mod+P { spawn "shmooz" "--zoom-in" "75%"; }
+    Mod+Shift+P { spawn "nirius" "toggle-follow-mode"; }
     // Mod+C { spawn "alacritty" "--class" "clipse" "-e" "clipse"; }
     Mod+C { spawn "bash" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
     Mod+F { fullscreen-window; }
@@ -345,4 +347,4 @@ binds {
 }
 
 spawn-at-startup "noctalia"
-
+spawn-at-startup "niriusd"

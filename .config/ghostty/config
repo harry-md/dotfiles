@@ -17,9 +17,6 @@ window-decoration = none
 app-notifications = no-clipboard-copy
 
 font-family = JetBrainsMono NF
-#font-style = Light
-#font-style-bold = Bold
-
 adjust-cursor-thickness = 1
 
 cursor-color = #cfcfcf
@@ -40,7 +37,7 @@ palette = 13=#c9b1ca
 palette = 14=#bebeda
 palette = 15=#d7d7d7
 background = #0e0e0e
-foreground = #cfcfcf
+foreground = #efefef
 cursor-text = cell-background
 selection-background = #252530
 selection-foreground = #cfcfcf

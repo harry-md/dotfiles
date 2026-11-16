@@ -69,7 +69,6 @@ cpupower
 croc
 crun
 cryptsetup
-cursor-bin
 device-mapper
 dhclient
 dialog
@@ -90,6 +89,7 @@ efibootmgr
 efitools
 egl-wayland
 esp-idf
+etcher-bin
 ethtool
 evince
 exfatprogs
@@ -112,14 +112,16 @@ fsarchiver
 fuzzel
 fwupd
 gdb
+geary
 ghostty
-gimp
 git
 git-filter-repo
 github-cli
 glances
 gnome-clocks
+gnome-font-viewer
 gnome-keyring
+gnome-online-accounts-gtk
 gnome-system-monitor
 go
 gpart
@@ -170,6 +172,7 @@ kvantum
 kwallet-pam
 kwalletmanager
 lazygit
+lemminx
 less
 lib32-mesa
 lib32-opencl-mesa
@@ -240,6 +243,7 @@ ngrok
 nilfs-utils
 ninja
 niri
+nirius
 noctalia
 noctalia-shell
 nodejs
@@ -262,7 +266,6 @@ okular
 openai-codex
 openbsd-netcat
 opencl-mesa
-opencode
 opendesktop-fonts
 openssh
 pacman-contrib
@@ -299,12 +302,14 @@ postgresql
 postgresql-libs
 power-profiles-daemon
 powerdevil
-prettier
 profile-sync-daemon
+proton-pass
 pv
 python
 python-adblock
+python-brotli
 python-defusedxml
+python-fonttools
 python-packaging
 python-tqdm
 qbittorrent
@@ -346,12 +351,14 @@ rsync
 rtkit
 ruby
 ruff
+rustup
 s-nail
 satty
 scrcpy
 sddm
 seahorse
 sg3_utils
+shmooz
 smartmontools
 sof-firmware
 spectacle
@@ -381,6 +388,7 @@ thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
+thunderbird
 tlp
 tofi
 tree
@@ -415,6 +423,8 @@ valkey
 vesktop-bin
 vlc-plugins-base
 vpl-gpu-rt
+vscodium-bin-marketplace
+vtsls
 vulkan-headers
 vulkan-intel
 waybar
