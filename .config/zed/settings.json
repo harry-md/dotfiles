@@ -1,4 +1,5 @@
 {
+  "proxy": "",
   "agent": {
     "default_model": {
       "provider": "openai-subscribed",
