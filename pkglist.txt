@@ -8,7 +8,6 @@ alsa-plugins
 alsa-utils
 amazon-fonts
 android-tools
-antigravity-cli
 appmenu-gtk-module
 arch-audit
 aria2
@@ -31,6 +30,7 @@ bluez-utils
 bottom
 bpftune-git
 brave-bin
+brave-origin-bin
 breeze-gtk
 brillo
 bruno-bin
@@ -189,7 +189,7 @@ libgusb
 libinput-tools
 libopenraw
 libplasma
-librewolf-bin
+librewolf
 librsync
 libva-utils
 libvirt
@@ -208,6 +208,7 @@ lsb-release
 lsscsi
 luametatex
 luarocks
+luciole-git
 lvm2
 lynis
 man-db

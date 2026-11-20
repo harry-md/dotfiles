@@ -84,7 +84,7 @@ input {
     mouse {
         accel-speed -0.2
         accel-profile "flat"
-        scroll-factor 1.0
+        scroll-factor 1.75
     }
     tablet {
         map-to-focused-output
@@ -211,10 +211,10 @@ animations {
 // =================================================================
 window-rule {
     open-floating true
-    match app-id="org.gnome.Nautilus"
-    default-column-width { fixed 1100; }
+    match app-id="org.gnome.Nautilus|dev.noctalia.luciole"
+    default-column-width { fixed 1200; }
     default-window-height { fixed 1000; }
-    default-floating-position x=10 y=40
+    default-floating-position x=20 y=20
 }
 
 window-rule {
@@ -277,7 +277,7 @@ window-rule {
 binds {
     Mod+Q { spawn "ghostty"; }
     Alt+C { close-window; }
-    Mod+E { spawn "nautilus"; }
+    Mod+E { spawn "luciole"; }
     Mod+V { toggle-window-floating; }
     Mod+Shift+F { maximize-window-to-edges; }
     Alt+Space { spawn "tofi-drun" "--drun-launch=true"; }

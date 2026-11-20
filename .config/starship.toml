@@ -1,5 +1,14 @@
 "$schema" = "https://starship.rs/config-schema.json"
 add_newline = false
+format = "[$username$hostname](bold)$directory$all"
+
+[username]
+show_always = true
+format = '\[$user'
+
+[hostname]
+ssh_only = false
+format = '@$hostname\] '
 
 [character]
 success_symbol = "[>](bold green)"

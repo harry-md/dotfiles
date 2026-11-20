@@ -15,6 +15,7 @@ return {
     zen = {
       win = {
         width = 120,
+        col = 8,
         backdrop = {
           transparent = false,
           blend = 0,

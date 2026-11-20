@@ -21,6 +21,7 @@ return {
       java = { "palantir-java-format" },
       xml = { "xmlformatter" },
       c = { "clang-format" },
+      cpp = { "clang-format" },
       tex = { "tex-fmt" },
       bib = { "tex-fmt" },
       toml = { "oxfmt" },

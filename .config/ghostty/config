@@ -17,6 +17,8 @@ window-decoration = none
 app-notifications = no-clipboard-copy
 
 font-family = JetBrainsMono NF
+#font-style = Light
+#font-style-bold = Bold
 adjust-cursor-thickness = 1
 
 cursor-color = #cfcfcf
